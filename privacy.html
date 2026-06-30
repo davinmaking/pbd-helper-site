@@ -40,7 +40,8 @@
   <p class="lede"><strong>Ringkasnya:</strong> PBD Helper <strong>tidak mengumpul data murid</strong>. Nama,
   No. KP dan Tahap Penguasaan murid hanya dibaca dari dan ditulis semula ke SPPB
   (moeissppb.moe.gov.my), iaitu sistem yang anda sudah log masuk. Data murid tidak pernah dihantar ke
-  pelayan kami. Tiada penjejak, tiada analitik, tiada penjualan data.</p>
+  pelayan kami. Tiada analitik, tiada penjualan data. (Satu pengesahan lesen tanpa nama dihantar
+  setiap kali anda mengisi — lihat Seksyen 4.)</p>
 
   <h2>1. Pengenalan</h2>
   <p>PBD Helper ("Extension") ialah Chrome Extension yang membantu guru mengisi skor PBD
@@ -60,15 +61,14 @@
   <p>Extension menyimpan perkara berikut dalam <code>chrome.storage.local</code> (pada peranti
   anda sahaja):</p>
   <ul>
-    <li><strong>Status lesen (dorman):</strong> Kunci lesen (jika dimasukkan) dan satu ID peranti
-    yang dijana secara rawak. Buat masa ini ciri lesen tidak aktif, jadi Extension percuma tanpa had.</li>
+    <li><strong>Status lesen:</strong> Kunci lesen (jika dimasukkan) dan satu ID peranti yang dijana
+    secara rawak. Ini digunakan untuk pengesahan lesen setiap kali anda mengisi (lihat Seksyen 4).</li>
   </ul>
   <p>Tiada data murid disimpan dalam storan tempatan.</p>
 
-  <h2>4. Ciri Pilihan Yang Menghubungi Pelayan Kami</h2>
-  <p>Dua ciri sahaja yang menghantar sebarang data ke pelayan kami
-  (<code>davinhub-api.davin-making.workers.dev</code>). Kedua-duanya <strong>tidak melibatkan data
-  murid</strong>:</p>
+  <h2>4. Data Yang Dihantar ke Pelayan Kami</h2>
+  <p>Extension menghubungi pelayan kami (<code>davinhub-api.davin-making.workers.dev</code>) untuk dua
+  perkara. Kedua-duanya <strong>tidak melibatkan data murid</strong>:</p>
   <ul>
     <li><strong>Lapor Masalah (pilihan):</strong> Apabila anda memilih untuk menghantar laporan,
     Extension menghantar nota yang anda taip, satu kontak pilihan (emel/Telegram) yang anda boleh
@@ -79,9 +79,11 @@
     melalui Telegram (kandungan sama), semata-mata untuk membantu kami membaiki masalah. Laporan
     yang dihantar disimpan selama yang perlu untuk menyelesaikan isu, dan boleh dipadam atas
     permintaan. Tiada apa-apa dihantar melainkan anda memilih untuk menghantarnya.</li>
-    <li><strong>Pengesahan lesen (dorman):</strong> Apabila naik taraf Pro diaktifkan pada masa
-    hadapan, hanya kunci lesen, ID peranti rawak, dan satu hash SHA-256 tanpa nama bagi ID pengguna
-    SPPB anda dihantar untuk pengesahan kuota. Tiada nama atau No. KP.</li>
+    <li><strong>Pengesahan lesen (setiap kali mengisi):</strong> Untuk menyokong pelan Pro, setiap
+    kali anda klik "Isi &amp; Simpan", Extension bertanya pelayan lesen kami sama ada kelas itu
+    dibenarkan. Ia menghantar satu hash SHA-256 <strong>tanpa nama</strong> bagi ID pengguna SPPB
+    anda sendiri, ID kelas (cmid), satu ID peranti rawak, dan kunci lesen jika ada. Tiada nama atau
+    No. KP murid. Pada masa ini semua kelas dibenarkan (percuma); pelan Pro sedang diperkenalkan.</li>
   </ul>
 
   <h2>5. Data Yang TIDAK Dikumpul</h2>
@@ -99,14 +101,14 @@
     <li><strong>scripting:</strong> Untuk menyuntik enjin Extension ke dalam halaman
     moeissppb.moe.gov.my bagi membaca senarai kelas dan menulis skor. Skrip hanya berjalan pada
     moeissppb.moe.gov.my.</li>
-    <li><strong>storage:</strong> Untuk menyimpan status lesen (dorman) pada peranti anda. Tiada
-    data murid disimpan.</li>
+    <li><strong>storage:</strong> Untuk menyimpan status lesen (kunci + ID peranti) pada peranti
+    anda. Tiada data murid disimpan.</li>
     <li><strong>tabs:</strong> Untuk mencari tab SPPB yang terbuka, membaca URL-nya bagi mengenal
     pasti kelas–mata pelajaran yang sedang dibuka, dan menavigasi tab itu semasa isian Excel pukal.</li>
     <li><strong>host (moeissppb.moe.gov.my):</strong> Untuk membaca senarai kelas anda sendiri dan
     menyimpan skor, dalam aplikasi SPPB yang anda sudah log masuk.</li>
-    <li><strong>host (davinhub-api.davin-making.workers.dev):</strong> Untuk ciri pilihan "Lapor
-    Masalah" dan pengesahan lesen (dorman) sahaja. Lihat Seksyen 4.</li>
+    <li><strong>host (davinhub-api.davin-making.workers.dev):</strong> Untuk pengesahan lesen (setiap
+    kali mengisi) dan ciri pilihan "Lapor Masalah" sahaja. Lihat Seksyen 4.</li>
   </ul>
 
   <h2>7. Keselamatan</h2>
