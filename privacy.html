@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>Dasar Privasi — PBD Helper</title>
+  <meta name="description" content="Dasar privasi PBD Helper Chrome Extension. Tiada data murid dikumpul, tiada penjejak, tiada analitik. Data murid kekal dalam SPPB.">
+  <link rel="canonical" href="https://pbd.davinhub.com/privacy">
+  <meta property="og:title" content="Dasar Privasi — PBD Helper">
+  <meta property="og:description" content="Dasar privasi PBD Helper. Tiada data murid dikumpul, tiada penjejak, tiada analitik.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pbd.davinhub.com/privacy">
+  <meta property="og:locale" content="ms_MY">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Inter", system-ui, sans-serif; color: #333; line-height: 1.8; margin: 0; }
+    .page-main { padding: 40px 20px; max-width: 700px; margin: 0 auto; }
+    h1 { font-size: 1.8rem; margin-bottom: 8px; color: #0b5e4d; }
+    h2 { font-size: 1.2rem; margin: 24px 0 8px; color: #333; }
+    p, li { font-size: 0.9rem; color: #555; margin-bottom: 8px; }
+    ul { padding-left: 20px; }
+    .updated { font-size: 0.8rem; color: #6B7280; margin-bottom: 24px; }
+    a { color: #0e7c66; }
+    .lede { background: #e7f1ee; border-radius: 10px; padding: 14px 16px; font-size: 0.9rem; color: #0b5e4d; }
+  </style>
+</head>
+<body>
+  <nav style="position:sticky;top:0;background:#fff;border-bottom:1px solid #E5E7EB;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;z-index:10">
+    <a href="/" style="display:inline-flex;align-items:center;gap:8px;font-size:1.1rem;font-weight:800;color:#111827;text-decoration:none"><img src="icon128.png" alt="" width="24" height="24" style="border-radius:6px">PBD <span style="color:#0e7c66">Helper</span></a>
+    <a href="/" style="font-size:0.85rem;color:#0e7c66;text-decoration:none;font-weight:600;padding:8px 0">&larr; Laman utama</a>
+  </nav>
+  <main class="page-main">
+  <h1>Dasar Privasi / Privacy Policy</h1>
+  <p class="updated">Kemaskini terakhir: 30 Jun 2026</p>
+
+  <p class="lede"><strong>Ringkasnya:</strong> PBD Helper <strong>tidak mengumpul data murid</strong>. Nama,
+  No. KP dan Tahap Penguasaan murid hanya dibaca dari dan ditulis semula ke SPPB
+  (moeissppb.moe.gov.my), iaitu sistem yang anda sudah log masuk. Data murid tidak pernah dihantar ke
+  pelayan kami. Tiada penjejak, tiada analitik, tiada penjualan data.</p>
+
+  <h2>1. Pengenalan</h2>
+  <p>PBD Helper ("Extension") ialah Chrome Extension yang membantu guru mengisi skor PBD
+  (Pentaksiran Bilik Darjah): Tahap Penguasaan dan medan-medan wajib (Usaha Murid, Ulasan Guru,
+  Intervensi, Kemahiran) dalam sistem SPPB (moeissppb.moe.gov.my). Dasar privasi ini menerangkan
+  bagaimana Extension mengendalikan data anda.</p>
+
+  <h2>2. Data Murid Kekal Dalam SPPB</h2>
+  <p>Extension membaca senarai kelas (nama, No. KP, jantina, Tahap Penguasaan) terus dari halaman
+  SPPB yang anda buka, dan menulis skor semula ke SPPB melalui butang "Simpan" sistem itu sendiri.
+  Semua data murid ini bergerak hanya antara pelayar anda dan moeissppb.moe.gov.my; ia
+  <strong>tidak dihantar, disimpan, atau dikongsi</strong> ke mana-mana pelayan PBD Helper.</p>
+  <p>Jika anda menggunakan ciri Excel Pukal, fail Excel diproses sepenuhnya secara tempatan dalam
+  pelayar anda; ia tidak dimuat naik ke mana-mana pelayan.</p>
+
+  <h2>3. Data Yang Disimpan Pada Peranti Anda</h2>
+  <p>Extension menyimpan perkara berikut dalam <code>chrome.storage.local</code> (pada peranti
+  anda sahaja):</p>
+  <ul>
+    <li><strong>Status lesen (dorman):</strong> Kunci lesen (jika dimasukkan) dan satu ID peranti
+    yang dijana secara rawak. Buat masa ini ciri lesen tidak aktif, jadi Extension percuma tanpa had.</li>
+  </ul>
+  <p>Tiada data murid disimpan dalam storan tempatan.</p>
+
+  <h2>4. Ciri Pilihan Yang Menghubungi Pelayan Kami</h2>
+  <p>Dua ciri sahaja yang menghantar sebarang data ke pelayan kami
+  (<code>davinhub-api.davin-making.workers.dev</code>). Kedua-duanya <strong>tidak melibatkan data
+  murid</strong>:</p>
+  <ul>
+    <li><strong>Lapor Masalah (pilihan):</strong> Apabila anda memilih untuk menghantar laporan,
+    Extension hanya menghantar nota yang anda taip, satu kontak pilihan (emel/Telegram) yang anda
+    boleh tambah supaya kami boleh balas, versi Extension, dan jenis pelayar (user agent). Sebarang
+    nombor KP 12 digit dalam nota ditapis secara automatik, dan dialog memberi amaran supaya anda
+    tidak menulis nama atau No. KP murid. Tiada rekod murid dikumpul. Laporan ini juga mencetuskan
+    satu pemberitahuan kepada pembangun melalui Telegram (kandungan sama), semata-mata untuk
+    membantu kami membaiki masalah. Tiada apa-apa dihantar melainkan anda memilih untuk
+    menghantarnya.</li>
+    <li><strong>Pengesahan lesen (dorman):</strong> Apabila naik taraf Pro diaktifkan pada masa
+    hadapan, hanya kunci lesen, ID peranti rawak, dan satu hash SHA-256 tanpa nama bagi ID pengguna
+    SPPB anda dihantar untuk pengesahan kuota. Tiada nama atau No. KP.</li>
+  </ul>
+
+  <h2>5. Data Yang TIDAK Dikumpul</h2>
+  <ul>
+    <li>Kami <strong>tidak</strong> mengumpul atau menyimpan data murid (nama, No. KP, Tahap
+    Penguasaan, ulasan) di mana-mana pelayan.</li>
+    <li>Kami <strong>tidak</strong> menggunakan cookies penjejak atau analitik.</li>
+    <li>Kami <strong>tidak</strong> menjual atau memindahkan data pengguna kepada pihak ketiga.</li>
+  </ul>
+
+  <h2>6. Kebenaran Extension</h2>
+  <ul>
+    <li><strong>sidePanel:</strong> Memaparkan antara muka Extension sebagai panel sisi di sebelah
+    halaman SPPB. Tiada data diakses oleh kebenaran ini.</li>
+    <li><strong>scripting:</strong> Untuk menyuntik enjin Extension ke dalam halaman
+    moeissppb.moe.gov.my bagi membaca senarai kelas dan menulis skor. Skrip hanya berjalan pada
+    moeissppb.moe.gov.my.</li>
+    <li><strong>storage:</strong> Untuk menyimpan status lesen (dorman) pada peranti anda. Tiada
+    data murid disimpan.</li>
+    <li><strong>tabs:</strong> Untuk mencari tab SPPB yang terbuka, membaca URL-nya bagi mengenal
+    pasti kelas–mata pelajaran yang sedang dibuka, dan menavigasi tab itu semasa isian Excel pukal.</li>
+    <li><strong>host (moeissppb.moe.gov.my):</strong> Untuk membaca senarai kelas anda sendiri dan
+    menyimpan skor, dalam aplikasi SPPB yang anda sudah log masuk.</li>
+    <li><strong>host (davinhub-api.davin-making.workers.dev):</strong> Untuk ciri pilihan "Lapor
+    Masalah" dan pengesahan lesen (dorman) sahaja. Lihat Seksyen 4.</li>
+  </ul>
+
+  <h2>7. Keselamatan</h2>
+  <p>Semua komunikasi menggunakan HTTPS. PBD Helper hanya menulis melalui butang "Simpan" SPPB yang
+  sebenar dan tidak pernah menekan "Hantar" secara automatik, jadi kelas anda tidak akan dikunci.</p>
+
+  <h2>8. Hak Pengguna</h2>
+  <ul>
+    <li>Memadam Extension akan mengosongkan semua data tempatan (status lesen) serta-merta.</li>
+    <li>Anda boleh menghubungi kami untuk memadam rekod lesen anda (jika ada).</li>
+  </ul>
+
+  <h2>9. Hubungi Kami</h2>
+  <p>Untuk sebarang pertanyaan mengenai dasar privasi ini:</p>
+  <p><strong>Cikgu Davin</strong><br>Emel: <a href="mailto:hi@davinhub.com">hi@davinhub.com</a><br>Web: <a href="https://davinhub.com" target="_blank" rel="noopener">davinhub.com</a></p>
+
+  <h2>10. Perubahan Dasar</h2>
+  <p>Dasar privasi ini mungkin dikemaskini dari semasa ke semasa. Perubahan akan diumumkan melalui
+  kemaskini Extension dan di halaman ini.</p>
+  </main>
+  <footer style="text-align:center;padding:24px 20px;font-size:0.8rem;color:#6B7280">
+    &copy; 2026 <a href="https://davinhub.com" target="_blank" rel="noopener" style="color:inherit">Cikgu Davin</a> &middot; <a href="/privacy" style="color:#0e7c66;text-decoration:none">Dasar Privasi</a>
+  </footer>
+</body>
+</html>
