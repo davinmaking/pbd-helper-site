@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>Beli PBD Helper Pro — RM59 sekali bayar</title>
+  <meta name="description" content="Dapatkan PBD Helper Pro — isi PBD untuk semua kelas tanpa had. RM59 sekali bayar, bukan langganan.">
+  <link rel="canonical" href="https://pbd.davinhub.com/beli">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal: #0e7c66; --teal-deep: #0b5e4d; --teal-tint: #e7f1ee;
+      --paper: #fcfaf6; --ink: #222; --muted: #6a655c; --line: #ece6db;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Hanken Grotesk", system-ui, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.65; }
+    a { color: var(--teal); }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 0 22px; }
+
+    nav { position: sticky; top: 0; z-index: 20; background: rgba(252,250,246,.9); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+    nav .wrap { display: flex; align-items: center; gap: 12px; height: 60px; }
+    .brand { display: inline-flex; align-items: center; gap: 9px; font-weight: 800; font-size: 1.15rem; color: var(--ink); text-decoration: none; }
+    .brand img { width: 28px; height: 28px; border-radius: 8px; }
+    .brand span { color: var(--teal); }
+    nav .spacer { margin-left: auto; }
+    .nav-link { font-size: .9rem; font-weight: 600; color: var(--muted); text-decoration: none; }
+    .nav-link:hover { color: var(--teal-deep); }
+
+    .page { padding: 56px 0 72px; }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 36px 32px 40px; max-width: 480px; margin: 0 auto; }
+
+    .pill { display: inline-block; font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--teal-deep); background: var(--teal-tint); padding: 5px 12px; border-radius: 999px; margin-bottom: 16px; }
+    h1 { font-size: 1.7rem; font-weight: 800; letter-spacing: -.02em; margin-bottom: 6px; }
+    .tagline { font-size: 1rem; color: var(--muted); margin-bottom: 22px; }
+
+    .price-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+    .price { font-size: 2.2rem; font-weight: 800; color: var(--teal-deep); }
+    .price-orig { font-size: 1rem; color: var(--muted); text-decoration: line-through; }
+    .price-note { font-size: .82rem; color: var(--muted); margin-bottom: 24px; }
+
+    hr { border: none; border-top: 1px solid var(--line); margin-bottom: 24px; }
+
+    .field { margin-bottom: 16px; }
+    label { display: block; font-size: .88rem; font-weight: 600; color: var(--ink); margin-bottom: 5px; }
+    label .opt { font-weight: 400; color: var(--muted); }
+    input[type="email"], input[type="text"] {
+      width: 100%; padding: 10px 13px; border: 1px solid var(--line); border-radius: 9px;
+      font: inherit; font-size: .95rem; color: var(--ink); background: #fff;
+      outline: none; transition: border-color .15s;
+    }
+    input:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(14,124,102,.12); }
+
+    .btn-pay {
+      display: block; width: 100%; padding: 13px; border-radius: 10px;
+      font: inherit; font-size: 1rem; font-weight: 700; cursor: pointer; border: 0;
+      background: var(--teal); color: #fff; box-shadow: 0 2px 10px rgba(11,94,77,.22);
+      margin-top: 20px; transition: background .15s;
+    }
+    .btn-pay:hover:not(:disabled) { background: var(--teal-deep); }
+    .btn-pay:disabled { opacity: .65; cursor: not-allowed; }
+
+    #err { margin-top: 12px; font-size: .88rem; color: #c0392b; min-height: 1.4em; }
+
+    .trust { margin-top: 18px; font-size: .78rem; color: var(--muted); text-align: center; line-height: 1.5; }
+
+    footer { border-top: 1px solid var(--line); padding: 30px 0; margin-top: 30px; }
+    footer .wrap { display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center; font-size: .85rem; color: var(--muted); }
+    footer a { color: var(--teal-deep); text-decoration: none; font-weight: 600; }
+    footer .links { display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: center; }
+
+    @media (max-width: 520px) {
+      .card { padding: 28px 20px 32px; }
+      .price { font-size: 1.9rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <a class="brand" href="/"><img src="icon128.png" alt="">PBD <span>Helper</span></a>
+      <span class="spacer"></span>
+      <a class="nav-link" href="/">&#8592; Laman utama</a>
+    </div>
+  </nav>
+
+  <main class="page">
+    <div class="wrap">
+      <div class="card">
+        <span class="pill">Pro</span>
+        <h1>PBD Helper Pro</h1>
+        <p class="tagline">Isi PBD untuk semua kelas tanpa had.</p>
+
+        <div class="price-row">
+          <span class="price">RM59</span>
+          <span class="price-orig">RM79</span>
+        </div>
+        <p class="price-note">Sekali bayar &mdash; bukan langganan. Untuk satu peranti.</p>
+
+        <hr>
+
+        <form id="buyForm" novalidate>
+          <div class="field">
+            <label for="email">Emel <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" placeholder="cikgu@sekolah.edu.my" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="name">Nama <span class="opt">(pilihan)</span></label>
+            <input type="text" id="name" name="name" placeholder="Nama guru" autocomplete="name">
+          </div>
+
+          <button class="btn-pay" id="payBtn" type="submit">Bayar RM59 dengan Billplz</button>
+          <p id="err" role="alert" aria-live="polite"></p>
+        </form>
+
+        <p class="trust">Pembayaran diproses oleh Billplz (FPX).<br>Resit dikeluarkan oleh EDUHELPER RESOURCES.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p style="max-width:60ch;font-size:.82rem;line-height:1.6">Alat bantuan pihak ketiga yang dibina secara bebas. <strong>Tidak berafiliasi</strong>, ditaja, atau disahkan oleh KPM/MOE atau sistem SPPB.</p>
+      <div class="links">
+        <span>&copy; 2026 <a href="https://davinhub.com" target="_blank" rel="noopener">Cikgu Davin</a></span>
+        <span>&middot;</span>
+        <a href="/privacy">Dasar Privasi</a>
+        <span>&middot;</span>
+        <a href="mailto:hi@davinhub.com">hi@davinhub.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const API = 'https://davinhub-api.davin-making.workers.dev';
+    const form = document.getElementById('buyForm');
+    const btn = document.getElementById('payBtn');
+    const err = document.getElementById('err');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      err.textContent = '';
+      btn.disabled = true; btn.textContent = 'Memproses…';
+      try {
+        const r = await fetch(API + '/api/license-purchase', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({
+            slug: 'pbd-helper',
+            email: document.getElementById('email').value.trim(),
+            name: document.getElementById('name').value.trim(),
+          }),
+        });
+        const j = await r.json();
+        if (j.ok && j.data && j.data.payUrl) { window.location.href = j.data.payUrl; return; }
+        throw new Error((j && j.error) || 'Ralat');
+      } catch (ex) {
+        err.textContent = 'Tidak dapat memulakan pembayaran. Cuba lagi atau emel hi@davinhub.com.';
+        btn.disabled = false; btn.textContent = 'Bayar RM59 dengan Billplz';
+      }
+    });
+  </script>
+</body>
+</html>
