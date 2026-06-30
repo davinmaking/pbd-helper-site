@@ -121,7 +121,7 @@
     const elMsg = document.getElementById('msg');
     let tries = 0;
     async function poll() {
-      if (!ref) { elMsg.textContent = 'Pesanan tidak dijumpai.'; return; }
+      if (!ref) { document.getElementById('waiting').hidden = true; elMsg.textContent = 'Pesanan tidak dijumpai.'; return; }
       try {
         const r = await fetch(API + '/api/license-purchase/status?ref=' + encodeURIComponent(ref));
         const j = await r.json();
@@ -133,7 +133,7 @@
         }
       } catch (_) {}
       if (++tries < 40) setTimeout(poll, 2000);              // ~80s
-      else elMsg.textContent = 'Kunci dihantar ke emel anda. Semak emel atau hubungi hi@davinhub.com.';
+      else { document.getElementById('waiting').hidden = true; elMsg.textContent = 'Kunci dihantar ke emel anda. Semak emel atau hubungi hi@davinhub.com.'; }
     }
     poll();
 
