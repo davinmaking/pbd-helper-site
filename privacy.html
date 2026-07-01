@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="icon128.png">
   <title>Dasar Privasi — PBD Helper</title>
   <meta name="description" content="Dasar privasi PBD Helper Chrome Extension. Tiada data murid dikumpul, tiada penjejak, tiada analitik. Data murid kekal dalam SPPB.">
   <link rel="canonical" href="https://pbd.davinhub.com/privacy">
@@ -14,28 +15,78 @@
   <meta property="og:locale" content="ms_MY">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --teal: #0e7c66; --teal-deep: #0b5e4d; --teal-tint: #e7f1ee;
+      --paper: #fcfaf6; --ink: #222; --muted: #6a655c; --line: #ece6db;
+      --white: #ffffff;
+      --n-50: #faf8f3; --n-100: #f4f0e8; --n-200: #e6e0d4;
+      --n-300: #cfc7b8; --n-400: #a49c8c; --n-500: #837b6d;
+      --n-700: #4a453d; --n-900: #2b2822;
+    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: "Inter", system-ui, sans-serif; color: #333; line-height: 1.8; margin: 0; }
-    .page-main { padding: 40px 20px; max-width: 700px; margin: 0 auto; }
-    h1 { font-size: 1.8rem; margin-bottom: 8px; color: #0b5e4d; }
-    h2 { font-size: 1.2rem; margin: 24px 0 8px; color: #333; }
-    p, li { font-size: 0.9rem; color: #555; margin-bottom: 8px; }
-    ul { padding-left: 20px; }
-    .updated { font-size: 0.8rem; color: #6B7280; margin-bottom: 24px; }
-    a { color: #0e7c66; }
-    .lede { background: #e7f1ee; border-radius: 10px; padding: 14px 16px; font-size: 0.9rem; color: #0b5e4d; }
+    *:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; border-radius: 4px; }
+    body { font-family: "Hanken Grotesk", system-ui, sans-serif; color: var(--ink); background: var(--paper); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; display: block; }
+
+    /* Nav — same shell as index.html, back-link variant for sub-pages */
+    nav { position: sticky; top: 0; z-index: 50; background: rgba(252,250,246,0.85); backdrop-filter: saturate(180%) blur(12px); -webkit-backdrop-filter: saturate(180%) blur(12px); border-bottom: 1px solid var(--line); }
+    .nav-inner { max-width: 1152px; margin: 0 auto; padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; }
+    @media(min-width:768px) { .nav-inner { padding: 14px 32px; } }
+    .nav-logo { display: inline-flex; align-items: center; gap: 9px; font-size: 1.2rem; font-weight: 800; color: var(--n-900); text-decoration: none; letter-spacing: -0.01em; }
+    .nav-logo img { width: 28px; height: 28px; border-radius: 7px; flex-shrink: 0; }
+    .nav-logo span { color: var(--teal); }
+    .nav-back { font-size: 0.9rem; font-weight: 600; color: var(--muted); text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; padding: 11px 4px; transition: color 0.15s; }
+    .nav-back:hover { color: var(--n-900); }
+
+    /* Container */
+    .container { max-width: 1152px; margin: 0 auto; padding: 0 16px; }
+    @media(min-width:768px) { .container { padding: 0 32px; } }
+
+    /* Article */
+    .page-main { max-width: 720px; margin: 0 auto; padding: 48px 20px 64px; line-height: 1.75; }
+    h1 { font-size: 1.85rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; color: var(--teal); }
+    h2 { font-size: 1.2rem; font-weight: 700; margin: 30px 0 10px; color: var(--teal); }
+    .page-main p, .page-main li { font-size: 0.95rem; color: var(--ink); margin-bottom: 8px; }
+    .page-main ul { padding-left: 22px; margin-bottom: 8px; }
+    .page-main a { color: var(--teal); }
+    .page-main a:hover { text-decoration: underline; }
+    .updated { font-size: 0.82rem; color: var(--muted); margin-bottom: 26px; }
+    .lede { background: var(--teal-tint); border: 1px solid #cfe3dc; border-radius: 12px; padding: 16px 18px; font-size: 0.95rem; color: var(--teal-deep); margin-bottom: 8px; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.85em; background: var(--n-100); padding: 1px 6px; border-radius: 5px; color: var(--n-900); }
+
+    /* Footer — same as index.html */
+    footer { padding: 52px 0 40px; border-top: 1px solid var(--line); background: var(--white); }
+    .footer-inner { display: flex; flex-direction: column; gap: 32px; }
+    @media(min-width:768px) { .footer-inner { flex-direction: row; justify-content: space-between; align-items: start; } }
+    .footer-brand { max-width: 320px; }
+    .footer-brand .logo { display: inline-flex; align-items: center; gap: 9px; font-size: 1.2rem; font-weight: 800; color: var(--n-900); margin-bottom: 10px; }
+    .footer-brand .logo img { width: 26px; height: 26px; border-radius: 7px; }
+    .footer-brand .logo span { color: var(--teal); }
+    .footer-brand p { font-size: 0.875rem; color: var(--muted); }
+    .footer-links { display: flex; gap: 48px; }
+    .footer-col h3 { font-weight: 700; color: var(--n-700); margin-bottom: 10px; font-size: 0.875rem; }
+    .footer-col a { display: block; font-size: 0.875rem; color: var(--muted); text-decoration: none; padding: 10px 0; min-height: 40px; transition: color 0.15s; }
+    .footer-col a:hover { color: var(--n-900); }
+    .footer-disclaimer { max-width: 1152px; margin: 36px auto 0; font-size: 0.78rem; color: var(--n-500); line-height: 1.6; padding-top: 24px; border-top: 1px solid var(--line); }
+    .footer-bottom { max-width: 1152px; margin: 16px auto 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: 0.85rem; color: var(--muted); }
+    .footer-bottom a { color: var(--muted); text-decoration: none; }
+    .footer-bottom a:hover { color: var(--teal); }
   </style>
 </head>
 <body>
-  <nav style="position:sticky;top:0;background:#fff;border-bottom:1px solid #E5E7EB;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;z-index:10">
-    <a href="/" style="display:inline-flex;align-items:center;gap:8px;font-size:1.1rem;font-weight:800;color:#111827;text-decoration:none"><img src="icon128.png" alt="" width="24" height="24" style="border-radius:6px">PBD <span style="color:#0e7c66">Helper</span></a>
-    <a href="/" style="font-size:0.85rem;color:#0e7c66;text-decoration:none;font-weight:600;padding:8px 0">&larr; Laman utama</a>
+  <!-- Nav -->
+  <nav aria-label="Navigasi utama">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><img src="icon128.png" alt="" aria-hidden="true">PBD <span>Helper</span></a>
+      <a href="/" class="nav-back">&larr; Laman utama</a>
+    </div>
   </nav>
+
   <main class="page-main">
   <h1>Dasar Privasi / Privacy Policy</h1>
-  <p class="updated">Kemaskini terakhir: 30 Jun 2026</p>
+  <p class="updated">Kemaskini terakhir: 1 Julai 2026</p>
 
   <p class="lede"><strong>Ringkasnya:</strong> PBD Helper <strong>tidak mengumpul data murid</strong>. Nama,
   No. KP dan Tahap Penguasaan murid hanya dibaca dari dan ditulis semula ke SPPB
@@ -83,7 +134,8 @@
     kali anda klik "Isi &amp; Simpan", Extension bertanya pelayan lesen kami sama ada kelas itu
     dibenarkan. Ia menghantar satu hash SHA-256 <strong>tanpa nama</strong> bagi ID pengguna SPPB
     anda sendiri, ID kelas (cmid), satu ID peranti rawak, dan kunci lesen jika ada. Tiada nama atau
-    No. KP murid. Pada masa ini semua kelas dibenarkan (percuma); pelan Pro sedang diperkenalkan.</li>
+    No. KP murid. Pelan percuma dibenarkan untuk 1 kelas&ndash;mata pelajaran; pelan Pro (tanpa had)
+    memerlukan kunci lesen yang sah.</li>
   </ul>
 
   <h2>5. Data Yang TIDAK Dikumpul</h2>
@@ -129,8 +181,38 @@
   <p>Dasar privasi ini mungkin dikemaskini dari semasa ke semasa. Perubahan akan diumumkan melalui
   kemaskini Extension dan di halaman ini.</p>
   </main>
-  <footer style="text-align:center;padding:24px 20px;font-size:0.8rem;color:#6B7280">
-    &copy; 2026 <a href="https://davinhub.com" target="_blank" rel="noopener" style="color:inherit">Cikgu Davin</a> &middot; <a href="/privacy" style="color:#0e7c66;text-decoration:none">Dasar Privasi</a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="logo"><img src="icon128.png" alt="" aria-hidden="true">PBD <span>Helper</span></div>
+          <p>Isi skor PBD di SPPB dengan pantas. Dibina oleh Cikgu Davin di Sarawak, untuk guru-guru di seluruh Malaysia.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h3>Produk</h3>
+            <a href="/panduan">Panduan</a>
+            <a href="/#harga">Harga</a>
+            <a href="/beli">Beli Pro</a>
+          </div>
+          <div class="footer-col">
+            <h3>Lain-lain</h3>
+            <a href="/privacy">Privasi</a>
+            <a href="https://davinhub.com" target="_blank" rel="noopener">davinhub.com</a>
+            <a href="mailto:dabing0126@gmail.com">Emel</a>
+          </div>
+        </div>
+      </div>
+      <p class="footer-disclaimer">
+        PBD Helper ialah alat bantuan pihak ketiga yang dibina secara bebas. Ia TIDAK berafiliasi, ditaja, atau disahkan oleh Kementerian Pendidikan Malaysia (KPM/MOE) atau sistem SPPB. PBD Helper hanya menulis melalui butang "Simpan" SPPB yang sebenar dan tidak pernah menekan "Hantar" secara automatik. Semua data murid kekal dalam SPPB.
+      </p>
+      <div class="footer-bottom">
+        <p>&copy; 2026 <a href="https://davinhub.com" target="_blank" rel="noopener" style="color:inherit">Cikgu Davin</a>. PBD Helper.</p>
+        <a href="/privacy">Dasar Privasi</a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>

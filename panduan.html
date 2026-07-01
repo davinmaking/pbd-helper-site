@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panduan PBD Helper | Isi Skor PBD di SPPB Langkah demi Langkah</title>
+  <meta name="description" content="Tutorial lengkap PBD Helper: pemasangan, aliran panel sisi (set TP, Isi &amp; Simpan, sahkan), dan Excel pukal untuk semua kelas di SPPB. Untuk guru Malaysia.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="icon128.png">
+  <link rel="canonical" href="https://pbd.davinhub.com/panduan">
+  <meta property="og:title" content="Panduan PBD Helper | Langkah demi Langkah">
+  <meta property="og:description" content="Dari pemasangan ke Isi &amp; Simpan ke Excel pukal — setiap langkah dengan screenshot dan tip.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://pbd.davinhub.com/panduan">
+  <meta property="og:locale" content="ms_MY">
+  <meta property="og:site_name" content="PBD Helper">
+  <meta property="og:image" content="https://pbd.davinhub.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Panduan PBD Helper | Langkah demi Langkah">
+  <meta name="twitter:description" content="Dari pemasangan ke Isi &amp; Simpan ke Excel pukal — setiap langkah dengan screenshot dan tip.">
+  <meta name="twitter:image" content="https://pbd.davinhub.com/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Cara isi skor PBD di SPPB dengan pantas menggunakan PBD Helper",
+    "description": "Tutorial lengkap PBD Helper: pemasangan, aliran panel sisi (set Tahap Penguasaan, isi medan wajib, Isi & Simpan, sahkan), dan Excel pukal untuk semua kelas.",
+    "inLanguage": "ms-MY",
+    "totalTime": "PT10M",
+    "tool": [{ "@type": "HowToTool", "name": "PBD Helper Chrome Extension" }],
+    "step": [
+      { "@type": "HowToStep", "name": "Pasang PBD Helper dari Chrome Web Store", "url": "https://pbd.davinhub.com/panduan#pemasangan" },
+      { "@type": "HowToStep", "name": "Log masuk SPPB dan buka satu kelas-mata pelajaran", "url": "https://pbd.davinhub.com/panduan#step-3-1" },
+      { "@type": "HowToStep", "name": "Set Tahap Penguasaan setiap murid", "url": "https://pbd.davinhub.com/panduan#step-3-2" },
+      { "@type": "HowToStep", "name": "Klik Isi & Simpan dan sahkan setiap murid", "url": "https://pbd.davinhub.com/panduan#step-3-4" },
+      { "@type": "HowToStep", "name": "Isi semua kelas sekali gus dengan Excel pukal", "url": "https://pbd.davinhub.com/panduan#excel-pukal" }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* === Tokens (mirror landing page) === */
+    :root {
+      --teal: #0e7c66; --teal-deep: #0b5e4d; --teal-tint: #e7f1ee;
+      --paper: #fcfaf6; --ink: #222; --muted: #6a655c; --line: #ece6db;
+      --white: #ffffff;
+      /* Warm neutral ramp for borders/text on paper */
+      --n-50: #faf8f3; --n-100: #f4f0e8; --n-200: #e6e0d4;
+      --n-300: #cfc7b8; --n-400: #a49c8c; --n-500: #837b6d;
+      --n-700: #4a453d; --n-900: #2b2822;
+      /* Semantics */
+      --ok: #2c8849; --ok-tint: #ecf7ee; --ok-line: #b7e0c0;
+      --bad: #b94a4f; --bad-tint: #fbf2f3; --bad-line: #eec6c8;
+      --tip: #b47d17; --tip-tint: #fbf5e7; --tip-line: #ecd9a8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    *:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; border-radius: 4px; }
+    html { scroll-padding-top: 76px; }
+    @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+    html, body { overscroll-behavior-y: none; }
+    body { font-family: "Hanken Grotesk", system-ui, sans-serif; color: var(--ink); background: var(--paper); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    a { color: var(--teal); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .step-body p a, .step-body li a, .footer-inner a, .hero p a, .callout a, .faq-a a { text-decoration: underline; text-underline-offset: 3px; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* === Top nav (mirror landing) === */
+    nav.topnav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(252,250,246,0.85); backdrop-filter: saturate(180%) blur(12px); -webkit-backdrop-filter: saturate(180%) blur(12px); border-bottom: 1px solid var(--line); }
+    .nav-inner { max-width: 1152px; margin: 0 auto; padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; }
+    @media(min-width:768px) { .nav-inner { padding: 14px 32px; } }
+    .nav-logo { display: inline-flex; align-items: center; gap: 9px; font-size: 1.2rem; font-weight: 800; color: var(--n-900); text-decoration: none; letter-spacing: -0.01em; }
+    .nav-logo img { width: 28px; height: 28px; border-radius: 7px; flex-shrink: 0; }
+    .nav-logo span { color: var(--teal); }
+    .nav-back { font-size: 0.9rem; color: var(--muted); display: inline-flex; align-items: center; gap: 6px; padding: 11px 8px; min-height: 44px; text-decoration: none; transition: color 0.15s; }
+    .nav-back:hover { color: var(--n-900); text-decoration: none; }
+
+    /* === Hero === */
+    .hero { padding: 104px 16px 32px; text-align: center; max-width: 800px; margin: 0 auto; }
+    @media(min-width:768px) { .hero { padding: 128px 32px 48px; } }
+    .hero-tag { display: inline-flex; align-items: center; gap: 8px; padding: 7px 15px; background: var(--teal-tint); border: 1px solid #cfe3dc; border-radius: 99px; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase; color: var(--teal-deep); margin-bottom: 20px; }
+    .hero h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1.12; margin: 0 0 16px; color: var(--n-900); }
+    @media(min-width:768px) { .hero h1 { font-size: 3rem; } }
+    .hero h1 .emph { color: var(--teal); }
+    .hero p { font-size: 1.05rem; color: var(--muted); margin: 0 auto; max-width: 640px; }
+    @media(min-width:768px) { .hero p { font-size: 1.15rem; } }
+
+    /* === Layout: TOC sidebar + content === */
+    .layout { max-width: 1152px; margin: 0 auto; padding: 16px; display: grid; gap: 32px; }
+    @media(min-width:1024px) { .layout { grid-template-columns: 244px 1fr; padding: 16px 32px 80px; gap: 56px; } }
+
+    /* === TOC === */
+    .toc { font-size: 0.9rem; }
+    @media(min-width:1024px) { .toc { position: sticky; top: 84px; align-self: start; max-height: calc(100vh - 104px); overflow-y: auto; } }
+    .toc h2 { font-size: 0.7rem; font-weight: 700; color: var(--n-500); text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 14px; }
+    .toc ol.toc-sections { list-style: none; padding: 0; margin: 0; counter-reset: toc-section; }
+    .toc ol.toc-sections > li { counter-increment: toc-section; margin-bottom: 4px; }
+    .toc ol.toc-sections > li > a { display: flex; gap: 10px; padding: 8px 12px; border-radius: 8px; color: var(--n-700); font-weight: 600; line-height: 1.4; transition: background 0.15s, color 0.15s; text-decoration: none; }
+    .toc ol.toc-sections > li > a:hover { background: var(--teal-tint); color: var(--teal-deep); }
+    .toc ol.toc-sections > li > a::before { content: counter(toc-section, decimal-leading-zero); color: var(--n-400); font-variant-numeric: tabular-nums; font-weight: 600; flex-shrink: 0; }
+    .toc ul.toc-substeps { list-style: none; padding: 0; margin: 4px 0 8px 23px; border-left: 1px solid var(--line); }
+    .toc ul.toc-substeps li { margin: 0; }
+    .toc ul.toc-substeps a { display: block; padding: 6px 12px; font-size: 0.82rem; font-weight: 500; color: var(--n-500); line-height: 1.4; border-radius: 8px; transition: background 0.15s, color 0.15s; text-decoration: none; }
+    .toc ul.toc-substeps a:hover { background: var(--teal-tint); color: var(--teal-deep); }
+    .toc a.is-active { background: var(--teal-tint); color: var(--teal-deep); }
+    .toc ul.toc-substeps a.is-active { font-weight: 600; }
+    .toc ol.toc-sections > li > a.is-active { color: var(--teal-deep); }
+    .toc-mobile-toggle { display: none; }
+    @media(max-width:1023px) {
+      .toc-mobile-toggle { display: block; width: 100%; padding: 14px 18px; background: var(--white); border: 1px solid var(--line); border-radius: 10px; font: inherit; font-weight: 600; color: var(--n-900); text-align: left; cursor: pointer; }
+      .toc-mobile-toggle::after { content: "\25BE"; float: right; color: var(--n-500); }
+      .toc.is-open .toc-mobile-toggle::after { content: "\25B4"; }
+      .toc .toc-list { display: none; }
+      .toc.is-open .toc-list { display: block; padding: 14px 0 0; }
+    }
+
+    /* === Sections === */
+    .content { min-width: 0; }
+    .section { margin-bottom: 64px; scroll-margin-top: 84px; }
+    .section-head { padding-bottom: 20px; margin-bottom: 32px; border-bottom: 1px solid var(--line); }
+    .section-tag { display: block; font-size: 0.72rem; font-weight: 700; color: var(--teal); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+    .section h2 { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; margin: 0 0 8px; color: var(--n-900); }
+    @media(min-width:768px) { .section h2 { font-size: 2.1rem; } }
+    .section-intro { font-size: 1rem; color: var(--muted); margin: 0; max-width: 640px; }
+
+    /* === Step component === */
+    .step { margin-bottom: 48px; scroll-margin-top: 84px; }
+    .step-header { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 18px; }
+    .step-num { width: 38px; height: 38px; border-radius: 50%; background: var(--teal); color: var(--white); display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; font-variant-numeric: tabular-nums; }
+    .step-header > div { padding-top: 4px; }
+    .step-title { font-size: 1.3rem; font-weight: 700; line-height: 1.3; margin: 0; color: var(--n-900); }
+    @media(min-width:768px) { .step-title { font-size: 1.5rem; } }
+    .step-tag { font-size: 0.72rem; font-weight: 600; color: var(--n-500); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 4px; }
+
+    .step-body { margin: 0 0 16px; padding-left: 54px; }
+    .step-body p { margin: 0 0 12px; color: var(--n-700); }
+    .step-body p:last-child { margin-bottom: 0; }
+    .step-body strong { color: var(--n-900); font-weight: 700; }
+    .step-body ul, .step-body ol { padding-left: 22px; margin: 0 0 12px; color: var(--n-700); }
+    .step-body li { margin-bottom: 4px; }
+    .step-body code { background: var(--n-100); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; font-family: ui-monospace, SFMono-Regular, monospace; color: var(--n-900); }
+    @media(max-width:540px) { .step-body { padding-left: 0; } }
+
+    .step-media { margin: 0 0 16px; padding-left: 54px; }
+    @media(max-width:540px) { .step-media { padding-left: 0; } }
+    /* Real screenshots framed in browser/window chrome */
+    .shot { border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 14px 34px -18px rgba(11,94,77,0.28); overflow: hidden; background: var(--white); }
+    .shot-bar { display: flex; align-items: center; gap: 7px; padding: 10px 14px; background: var(--n-100); border-bottom: 1px solid var(--line); }
+    .shot-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--n-300); flex-shrink: 0; }
+    .shot-url { margin-left: 10px; font-size: 0.76rem; color: var(--n-500); padding: 4px 13px; background: var(--white); border: 1px solid var(--line); border-radius: 99px; flex: 1; text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 380px; }
+    .shot-url .lock { color: var(--teal); margin-right: 6px; }
+    .shot img { width: 100%; height: auto; display: block; }
+    .step-media figcaption { font-size: 0.85rem; color: var(--n-500); margin-top: 10px; text-align: center; font-style: italic; }
+    .step-media-placeholder { border: 2px dashed var(--n-300); border-radius: 12px; background: var(--n-50); padding: 56px 20px; text-align: center; color: var(--n-500); font-size: 0.9rem; }
+    .step-media-placeholder strong { color: var(--n-700); display: block; margin-bottom: 4px; }
+
+    /* === Callouts === */
+    .step-callout { padding-left: 54px; margin: 0 0 16px; }
+    @media(max-width:540px) { .step-callout { padding-left: 0; } }
+    .callout { padding: 14px 18px; border-radius: 10px; border: 1px solid #cfe3dc; background: var(--teal-tint); font-size: 0.93rem; line-height: 1.6; color: var(--n-900); }
+    .callout strong { color: var(--n-900); }
+    .callout.is-tip  { border-color: var(--tip-line); background: var(--tip-tint); }
+    .callout.is-warn { border-color: var(--bad-line); background: var(--bad-tint); }
+    .callout.is-ok   { border-color: var(--ok-line); background: var(--ok-tint); }
+    .callout-icon { display: inline-block; margin-right: 8px; font-weight: 600; }
+
+    /* === Pending TOC item === */
+    .toc ol.toc-sections > li.is-pending > span { display: flex; gap: 10px; padding: 8px 12px; color: var(--n-500); font-weight: 600; line-height: 1.4; cursor: default; font-style: italic; }
+    .toc ol.toc-sections > li.is-pending > span::before { content: counter(toc-section, decimal-leading-zero); color: var(--n-400); font-variant-numeric: tabular-nums; font-weight: 600; flex-shrink: 0; }
+
+    /* === FAQ + support block (Section 5) === */
+    .faq-list { display: flex; flex-direction: column; gap: 12px; margin: 0 0 32px; }
+    .faq-q { background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px; }
+    .faq-q h3 { font-size: 1.02rem; font-weight: 700; color: var(--n-900); margin: 0 0 6px; }
+    .faq-a { font-size: 0.93rem; color: var(--n-700); line-height: 1.65; margin: 0; }
+    .faq-a a { color: var(--teal); }
+    .support-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    @media(min-width:640px) { .support-grid { grid-template-columns: 1fr 1fr; } }
+    .support-card { display: flex; align-items: center; gap: 14px; padding: 18px 20px; background: var(--white); border: 1px solid var(--line); border-radius: 12px; text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s; color: var(--n-900); }
+    .support-card:hover { border-color: #cfe3dc; box-shadow: 0 8px 22px -12px rgba(11,94,77,0.22); text-decoration: none; }
+    .support-icon { width: 42px; height: 42px; border-radius: 11px; background: var(--teal-tint); color: var(--teal-deep); display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .support-card strong { display: block; font-size: 0.95rem; font-weight: 700; }
+    .support-card small { display: block; font-size: 0.8rem; color: var(--muted); margin-top: 2px; }
+
+    /* === Floating action buttons === */
+    .fab { position: fixed; right: 24px; width: 44px; height: 44px; background: var(--teal); color: var(--white); border: none; border-radius: 50%; box-shadow: 0 6px 20px -6px rgba(11,94,77,0.4); cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity 0.2s, visibility 0.2s, transform 0.2s, background 0.15s; z-index: 60; }
+    .fab.is-visible { opacity: 1; visibility: visible; transform: translateY(0); }
+    .fab:hover { background: var(--teal-deep); }
+    .fab svg { width: 20px; height: 20px; }
+    .to-top { bottom: 24px; }
+    .toc-fab { bottom: 80px; }
+    @media(min-width:768px) { .fab { width: 48px; height: 48px; right: 32px; } .to-top { bottom: 32px; } .toc-fab { bottom: 92px; } }
+    @media(min-width:1024px) { .toc-fab { display: none; } }
+
+    /* === TOC bottom sheet (mobile/tablet) === */
+    .toc-sheet { position: fixed; inset: 0; z-index: 70; pointer-events: none; visibility: hidden; transition: visibility 0s linear 0.3s; }
+    .toc-sheet.is-open { pointer-events: auto; visibility: visible; transition: visibility 0s; }
+    .toc-sheet-backdrop { position: absolute; inset: 0; background: rgba(43,40,34,0.42); opacity: 0; transition: opacity 0.2s; }
+    .toc-sheet.is-open .toc-sheet-backdrop { opacity: 1; }
+    .toc-sheet-panel { position: absolute; left: 0; right: 0; bottom: 0; max-height: 75vh; overflow-y: auto; background: var(--paper); border-top-left-radius: 18px; border-top-right-radius: 18px; padding: 8px 16px 32px; transform: translateY(100%); transition: transform 0.25s cubic-bezier(0.32,0.72,0,1); box-shadow: 0 -8px 32px -8px rgba(11,94,77,0.25); }
+    .toc-sheet.is-open .toc-sheet-panel { transform: translateY(0); }
+    .toc-sheet-handle { width: 40px; height: 4px; background: var(--n-300); border-radius: 2px; margin: 8px auto 16px; }
+    .toc-sheet-header { display: flex; align-items: center; justify-content: space-between; padding: 0 4px 12px; border-bottom: 1px solid var(--line); margin-bottom: 12px; }
+    .toc-sheet-header h2 { font-size: 0.95rem; font-weight: 700; margin: 0; color: var(--n-900); }
+    .toc-sheet-close { background: transparent; border: 0; font-size: 22px; line-height: 1; color: var(--n-500); cursor: pointer; padding: 4px 8px; min-height: 36px; }
+    .toc-sheet-close:hover { color: var(--n-900); }
+    .toc-sheet-body ol.toc-sections { list-style: none; padding: 0; margin: 0; counter-reset: toc-section; }
+    .toc-sheet-body ol.toc-sections > li { counter-increment: toc-section; margin-bottom: 4px; }
+    .toc-sheet-body ol.toc-sections > li > a, .toc-sheet-body ol.toc-sections > li > span { display: flex; gap: 12px; padding: 12px; min-height: 44px; align-items: center; border-radius: 10px; color: var(--n-700); font-weight: 600; font-size: 0.95rem; line-height: 1.4; text-decoration: none; }
+    .toc-sheet-body ol.toc-sections > li > a::before, .toc-sheet-body ol.toc-sections > li.is-pending > span::before { content: counter(toc-section, decimal-leading-zero); color: var(--n-400); font-variant-numeric: tabular-nums; font-weight: 600; flex-shrink: 0; }
+    .toc-sheet-body ol.toc-sections > li.is-pending > span { color: var(--n-500); font-style: italic; cursor: default; }
+    .toc-sheet-body ul.toc-substeps { list-style: none; padding: 0; margin: 4px 0 8px 22px; }
+    .toc-sheet-body ul.toc-substeps a { display: block; padding: 10px 12px; min-height: 40px; font-size: 0.88rem; font-weight: 500; color: var(--muted); line-height: 1.4; border-radius: 8px; text-decoration: none; }
+    .toc-sheet-body a:hover, .toc-sheet-body a.is-active { background: var(--teal-tint); color: var(--teal-deep); }
+    .toc-sheet-body ul.toc-substeps a.is-active { font-weight: 600; }
+
+    /* === Footer (mirror landing) === */
+    footer { padding: 52px 0 40px; border-top: 1px solid var(--line); background: var(--white); margin-top: 40px; }
+    .footer-inner { max-width: 1152px; margin: 0 auto; padding: 0 16px; display: flex; flex-direction: column; gap: 32px; }
+    @media(min-width:768px) { .footer-inner { padding: 0 32px; flex-direction: row; justify-content: space-between; align-items: start; } }
+    .footer-brand { max-width: 320px; }
+    .footer-brand .logo { display: inline-flex; align-items: center; gap: 9px; font-size: 1.2rem; font-weight: 800; color: var(--n-900); margin-bottom: 10px; }
+    .footer-brand .logo img { width: 26px; height: 26px; border-radius: 7px; }
+    .footer-brand .logo span { color: var(--teal); }
+    .footer-brand p { font-size: 0.875rem; color: var(--muted); }
+    .footer-links { display: flex; gap: 48px; }
+    .footer-col h3 { font-weight: 700; color: var(--n-700); margin-bottom: 10px; font-size: 0.875rem; }
+    .footer-col a { display: block; font-size: 0.875rem; color: var(--muted); text-decoration: none; padding: 10px 0; min-height: 40px; transition: color 0.15s; }
+    .footer-col a:hover { color: var(--n-900); }
+    .footer-disclaimer { max-width: 1152px; margin: 36px auto 0; padding: 24px 16px 0; font-size: 0.78rem; color: var(--n-500); line-height: 1.6; border-top: 1px solid var(--line); }
+    @media(min-width:768px) { .footer-disclaimer { padding: 24px 32px 0; } }
+    .footer-bottom { max-width: 1152px; margin: 16px auto 0; padding: 0 16px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: 0.85rem; color: var(--muted); }
+    @media(min-width:768px) { .footer-bottom { padding: 0 32px; } }
+    .footer-bottom a { color: var(--muted); text-decoration: none; }
+    .footer-bottom a:hover { color: var(--teal); }
+  </style>
+</head>
+<body>
+
+  <!-- SVG symbol sprite for repeated icons -->
+  <svg style="display:none" aria-hidden="true">
+    <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+    <symbol id="icon-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></symbol>
+  </svg>
+
+  <!-- === Top nav === -->
+  <nav class="topnav" aria-label="Navigasi utama">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><img src="icon128.png" alt="" aria-hidden="true">PBD <span>Helper</span></a>
+      <a href="/" class="nav-back"><svg width="16" height="16" aria-hidden="true"><use href="#icon-back"/></svg> Kembali ke laman utama</a>
+    </div>
+  </nav>
+
+  <!-- === Hero === -->
+  <header class="hero">
+    <div class="hero-tag">Panduan Pengguna</div>
+    <h1>Panduan <span class="emph">PBD Helper</span></h1>
+    <p>Tutorial lengkap dari pemasangan ke <strong>Isi &amp; Simpan</strong> dan <strong>Excel pukal</strong>. Setiap langkah dengan screenshot dan tip, sesuai untuk guru yang baharu menggunakan extension ini.</p>
+  </header>
+
+  <!-- === Main layout === -->
+  <div class="layout">
+
+    <!-- TOC sidebar -->
+    <aside class="toc">
+      <button class="toc-mobile-toggle" type="button" aria-expanded="false" aria-controls="tocList" onclick="var open=this.parentElement.classList.toggle('is-open'); this.setAttribute('aria-expanded', String(open));">Daftar Kandungan</button>
+      <div class="toc-list" id="tocList">
+        <h2>Bahagian</h2>
+        <ol class="toc-sections">
+          <li><a href="#pengenalan">Pengenalan</a></li>
+          <li>
+            <a href="#pemasangan">Pemasangan</a>
+            <ul class="toc-substeps">
+              <li><a href="#step-2-1">Pergi ke Chrome Web Store</a></li>
+              <li><a href="#step-2-2">Tambah ke Chrome</a></li>
+              <li><a href="#step-2-3">Semat ikon di toolbar</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#aliran-panel">Aliran Panel Sisi</a>
+            <ul class="toc-substeps">
+              <li><a href="#step-3-1">Log masuk &amp; buka kelas</a></li>
+              <li><a href="#step-3-2">Set TP setiap murid</a></li>
+              <li><a href="#step-3-3">Tetapkan Berkumpulan</a></li>
+              <li><a href="#step-3-4">Isi &amp; Simpan</a></li>
+              <li><a href="#step-3-5">Baca semula &amp; tanda tick</a></li>
+              <li><a href="#step-3-6">Hanya isi yang kosong</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#excel-pukal">Excel Pukal</a>
+            <ul class="toc-substeps">
+              <li><a href="#step-4-1">Jana Excel</a></li>
+              <li><a href="#step-4-2">Isi TP, Usaha, Ulasan</a></li>
+              <li><a href="#step-4-3">Muat naik fail</a></li>
+              <li><a href="#step-4-4">Sahkan senarai di gate</a></li>
+              <li><a href="#step-4-5">Sahkan &amp; Isi</a></li>
+            </ul>
+          </li>
+          <li><a href="#faq">Soalan Lazim &amp; Sokongan</a></li>
+        </ol>
+      </div>
+    </aside>
+
+    <!-- Content -->
+    <main class="content">
+
+      <!-- ============================================================ -->
+      <!-- SECTION 1, Pengenalan -->
+      <!-- ============================================================ -->
+      <section class="section" id="pengenalan">
+        <div class="section-head">
+          <span class="section-tag">Bahagian 1</span>
+          <h2>Pengenalan</h2>
+          <p class="section-intro">Apa itu PBD Helper, masalah yang diselesaikan, dan apa anda akan belajar dalam panduan ini.</p>
+        </div>
+
+        <article class="step" id="step-1-1">
+          <div class="step-header">
+            <span class="step-num">1</span>
+            <div>
+              <p class="step-tag">Mengapa PBD Helper</p>
+              <h3 class="step-title">Berjam-jam jadi beberapa minit</h3>
+            </div>
+          </div>
+          <div class="step-body">
+            <p>Mengisi PBD (Pentaksiran Bilik Darjah) di SPPB (<code>moeissppb.moe.gov.my</code>) untuk berpuluh murid × beberapa kelas memakan masa yang lama:</p>
+            <ul>
+              <li>Klik radio <strong>Tahap Penguasaan</strong> (TP1–TP6) untuk setiap murid, satu per satu</li>
+              <li>Buka dialog <strong>Ulasan Guru</strong> mengikut kategori TP, taip, tutup, ulang</li>
+              <li>Isi <strong>Usaha Murid</strong>, <strong>Kemahiran</strong> (4 komponen untuk subjek bahasa), dan <strong>Intervensi</strong></li>
+              <li>Buka semula setiap murid untuk sahkan apa yang benar-benar tersimpan</li>
+            </ul>
+            <p><strong>PBD Helper mengecilkan kerja berulang ini kepada beberapa klik</strong> — terus dalam panel sisi di sebelah halaman SPPB, atau melalui Excel pukal untuk semua kelas sekali gus. Panduan ini menunjukkan setiap langkah, dari pemasangan hingga sahkan.</p>
+          </div>
+          <div class="step-callout">
+            <div class="callout"><span class="callout-icon" aria-hidden="true">&#9432;</span>
+              <strong>Selamat digunakan.</strong> PBD Helper hanya menulis melalui butang <strong>&ldquo;Simpan&rdquo;</strong> SPPB yang sebenar dan tidak pernah menekan <strong>&ldquo;Hantar&rdquo;</strong> secara automatik — kelas anda tidak akan dikunci. Semua data murid kekal dalam SPPB.
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- SECTION 2, Pemasangan -->
+      <!-- ============================================================ -->
+      <section class="section" id="pemasangan">
+        <div class="section-head">
+          <span class="section-tag">Bahagian 2</span>
+          <h2>Pemasangan</h2>
+          <p class="section-intro">Sekali sahaja. Selepas dipasang, ikon PBD Helper akan kekal di toolbar Chrome anda.</p>
+        </div>
+
+        <article class="step" id="step-2-1">
+          <div class="step-header">
+            <span class="step-num">1</span>
+            <div>
+              <p class="step-tag">Buka halaman extension</p>
+              <h3 class="step-title">Pergi ke Chrome Web Store</h3>
+            </div>
+          </div>
+          <div class="step-body">
+            <p>Buka <a href="/">pbd.davinhub.com</a>, kemudian klik butang <strong>Pasang dari Chrome Web Store</strong>. Halaman PBD Helper di Chrome Web Store akan terbuka.</p>
+          </div>
+          <figure class="step-media">
+            <div class="step-media-placeholder"><strong>Skrinsut akan ditambah</strong>Halaman Chrome Web Store PBD Helper dengan butang &ldquo;Add to Chrome&rdquo;</div>
+          </figure>
+          <div class="step-callout">
+            <div class="callout is-tip"><span class="callout-icon" aria-hidden="true">&#128276;</span>
+              <strong>Akan datang di Chrome Web Store.</strong> PBD Helper sedang dalam proses penerbitan. Sehingga itu, pautan pemasangan akan dikemas kini di laman utama sebaik sahaja tersedia.
+            </div>
+          </div>
+          <div class="step-callout">
+            <div class="callout"><span class="callout-icon" aria-hidden="true">&#9432;</span>
+              <strong>Hanya berfungsi pada komputer</strong> dengan pelayar berasaskan Chromium (Chrome, Edge, Brave, Opera). Tidak boleh digunakan pada telefon atau Safari.
+            </div>
+          </div>
+        </article>
+
+        <article class="step" id="step-2-2">
+          <div class="step-header">
+            <span class="step-num">2</span>
+            <div>
+              <p class="step-tag">Tambah ke Chrome</p>
+              <h3 class="step-title">Klik &ldquo;Add to Chrome&rdquo; dan sahkan</h3>
+            </div>
+          </div>
+          <div class="step-body">
+            <p>Di halaman PBD Helper, klik butang <strong>Add to Chrome</strong> di sebelah kanan atas.</p>
+            <p>Satu dialog pengesahan akan muncul. Klik <strong>Add extension</strong> untuk siapkan pemasangan.</p>
+          </div>
+          <figure class="step-media">
+            <div class="step-media-placeholder"><strong>Skrinsut akan ditambah</strong>Dialog &ldquo;Add extension&rdquo; Chrome semasa memasang PBD Helper</div>
+          </figure>
+        </article>
+
+        <article class="step" id="step-2-3">
+          <div class="step-header">
+            <span class="step-num">3</span>
+            <div>
+              <p class="step-tag">Semat ikon</p>
+              <h3 class="step-title">Semat PBD Helper di toolbar</h3>
+            </div>
+          </div>
+          <div class="step-body">
+            <p>Klik ikon <strong>&#129513; puzzle</strong> di kanan atas Chrome untuk buka senarai extension.</p>
+            <p>Cari <strong>PBD Helper</strong> dalam senarai, kemudian klik ikon <strong>&#128204; pin</strong> di sebelahnya.</p>
+            <p>Selepas disemat, ikon PBD Helper akan muncul terus di toolbar. Klik ikon itu untuk buka panel sisi bila-bila masa.</p>
+          </div>
+          <figure class="step-media">
+            <div class="step-media-placeholder"><strong>Skrinsut akan ditambah</strong>Senarai extension Chrome dengan ikon pin PBD Helper</div>
+          </figure>
+          <div class="step-callout">
+            <div class="callout is-ok"><span class="callout-icon" aria-hidden="true">&#10003;</span>Pemasangan selesai. Anda boleh teruskan ke <a href="#aliran-panel">Bahagian 3, Aliran Panel Sisi</a>.</div>
+          </div>
+        </article>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- SECTION 3, Aliran Panel Sisi -->
+      <!-- ============================================================ -->
+      <section class="section" id="aliran-panel">
+        <div class="section-head">
+          <span class="section-tag">Bahagian 3</span>
+          <h2>Aliran Panel Sisi</h2>
+          <p class="section-intro">Cara paling pantas untuk satu kelas: set TP, isi medan wajib automatik, simpan, dan sahkan — semua di panel sisi di sebelah halaman SPPB.</p>
+        </div>
+
+        <article class="step" id="step-3-1">
+          <div class="step-header">
+            <span class="step-num">1</span>
+            <div>
+              <p class="step-tag">Sebelum mula</p>
+              <h3 class="step-title">Log masuk SPPB dan buka satu kelas</h3>
+            </div>
+          </div>
+          <div class="step-body">
+            <p>Log masuk ke SPPB di <a href="https://moeissppb.moe.gov.my" target="_blank" rel="noopener">moeissppb.moe.gov.my</a>, pergi ke <strong>Keputusan &rsaquo; PBD</strong>, dan buka satu <strong>kelas–mata pelajaran</strong>.</p>
+            <p>Buka panel PBD Helper dari toolbar. Panel akan membaca senarai murid kelas semasa dan memaparkan butang bersegmen <strong>TP1 hingga TP6</strong> untuk setiap murid. Bar status di atas menunjukkan kelas yang sedang dibaca.</p>
+          </div>
+          <figure class="step-media">
+            <div class="shot" role="img" aria-label="Panel PBD Helper memaparkan senarai murid kelas semasa dengan butang bersegmen TP1 hingga TP6 dan bar status sambungan.">
+              <div class="shot-bar" aria-hidden="true">
+                <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
+                <span class="shot-url"><span class="lock">&#128274;</span>moeissppb.moe.gov.my</span>
+              </div>
+              <img src="img/01-kelas-semasa.png" width="1280" height="800" loading="lazy" alt="Panel Kelas Semasa PBD Helper: senarai murid dengan butang bersegmen TP1 hingga TP6 dan bar status sambungan kelas.">
+            </div>
+          </figure>
+          <div class="step-callout">
+            <div class="callout is-tip"><span class="callout-icon" aria-hidden="true">&#128161;</span>
+              <strong>Bar status tidak menunjukkan kelas?</strong> Klik butang <strong>&#8635; muat semula</strong>, atau pastikan tab semasa berada pada halaman PBD sesuatu kelas dalam SPPB, kemudian buka panel semula.
+            </div>
+          </div>
+        </article>
+
+        <article class="step" id="step-3-2">
+          <div class="step-header">
+            <span class="step-num">2</span>
+            <div>
+              <p class="step-tag">Tetapkan Tahap Penguasaan</p>
+              <h3 class="step-title">Set TP setiap murid</h3>
+            </div>
+          </div>
+          <div class="step-body">
+            <p>Untuk setiap murid, klik butang <strong>TP1</strong> hingga <strong>TP6</strong> mengikut tahap penguasaan mereka.</p>
+            <p>Medan wajib lain diisi <strong>automatik mengikut TP</strong> yang anda pilih:</p>
+            <ul>
+              <li><strong>Ulasan Guru</strong> — kategori ulasan (contoh <em>[Cemerlang]</em>) dipadankan dengan TP</li>
+              <li><strong>Usaha Murid</strong> — ditetapkan mengikut tahap</li>
+              <li><strong>Kemahiran</strong> — 4 komponen untuk subjek bahasa, diisi mengikut TP</li>
+            </ul>
+            <p>Anda nampak apa yang akan ditulis pada setiap baris sebelum simpan — tiada apa-apa dihantar ke SPPB pada peringkat ini.</p>
+          </div>
+          <figure class="step-media">
+            <div class="step-media-placeholder"><strong>Skrinsut akan ditambah</strong>Panel dengan TP dipilih bagi beberapa murid dan medan wajib yang diisi automatik</div>
+          </figure>
+        </article>
+
+        <article class="step" id="step-3-3">
+          <div class="step-header">
+            <span class="step-num">3</span>
+            <div>
+              <p class="step-tag">Jimatkan masa</p>
+              <h3 class="step-title">Guna &ldquo;Tetapkan Berkumpulan&rdquo; untuk set ramai sekali gus</h3>
+            </div>
+          </div>
+          <div class="step-body">
+            <p>Jika ramai murid berkongsi tahap yang sama, tidak perlu klik radio yang sama berpuluh kali.</p>
+            <p>Tanda kotak semak di sebelah murid untuk pilih sekumpulan (atau pilih semua), kemudian dari bar tindakan tekan <strong>Set TP&hellip;</strong> atau <strong>Set Usaha&hellip;</strong>. Seluruh kumpulan yang ditanda diisi sekali gus — contohnya sebahagian &ldquo;Tinggi&rdquo;, sebahagian &ldquo;Sederhana&rdquo;.</p>
+          </div>
+          <figure class="step-media">
+            <div class="shot" role="img" aria-label="Bar tindakan berkumpulan PBD Helper: beberapa murid ditanda dengan pilihan Set TP dan Set Usaha.">
+              <div class="shot-bar" aria-hidden="true">
+                <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
+                <span class="shot-url"><span class="lock">&#128274;</span>moeissppb.moe.gov.my</span>
+              </div>
+              <img src="img/02-set-berkumpulan.png" width="1280" height="800" loading="lazy" alt="Set berkumpulan: beberapa murid ditanda dengan bar Set TP dan Set Usaha.">
+            </div>
+          </figure>
+        </article>
+
+        <article class="step" id="step-3-4">
+          <div class="step-header">
+            <span class="step-num">4</span>
+            <div>
+              <p class="step-tag">Tulis ke SPPB</p>
+              <h3 class="step-title">Klik &ldquo;Isi &amp; Simpan&rdquo;</h3>
+            </div>
+          </div>
+          <div class="step-body">
+            <p>Setelah TP dan medan ditetapkan, klik <strong>Isi &amp; Simpan</strong>. Untuk setiap murid, extension akan:</p>
+            <ol>
+              <li>Isi TP, Usaha Murid, Ulasan Guru, Kemahiran, dan Intervensi</li>
+              <li>Simpan melalui butang <strong>&ldquo;Simpan&rdquo;</strong> SPPB yang sebenar</li>
+            </ol>
+            <p>Status setiap murid dipaparkan secara langsung dalam panel semasa proses berjalan.</p>
+          </div>
+          <figure class="step-media">
+            <div class="step-media-placeholder"><strong>Skrinsut akan ditambah</strong>Panel semasa &ldquo;Isi &amp; Simpan&rdquo; berjalan, status langsung bagi setiap murid</div>
+          </figure>
+          <div class="step-callout">
+            <div class="callout is-warn"><span class="callout-icon" aria-hidden="true">&#9888;</span>
+              <strong>&ldquo;Hantar&rdquo; tidak ditekan.</strong> PBD Helper hanya menekan &ldquo;Simpan&rdquo; dan tidak pernah menekan &ldquo;Hantar&rdquo; secara automatik. Simpanan separa dibenarkan, jadi kelas anda tidak akan dikunci.
+            </div>
+          </div>
+        </article>
+
+        <article class="step" id="step-3-5">
+          <div class="step-header">
+            <span class="step-num">5</span>
+            <div>
+              <p class="step-tag">Sahkan</p>
+              <h3 class="step-title">Extension membaca semula dan menanda tick</h3>
+            </div>
+          </div>
+          <div class="step-body">
+            <p>Mesej &ldquo;Berjaya&rdquo; sahaja tidak cukup. Selepas simpan, PBD Helper <strong>membaca semula</strong> data dari SPPB dan menanda <strong>&#10003; disahkan</strong> atau <strong>&#10007; perlu semak</strong> untuk setiap murid.</p>
+            <p>Semakan meliputi <strong>semua medan</strong> — bukan TP sahaja — termasuk Usaha, Ulasan, dan Intervensi, supaya anda tahu apa yang benar-benar tercatat di SPPB.</p>
+          </div>
+          <figure class="step-media">
+            <div class="shot" role="img" aria-label="Keputusan simpan PBD Helper: tanda hijau disahkan merentasi senarai murid.">
+              <div class="shot-bar" aria-hidden="true">
+                <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
+                <span class="shot-url"><span class="lock">&#128274;</span>moeissppb.moe.gov.my</span>
+              </div>
+              <img src="img/03-disahkan.png" width="1280" height="800" loading="lazy" alt="Keputusan simpan: tanda hijau disahkan bagi setiap murid dalam senarai.">
+            </div>
+          </figure>
+        </article>
+
+        <article class="step" id="step-3-6">
+          <div class="step-header">
+            <span class="step-num">6</span>
+            <div>
+              <p class="step-tag">Lindungi kerja sedia ada</p>
+              <h3 class="step-title">Guna &ldquo;Hanya isi yang kosong&rdquo;</h3>
+            </div>
+          </div>
+          <div class="step-body">
+            <p>Jika sesetengah murid sudah dinilai dan anda hanya mahu isi yang tinggal, hidupkan pilihan <strong>&ldquo;Hanya isi yang kosong&rdquo;</strong>.</p>
+            <p>Extension akan melangkau murid yang nilainya sudah sepadan dan hanya menulis medan yang berbeza. Isi berulang tidak akan menimpa nilai yang sudah betul atau suntingan manual anda.</p>
+          </div>
+          <figure class="step-media">
+            <div class="step-media-placeholder"><strong>Skrinsut akan ditambah</strong>Pilihan &ldquo;Hanya isi yang kosong&rdquo; dihidupkan dalam panel</div>
+          </figure>
+          <div class="step-callout">
+            <div class="callout is-ok"><span class="callout-icon" aria-hidden="true">&#10003;</span>
+              <strong>Bahagian 3 selesai.</strong> Untuk mengisi banyak kelas serentak, teruskan ke <a href="#excel-pukal">Bahagian 4, Excel Pukal</a>.
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- SECTION 4, Excel Pukal -->
+      <!-- ============================================================ -->
+      <section class="section" id="excel-pukal">
+        <div class="section-head">
+          <span class="section-tag">Bahagian 4</span>
+          <h2>Excel Pukal (semua kelas)</h2>
+          <p class="section-intro">Satu fail Excel meliputi semua kelas–mata pelajaran anda. Isi di luar talian, muat naik, sahkan, dan biar extension isi semuanya sekali gus.</p>
+        </div>
+
+        <article class="step" id="step-4-1">
+          <div class="step-header">
+            <span class="step-num">1</span>
+            <div>
+              <p class="step-tag">Muat turun template</p>
+              <h3 class="step-title">Klik &ldquo;Jana Excel&rdquo;</h3>
+            </div>
+          </div>
+          <div class="step-body">
+            <p>Dalam panel PBD Helper, klik <strong>Jana Excel</strong>. Extension akan memuat turun satu fail Excel dengan <strong>satu tab untuk setiap kelas–mata pelajaran</strong> anda.</p>
+            <p>Setiap tab sudah disenaraikan dengan nama murid kelas berkenaan, sedia untuk anda isi.</p>
+          </div>
+          <figure class="step-media">
+            <div class="step-media-placeholder"><strong>Skrinsut akan ditambah</strong>Fail Excel yang dijana dengan satu tab bagi setiap kelas–mata pelajaran</div>
+          </figure>
+        </article>
+
+        <article class="step" id="step-4-2">
+          <div class="step-header">
+            <span class="step-num">2</span>
+            <div>
+              <p class="step-tag">Isi di luar talian</p>
+              <h3 class="step-title">Isi TP, Usaha, Ulasan, dan Intervensi</h3>
+            </div>
+          </div>
+          <div class="step-body">
+            <p>Buka fail Excel dan isi setiap murid:</p>
+            <ul>
+              <li><strong>TP</strong> — taip <code>TP4</code> atau hanya <code>4</code>, kedua-duanya diterima. (Tiada lajur Markah — SPPB tidak menggunakan markah untuk PBD.)</li>
+              <li><strong>Usaha Murid</strong> — pilih dari dropdown</li>
+              <li><strong>Ulasan Guru</strong> — pilih dari dropdown; pilihan dikumpulkan mengikut kategori (contoh <code>[Cemerlang] &hellip;</code>)</li>
+              <li><strong>Intervensi</strong> — isi jika perlu</li>
+            </ul>
+            <p>Anda boleh isi di komputer sendiri atau muat naik fail ke Google Sheets untuk beberapa guru isi serentak, kemudian muat turun semula sebagai <code>.xlsx</code>.</p>
+          </div>
+          <figure class="step-media">
+            <div class="step-media-placeholder"><strong>Skrinsut akan ditambah</strong>Tab kelas dalam Excel dengan lajur TP, Usaha, Ulasan, dan Intervensi diisi</div>
+          </figure>
+          <div class="step-callout">
+            <div class="callout is-tip"><span class="callout-icon" aria-hidden="true">&#128161;</span>
+              <strong>Copy-paste laju.</strong> Jika ramai murid berkongsi TP atau ulasan yang sama, isi satu sel kemudian copy-paste ke seluruh lajur — jauh lebih cepat daripada taip satu-satu.
+            </div>
+          </div>
+        </article>
+
+        <article class="step" id="step-4-3">
+          <div class="step-header">
+            <span class="step-num">3</span>
+            <div>
+              <p class="step-tag">Kembali ke panel</p>
+              <h3 class="step-title">Muat naik fail Excel</h3>
+            </div>
+          </div>
+          <div class="step-body">
+            <p>Buka panel PBD Helper dan pergi ke aliran <strong>Excel Pukal</strong>. <strong>Seret</strong> fail Excel yang telah diisi ke zon lepas fail, atau klik untuk pilih fail.</p>
+            <p>Extension akan membaca setiap tab, mengesahkan format (TP <code>4</code> atau <code>TP4</code>, kategori ulasan), dan memaparkan ringkasan kelas serta murid yang dikesan.</p>
+          </div>
+          <figure class="step-media">
+            <div class="shot" role="img" aria-label="Aliran Excel pukal PBD Helper: zon lepas fail dengan butang Jana template dan Muat naik.">
+              <div class="shot-bar" aria-hidden="true">
+                <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
+                <span class="shot-url">PBD Helper &middot; Excel Pukal</span>
+              </div>
+              <img src="img/04-excel-pukal.png" width="1280" height="800" loading="lazy" alt="Excel pukal: zon lepas fail dengan Jana template dan aliran Muat naik untuk semua kelas.">
+            </div>
+          </figure>
+        </article>
+
+        <article class="step" id="step-4-4">
+          <div class="step-header">
+            <span class="step-num">4</span>
+            <div>
+              <p class="step-tag">Semak sebelum tulis</p>
+              <h3 class="step-title">Sahkan senarai di gate pengesahan</h3>
+            </div>
+          </div>
+          <div class="step-body">
+            <p>Sebelum menulis apa-apa ke SPPB, extension memaparkan <strong>gate pengesahan</strong> yang menyenaraikan berapa kelas dan berapa murid akan diisi — contoh <em>&ldquo;Sahkan: isi N kelas, M murid?&rdquo;</em>.</p>
+            <p>Ini peluang anda untuk semak jumlah dan pastikan fail yang betul dimuat naik sebelum meneruskan.</p>
+          </div>
+          <figure class="step-media">
+            <div class="shot" role="img" aria-label="Gate pengesahan PBD Helper: mengesahkan bilangan kelas dan murid sebelum mengisi.">
+              <div class="shot-bar" aria-hidden="true">
+                <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
+                <span class="shot-url">PBD Helper &middot; Sahkan</span>
+              </div>
+              <img src="img/05-sahkan-gate.png" width="1280" height="800" loading="lazy" alt="Gate pengesahan: sahkan bilangan kelas dan murid sebelum mengisi.">
+            </div>
+          </figure>
+        </article>
+
+        <article class="step" id="step-4-5">
+          <div class="step-header">
+            <span class="step-num">5</span>
+            <div>
+              <p class="step-tag">Isi semua kelas</p>
+              <h3 class="step-title">Klik &ldquo;Sahkan &amp; Isi&rdquo;</h3>
+            </div>
+          </div>
+          <div class="step-body">
+            <p>Klik <strong>Sahkan &amp; Isi</strong>. Extension akan pergi ke setiap kelas satu per satu, mengisi medan wajib, menyimpan melalui butang &ldquo;Simpan&rdquo; SPPB, dan membaca semula untuk mengesahkan.</p>
+            <p>Anda boleh klik <strong>Berhenti</strong> bila-bila masa untuk menghentikan proses — kelas yang sudah diisi kekal tersimpan.</p>
+          </div>
+          <figure class="step-media">
+            <div class="step-media-placeholder"><strong>Skrinsut akan ditambah</strong>Kemajuan pukal merentasi beberapa kelas dengan butang &ldquo;Berhenti&rdquo;</div>
+          </figure>
+          <div class="step-callout">
+            <div class="callout is-ok"><span class="callout-icon" aria-hidden="true">&#10003;</span>
+              <strong>Aliran lengkap.</strong> Sama ada satu kelas melalui panel atau semua kelas melalui Excel pukal, PBD Helper sentiasa mengesahkan hasil selepas simpan.
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- SECTION 5, Soalan Lazim & Sokongan -->
+      <!-- ============================================================ -->
+      <section class="section" id="faq">
+        <div class="section-head">
+          <span class="section-tag">Bahagian 5</span>
+          <h2>Soalan Lazim &amp; Sokongan</h2>
+          <p class="section-intro">Soalan yang paling kerap ditanya sebelum bermula, dan cara hubungi kami jika perlukan bantuan.</p>
+        </div>
+
+        <div class="step-body" style="padding-left:0">
+          <div class="faq-list">
+            <div class="faq-q">
+              <h3>Apa beza percuma dengan Pro?</h3>
+              <p class="faq-a">Percuma membolehkan anda mengisi <strong>1 kelas-subjek</strong> dengan aliran penuh (set TP, isi medan wajib, simpan dan sahkan). Pro (<strong>RM59</strong>, harga biasa RM79, <strong>sekali bayar</strong> — bukan langganan) membuka penggunaan <strong>tanpa had kelas-subjek</strong> serta Excel pukal untuk semua kelas sekali gus. Lesen Pro <strong>terikat pada satu peranti</strong>.</p>
+            </div>
+            <div class="faq-q">
+              <h3>Bagaimana saya beli dan aktifkan Pro?</h3>
+              <p class="faq-a">Beli Pro di <a href="/beli">pbd.davinhub.com/beli</a> melalui Billplz (FPX). Anda akan terima kunci lesen bermula dengan <strong>PBDH-</strong> beserta emel. Tampal kunci itu ke dalam panel PBD Helper dan klik <strong>Aktifkan</strong>.</p>
+            </div>
+            <div class="faq-q">
+              <h3>Adakah data murid saya selamat?</h3>
+              <p class="faq-a">Ya. <strong>Tiada nama atau nombor kad pengenalan murid dikeluarkan dari peranti anda.</strong> Extension hanya menulis melalui butang &ldquo;Simpan&rdquo; SPPB, dan semua data murid kekal dalam SPPB. Pelayan lesen hanya menerima cincangan (hash) SHA-256 tanpa nama serta id peranti. <a href="/privacy">Baca dasar privasi penuh</a>.</p>
+            </div>
+            <div class="faq-q">
+              <h3>Adakah kelas saya akan dikunci?</h3>
+              <p class="faq-a">Tidak. PBD Helper hanya menulis melalui butang &ldquo;Simpan&rdquo; SPPB dan tidak pernah menekan &ldquo;Hantar&rdquo; secara automatik. Kelas anda tidak akan dikunci, dan simpanan separa dibenarkan.</p>
+            </div>
+            <div class="faq-q">
+              <h3>Pelayar apa yang disokong?</h3>
+              <p class="faq-a">Chrome, Edge, Brave, dan Opera (semua pelayar berasaskan Chromium). PBD Helper ialah extension komputer, jadi ia tidak berfungsi pada telefon atau Safari.</p>
+            </div>
+          </div>
+
+          <div class="support-grid">
+            <a class="support-card" href="mailto:dabing0126@gmail.com">
+              <span class="support-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
+              <div>
+                <strong>Emel sokongan</strong>
+                <small>dabing0126@gmail.com</small>
+              </div>
+            </a>
+            <a class="support-card" href="/privacy">
+              <span class="support-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </span>
+              <div>
+                <strong>Dasar Privasi</strong>
+                <small>Bagaimana data anda dikendalikan</small>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- === Floating action buttons === -->
+  <button class="fab toc-fab" id="tocFab" aria-label="Buka daftar kandungan" type="button">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="14" y2="18"/></svg>
+  </button>
+  <button class="fab to-top" id="toTop" aria-label="Kembali ke atas" type="button">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <!-- === TOC bottom sheet (mobile) === -->
+  <div class="toc-sheet" id="tocSheet" aria-hidden="true" role="dialog" aria-label="Daftar Kandungan">
+    <div class="toc-sheet-backdrop" data-toc-close></div>
+    <div class="toc-sheet-panel" role="document">
+      <div class="toc-sheet-handle" aria-hidden="true"></div>
+      <div class="toc-sheet-header">
+        <h2>Daftar Kandungan</h2>
+        <button class="toc-sheet-close" data-toc-close aria-label="Tutup">&times;</button>
+      </div>
+      <nav class="toc-sheet-body" id="tocSheetBody"></nav>
+    </div>
+  </div>
+
+  <!-- === Footer (mirror landing) === -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo"><img src="icon128.png" alt="" aria-hidden="true">PBD <span>Helper</span></div>
+        <p>Isi skor PBD di SPPB dengan pantas. Dibina oleh Cikgu Davin di Sarawak, untuk guru-guru di seluruh Malaysia.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h3>Produk</h3>
+          <a href="/">Laman utama</a>
+          <a href="/#harga">Harga</a>
+          <a href="/beli">Beli Pro</a>
+        </div>
+        <div class="footer-col">
+          <h3>Lain-lain</h3>
+          <a href="/privacy">Privasi</a>
+          <a href="https://davinhub.com" target="_blank" rel="noopener">davinhub.com</a>
+          <a href="mailto:dabing0126@gmail.com">Emel</a>
+        </div>
+      </div>
+    </div>
+    <p class="footer-disclaimer">
+      PBD Helper ialah alat bantuan pihak ketiga yang dibina secara bebas. Ia TIDAK berafiliasi, ditaja, atau disahkan oleh Kementerian Pendidikan Malaysia (KPM/MOE) atau sistem SPPB. PBD Helper hanya menulis melalui butang "Simpan" SPPB yang sebenar dan tidak pernah menekan "Hantar" secara automatik. Semua data murid kekal dalam SPPB.
+    </p>
+    <div class="footer-bottom">
+      <p>&copy; 2026 <a href="https://davinhub.com" target="_blank" rel="noopener" style="color:inherit">Cikgu Davin</a>. PBD Helper.</p>
+      <a href="/privacy">Dasar Privasi</a>
+    </div>
+  </footer>
+
+  <script>
+    // Clone sidebar TOC into the bottom sheet ONCE, before scroll-spy runs.
+    (function () {
+      var body = document.getElementById('tocSheetBody');
+      var src = document.querySelector('.toc-list ol.toc-sections');
+      if (body && src) body.appendChild(src.cloneNode(true));
+    })();
+
+    // Scroll-spy: highlight TOC item closest to viewport top.
+    (function () {
+      var spyTargets = document.querySelectorAll('.section, .step');
+      var tocLinks = document.querySelectorAll('.toc a[href^="#"], .toc-sheet-body a[href^="#"]');
+      if (!spyTargets.length || !tocLinks.length) return;
+      var clickSuppress = false;
+
+      function setActive(id) {
+        for (var j = 0; j < tocLinks.length; j++) {
+          tocLinks[j].classList.toggle('is-active', id && tocLinks[j].getAttribute('href') === '#' + id);
+        }
+      }
+      function hasLink(id) {
+        if (!id) return false;
+        for (var j = 0; j < tocLinks.length; j++) {
+          if (tocLinks[j].getAttribute('href') === '#' + id) return true;
+        }
+        return false;
+      }
+      function updateActive() {
+        if (clickSuppress) return;
+        var threshold = 120;
+        var activeEl = null;
+        for (var i = 0; i < spyTargets.length; i++) {
+          if (spyTargets[i].getBoundingClientRect().top - threshold <= 0) activeEl = spyTargets[i];
+        }
+        if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) {
+          activeEl = spyTargets[spyTargets.length - 1];
+        }
+        var activeId = activeEl ? activeEl.id : null;
+        if (activeEl && !hasLink(activeId)) {
+          var sec = activeEl.closest('.section');
+          if (sec && hasLink(sec.id)) {
+            activeId = sec.id;
+          } else {
+            for (var m = 0; m < spyTargets.length; m++) {
+              if (hasLink(spyTargets[m].id) && spyTargets[m].getBoundingClientRect().top - threshold <= 0) {
+                activeId = spyTargets[m].id;
+              }
+            }
+          }
+        }
+        setActive(activeId);
+      }
+      for (var k = 0; k < tocLinks.length; k++) {
+        tocLinks[k].addEventListener('click', function () {
+          setActive(this.getAttribute('href').slice(1));
+          clickSuppress = true;
+          setTimeout(function () { clickSuppress = false; }, 800);
+        });
+      }
+      var ticking = false;
+      window.addEventListener('scroll', function () {
+        if (!ticking) { requestAnimationFrame(function () { updateActive(); ticking = false; }); ticking = true; }
+      }, { passive: true });
+      window.addEventListener('load', updateActive);
+      updateActive();
+    })();
+
+    // Back-to-top + TOC FAB + bottom sheet.
+    (function () {
+      var toTop = document.getElementById('toTop');
+      var tocFab = document.getElementById('tocFab');
+      var sheet = document.getElementById('tocSheet');
+      function onScroll() {
+        var show = window.scrollY > 600;
+        if (toTop) toTop.classList.toggle('is-visible', show);
+        if (tocFab) tocFab.classList.toggle('is-visible', show);
+      }
+      if (toTop) toTop.addEventListener('click', function () {
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+      });
+      function setSheetOpen(open) {
+        if (!sheet) return;
+        sheet.classList.toggle('is-open', open);
+        sheet.setAttribute('aria-hidden', open ? 'false' : 'true');
+        document.body.style.overflow = open ? 'hidden' : '';
+      }
+      if (tocFab) tocFab.addEventListener('click', function () { setSheetOpen(true); });
+      if (sheet) {
+        sheet.addEventListener('click', function (e) {
+          if (e.target.hasAttribute('data-toc-close')) { setSheetOpen(false); return; }
+          if (e.target.closest('a[href^="#"]')) setTimeout(function () { setSheetOpen(false); }, 100);
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && sheet.classList.contains('is-open')) setSheetOpen(false);
+        });
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
+
+</body>
+</html>
