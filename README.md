@@ -19,7 +19,7 @@ Static HTML, no build step. Mirrors `smis-helper-site`.
 
 After step 1, every push to `main` auto-deploys in ~1 minute.
 
-## CWS dependency
-The Chrome Web Store listing's **Privacy Policy URL** is `https://pbd.davinhub.com/privacy`
-— it must be reachable before submitting. Update `index.html`'s `#cwsBtn` href to the
-real Web Store link once the extension is approved.
+## CWS
+Live listing: `https://chromewebstore.google.com/detail/pbd-helper/hpjmhpolokbbhnjbnkddbjnomahanpoc`
+(approved 2026-07-01). Privacy Policy URL is `https://pbd.davinhub.com/privacy`. The install
+CTAs in `index.html` + `panduan.html` point at the live listing (`target="_blank"`).
