@@ -134,6 +134,16 @@
     .footer-bottom a { color: var(--muted); text-decoration: none; }
     .footer-bottom a:hover { color: var(--teal); }
 
+    .promo-row { display: flex; gap: 8px; }
+    .promo-row input { flex: 1; text-transform: uppercase; }
+    .btn-promo { flex: none; padding: 0 16px; font: inherit; font-weight: 600; font-size: 0.9rem; color: #0b5e4d; background: #e7f1ee; border: 1px solid #0e7c66; border-radius: 10px; cursor: pointer; transition: background .15s; }
+    .btn-promo:hover { background: #dcebe6; }
+    .btn-promo:disabled { opacity: .55; cursor: default; }
+    .promo-msg { margin: 8px 0 0; font-size: 0.82rem; line-height: 1.4; }
+    .promo-msg:empty { margin: 0; }
+    .promo-msg.ok { color: #0b5e4d; font-weight: 600; }
+    .promo-msg.bad { color: #b94a4f; }
+
     @media (max-width: 520px) {
       .buy-card, .buy-panel { padding: 28px 22px; }
       .buy-card .price { font-size: 2.1rem; }
@@ -221,6 +231,14 @@
               <label for="name">Nama <span class="opt">(pilihan)</span></label>
               <input type="text" id="name" name="name" placeholder="Nama guru" autocomplete="name">
             </div>
+            <div class="field">
+              <label for="promo">Kod promosi <span class="opt">(jika ada)</span></label>
+              <div class="promo-row">
+                <input type="text" id="promo" name="promo" placeholder="cth: GURU20" autocomplete="off" spellcheck="false">
+                <button type="button" id="promoBtn" class="btn-promo">Guna</button>
+              </div>
+              <p id="promoMsg" class="promo-msg" role="status" aria-live="polite"></p>
+            </div>
 
             <button class="btn-pay" id="payBtn" type="submit">Bayar RM59 dengan Billplz</button>
             <p id="err" role="alert" aria-live="polite"></p>
@@ -271,29 +289,76 @@
 
   <script>
     const API = 'https://davinhub-api.davin-making.workers.dev';
+    const SLUG = 'pbd-helper';
+    const BASE_CENTS = 5900; // static RM59 (matches resources.price)
     const form = document.getElementById('buyForm');
     const btn = document.getElementById('payBtn');
     const err = document.getElementById('err');
+    const promoInput = document.getElementById('promo');
+    const promoBtn = document.getElementById('promoBtn');
+    const promoMsg = document.getElementById('promoMsg');
+    const priceEl = document.querySelector('.buy-card .price');
+    let payLabel = 'Bayar RM59 dengan Billplz';
+
+    function setPay(cents) {
+      const rm = Math.round(cents / 100);
+      payLabel = `Bayar RM${rm} dengan Billplz`;
+      btn.textContent = payLabel;
+      if (priceEl) priceEl.textContent = `RM${rm}`;
+    }
+    // Editing the code un-applies the discount until re-checked (display + charge stay honest).
+    promoInput.addEventListener('input', () => { setPay(BASE_CENTS); promoMsg.textContent = ''; promoMsg.className = 'promo-msg'; });
+
+    promoBtn.addEventListener('click', async () => {
+      const code = promoInput.value.trim().toUpperCase();
+      promoMsg.className = 'promo-msg'; promoMsg.textContent = '';
+      if (!code) { promoInput.focus(); return; }
+      promoBtn.disabled = true; promoBtn.textContent = '…';
+      try {
+        const r = await fetch(`${API}/api/license-purchase/promo?code=${encodeURIComponent(code)}&slug=${SLUG}`);
+        const j = await r.json();
+        if (j.ok && j.data) {
+          setPay(j.data.finalCents);
+          promoMsg.className = 'promo-msg ok';
+          promoMsg.textContent = `✓ ${j.data.code} digunakan — jimat RM${Math.round(j.data.discountCents / 100)}. Jumlah: RM${Math.round(j.data.finalCents / 100)}.`;
+        } else {
+          setPay(BASE_CENTS);
+          promoMsg.className = 'promo-msg bad';
+          promoMsg.textContent = (j && j.error) || 'Kod promosi tidak sah.';
+        }
+      } catch (ex) {
+        promoMsg.className = 'promo-msg bad';
+        promoMsg.textContent = 'Tidak dapat menyemak kod. Cuba lagi.';
+      } finally {
+        promoBtn.disabled = false; promoBtn.textContent = 'Guna';
+      }
+    });
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       err.textContent = '';
       btn.disabled = true; btn.textContent = 'Memproses…';
       try {
+        const body = {
+          slug: SLUG,
+          email: document.getElementById('email').value.trim(),
+          name: document.getElementById('name').value.trim(),
+        };
+        const code = promoInput.value.trim().toUpperCase();
+        if (code) body.promo = code;
         const r = await fetch(API + '/api/license-purchase', {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({
-            slug: 'pbd-helper',
-            email: document.getElementById('email').value.trim(),
-            name: document.getElementById('name').value.trim(),
-          }),
+          body: JSON.stringify(body),
         });
         const j = await r.json();
         if (j.ok && j.data && j.data.payUrl) { window.location.href = j.data.payUrl; return; }
         throw new Error((j && j.error) || 'Ralat');
       } catch (ex) {
-        err.textContent = 'Tidak dapat memulakan pembayaran. Cuba lagi atau emel hi@davinhub.com.';
-        btn.disabled = false; btn.textContent = 'Bayar RM59 dengan Billplz';
+        err.textContent = (ex && ex.message && ex.message !== 'Ralat')
+          ? ex.message
+          : 'Tidak dapat memulakan pembayaran. Cuba lagi atau emel hi@davinhub.com.';
+        btn.disabled = false; btn.textContent = payLabel;
       }
     });
   </script>
