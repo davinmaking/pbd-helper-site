@@ -86,7 +86,7 @@
 
   <main class="page-main">
   <h1>Dasar Privasi / Privacy Policy</h1>
-  <p class="updated">Kemaskini terakhir: 1 Julai 2026</p>
+  <p class="updated">Kemaskini terakhir: 5 Julai 2026</p>
 
   <p class="lede"><strong>Ringkasnya:</strong> PBD Helper <strong>tidak mengumpul data murid</strong>. Nama,
   No. KP dan Tahap Penguasaan murid hanya dibaca dari dan ditulis semula ke SPPB
@@ -118,8 +118,8 @@
   <p>Tiada data murid disimpan dalam storan tempatan.</p>
 
   <h2>4. Data Yang Dihantar ke Pelayan Kami</h2>
-  <p>Extension menghubungi pelayan kami (<code>davinhub-api.davin-making.workers.dev</code>) untuk dua
-  perkara. Kedua-duanya <strong>tidak melibatkan data murid</strong>:</p>
+  <p>Extension menghubungi pelayan kami (<code>davinhub-api.davin-making.workers.dev</code>) untuk tiga
+  perkara. Ketiga-tiganya <strong>tidak melibatkan data murid</strong>:</p>
   <ul>
     <li><strong>Lapor Masalah (pilihan):</strong> Apabila anda memilih untuk menghantar laporan,
     Extension menghantar nota yang anda taip, satu kontak pilihan (emel/Telegram) yang anda boleh
@@ -136,6 +136,13 @@
     anda sendiri, ID kelas (cmid), satu ID peranti rawak, dan kunci lesen jika ada. Tiada nama atau
     No. KP murid. Pelan percuma dibenarkan untuk 1 kelas&ndash;mata pelajaran; pelan Pro (tanpa had)
     memerlukan kunci lesen yang sah.</li>
+    <li><strong>Semakan status lesen (baca sahaja):</strong> Apabila anda membuka panel atau bertukar
+    tab SPPB, Extension menyemak pelayan lesen kami untuk memaparkan lencana pelan anda (PERCUMA
+    atau PRO) dalam panel. Ia menghantar hash SHA-256 <strong>tanpa nama</strong> yang sama bagi ID
+    pengguna SPPB anda, penanda produk, dan kunci lesen jika ada &mdash; tiada nama atau No. KP
+    murid. Semakan ini baca sahaja: ia tidak mendaftarkan kunci dan tidak menuntut kuota percuma.
+    Hasilnya disimpan sementara (lebih kurang 10 minit) pada peranti anda supaya pertukaran tab
+    tidak menghantar permintaan berulang.</li>
   </ul>
 
   <h2>5. Data Yang TIDAK Dikumpul</h2>
@@ -160,7 +167,8 @@
     <li><strong>host (moeissppb.moe.gov.my):</strong> Untuk membaca senarai kelas anda sendiri dan
     menyimpan skor, dalam aplikasi SPPB yang anda sudah log masuk.</li>
     <li><strong>host (davinhub-api.davin-making.workers.dev):</strong> Untuk pengesahan lesen (setiap
-    kali mengisi) dan ciri pilihan "Lapor Masalah" sahaja. Lihat Seksyen 4.</li>
+    kali mengisi), semakan status lesen (baca sahaja), dan ciri pilihan "Lapor Masalah" sahaja.
+    Lihat Seksyen 4.</li>
   </ul>
 
   <h2>7. Keselamatan</h2>

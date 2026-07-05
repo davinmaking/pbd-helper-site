@@ -8,6 +8,19 @@
   <title>Beli PBD Helper Pro — RM59 sekali bayar</title>
   <meta name="description" content="Dapatkan PBD Helper Pro — isi PBD untuk semua kelas tanpa had. RM59 sekali bayar, bukan langganan.">
   <link rel="canonical" href="https://pbd.davinhub.com/beli">
+  <meta property="og:title" content="Beli PBD Helper Pro — RM59 sekali bayar">
+  <meta property="og:description" content="Dapatkan PBD Helper Pro — isi PBD untuk semua kelas tanpa had. RM59 sekali bayar, bukan langganan.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pbd.davinhub.com/beli">
+  <meta property="og:locale" content="ms_MY">
+  <meta property="og:site_name" content="PBD Helper">
+  <meta property="og:image" content="https://pbd.davinhub.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Beli PBD Helper Pro — RM59 sekali bayar">
+  <meta name="twitter:description" content="Dapatkan PBD Helper Pro — isi PBD untuk semua kelas tanpa had. RM59 sekali bayar, bukan langganan.">
+  <meta name="twitter:image" content="https://pbd.davinhub.com/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -188,9 +201,9 @@
           <h2>Semua kelas, satu bayaran</h2>
           <p class="panel-sub">Mula percuma dengan 1 kelas-subjek. Naik taraf ke Pro untuk buka semuanya.</p>
           <ul class="panel-list">
+            <li><svg><use href="#icon-check"/></svg> Semua ciri Percuma &mdash; ulasan fleksibel &amp; lindungi kerja sedia ada</li>
             <li><svg><use href="#icon-check"/></svg> Tanpa had kelas-subjek</li>
             <li><svg><use href="#icon-check"/></svg> Excel pukal (semua kelas sekali gus)</li>
-            <li><svg><use href="#icon-check"/></svg> Ulasan fleksibel &amp; lindungi kerja sedia ada</li>
             <li><svg><use href="#icon-check"/></svg> RM59 sekali bayar (bukan langganan)</li>
             <li><svg><use href="#icon-check"/></svg> Terikat pada akaun MOEIS, boleh tukar peranti</li>
           </ul>
@@ -234,7 +247,7 @@
             <div class="field">
               <label for="promo">Kod promosi <span class="opt">(jika ada)</span></label>
               <div class="promo-row">
-                <input type="text" id="promo" name="promo" placeholder="cth: GURU20" autocomplete="off" spellcheck="false">
+                <input type="text" id="promo" name="promo" placeholder="Kod diskaun (jika ada)" autocomplete="off" spellcheck="false">
                 <button type="button" id="promoBtn" class="btn-promo">Guna</button>
               </div>
               <p id="promoMsg" class="promo-msg" role="status" aria-live="polite"></p>
@@ -353,9 +366,13 @@
         });
         const j = await r.json();
         if (j.ok && j.data && j.data.payUrl) { window.location.href = j.data.payUrl; return; }
-        throw new Error((j && j.error) || 'Ralat');
+        // Whitelist: only messages the server supplied (BM strings) are shown
+        // verbatim — a network TypeError ('Failed to fetch') must not surface.
+        const serverError = new Error((j && j.error) || 'Ralat');
+        serverError.fromServer = !!(j && j.error);
+        throw serverError;
       } catch (ex) {
-        err.textContent = (ex && ex.message && ex.message !== 'Ralat')
+        err.textContent = (ex && ex.fromServer && ex.message)
           ? ex.message
           : 'Tidak dapat memulakan pembayaran. Cuba lagi atau emel hi@davinhub.com.';
         btn.disabled = false; btn.textContent = payLabel;

@@ -93,12 +93,14 @@
   <!-- aria-live: SR users must hear the key appear without manual exploration -->
   <main><div class="card" aria-live="polite">
 
-    <!-- Waiting / fallback state -->
+    <!-- Waiting state -->
     <div id="waiting">
       <div class="spinner"></div>
       <h2>Mengesahkan pembayaran&hellip;</h2>
-      <p id="msg">Sila tunggu sebentar.</p>
     </div>
+    <!-- Fallback / failure message — OUTSIDE #waiting so it stays visible
+         when the spinner block is hidden -->
+    <p id="msg">Sila tunggu sebentar.</p>
 
     <!-- Done state (revealed by script) -->
     <div id="done" hidden>
@@ -148,21 +150,33 @@
     const ref = params.get('ref');
     const elKey = document.getElementById('key');
     const elMsg = document.getElementById('msg');
+    // Static strings only — never interpolate query params into this.
+    function showFallback(html) {
+      document.getElementById('waiting').hidden = true;
+      elMsg.innerHTML = html;
+    }
     let tries = 0;
     async function poll() {
-      if (!ref) { document.getElementById('waiting').hidden = true; elMsg.textContent = 'Pesanan tidak dijumpai.'; return; }
+      // Billplz appends billplz[paid]=false when the payment failed or was
+      // cancelled (single redirect_url for the bill) — no charge was made.
+      if (params.get('billplz[paid]') === 'false') {
+        showFallback('Pembayaran tidak berjaya atau dibatalkan &mdash; tiada caj dibuat. <a href="/beli">Cuba semula di halaman belian</a>, atau hubungi <a href="mailto:hi@davinhub.com">hi@davinhub.com</a> jika anda rasa ini satu kesilapan.');
+        return;
+      }
+      if (!ref) { showFallback('Pesanan tidak dijumpai. Jika anda telah membuat pembayaran, hubungi <a href="mailto:hi@davinhub.com">hi@davinhub.com</a>.'); return; }
       try {
         const r = await fetch(API + '/api/license-purchase/status?ref=' + encodeURIComponent(ref));
         const j = await r.json();
         if (j.ok && j.data && j.data.status === 'fulfilled' && j.data.key) {
           elKey.textContent = j.data.key;
+          elMsg.hidden = true;
           document.getElementById('done').hidden = false;
           document.getElementById('waiting').hidden = true;
           return;
         }
       } catch (_) {}
       if (++tries < 40) setTimeout(poll, 2000);              // ~80s
-      else { document.getElementById('waiting').hidden = true; elMsg.textContent = 'Kunci dihantar ke emel anda. Semak emel atau hubungi hi@davinhub.com.'; }
+      else { showFallback('Pengesahan mengambil masa lebih lama daripada biasa. Jika pembayaran anda berjaya, kunci akan dihantar ke emel anda &mdash; semak emel (termasuk folder Spam) atau hubungi <a href="mailto:hi@davinhub.com">hi@davinhub.com</a>.'); }
     }
     poll();
 
