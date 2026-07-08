@@ -20,6 +20,8 @@
       --n-700: #4a453d; --n-900: #2b2822;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    .skip-link{position:absolute;left:-9999px;top:0;z-index:100;background:var(--white);color:var(--teal-deep);padding:10px 16px;border-bottom-right-radius:8px;font-weight:700;text-decoration:none}
+    .skip-link:focus{left:0}
     *:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; border-radius: 4px; }
     body { font-family: "Hanken Grotesk", system-ui, sans-serif; color: var(--ink); background: var(--paper); min-height: 100vh; display: flex; flex-direction: column; font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
     img { max-width: 100%; display: block; }
@@ -52,7 +54,7 @@
     #done { text-align: center; }
     .done-check { width: 60px; height: 60px; margin: 0 auto 18px; border-radius: 50%; background: var(--teal-tint); color: var(--teal-deep); display: flex; align-items: center; justify-content: center; }
     .done-check svg { width: 30px; height: 30px; }
-    #done h2 { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; color: var(--n-900); margin-bottom: 6px; }
+    #done h1 { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; color: var(--n-900); margin-bottom: 6px; }
     #done .sub { font-size: 0.92rem; color: var(--muted); margin-bottom: 24px; }
 
     .key-box { background: var(--teal-tint); border: 1px solid #cfe3dc; border-radius: 14px; padding: 20px 16px 16px; margin-bottom: 22px; }
@@ -82,16 +84,17 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Langkau ke kandungan</a>
   <!-- Nav -->
   <nav aria-label="Navigasi utama">
     <div class="nav-inner">
-      <a href="/" class="nav-logo"><img src="icon128.png" alt="" aria-hidden="true">PBD <span>Helper</span></a>
+      <a href="/" class="nav-logo"><img src="icon128.png" width="28" height="28" alt="" aria-hidden="true">PBD <span>Helper</span></a>
       <a class="nav-back" href="/">&larr; Laman utama</a>
     </div>
   </nav>
 
   <!-- aria-live: SR users must hear the key appear without manual exploration -->
-  <main><div class="card" aria-live="polite">
+  <main id="main"><div class="card" aria-live="polite">
 
     <!-- Waiting state -->
     <div id="waiting">
@@ -107,7 +110,7 @@
       <div class="done-check" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
       </div>
-      <h2>Pembayaran Berjaya!</h2>
+      <h1>Pembayaran Berjaya!</h1>
       <p class="sub">Terima kasih kerana membeli PBD Helper Pro.</p>
       <div class="key-box">
         <div class="key-label">Kunci Lesen Anda</div>

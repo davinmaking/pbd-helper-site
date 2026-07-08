@@ -13,6 +13,14 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://pbd.davinhub.com/privacy">
   <meta property="og:locale" content="ms_MY">
+  <meta property="og:site_name" content="PBD Helper">
+  <meta property="og:image" content="https://pbd.davinhub.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dasar Privasi — PBD Helper">
+  <meta name="twitter:description" content="Dasar privasi PBD Helper Chrome Extension. Tiada data murid dikumpul, tiada penjejak, tiada analitik. Data murid kekal dalam SPPB.">
+  <meta name="twitter:image" content="https://pbd.davinhub.com/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -27,6 +35,8 @@
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     *:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; border-radius: 4px; }
+    .skip-link{position:absolute;left:-9999px;top:0;z-index:100;background:var(--white);color:var(--teal-deep);padding:10px 16px;border-bottom-right-radius:8px;font-weight:700;text-decoration:none}
+    .skip-link:focus{left:0}
     body { font-family: "Hanken Grotesk", system-ui, sans-serif; color: var(--ink); background: var(--paper); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
     img { max-width: 100%; display: block; }
 
@@ -76,23 +86,24 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Langkau ke kandungan</a>
   <!-- Nav -->
   <nav aria-label="Navigasi utama">
     <div class="nav-inner">
-      <a href="/" class="nav-logo"><img src="icon128.png" alt="" aria-hidden="true">PBD <span>Helper</span></a>
+      <a href="/" class="nav-logo"><img src="icon128.png" alt="" aria-hidden="true" width="28" height="28">PBD <span>Helper</span></a>
       <a href="/" class="nav-back">&larr; Laman utama</a>
     </div>
   </nav>
 
-  <main class="page-main">
+  <main class="page-main" id="main">
   <h1>Dasar Privasi / Privacy Policy</h1>
-  <p class="updated">Kemaskini terakhir: 5 Julai 2026</p>
+  <p class="updated">Kemaskini terakhir: 8 Julai 2026</p>
 
   <p class="lede"><strong>Ringkasnya:</strong> PBD Helper <strong>tidak mengumpul data murid</strong>. Nama,
   No. KP dan Tahap Penguasaan murid hanya dibaca dari dan ditulis semula ke SPPB
   (moeissppb.moe.gov.my), iaitu sistem yang anda sudah log masuk. Data murid tidak pernah dihantar ke
   pelayan kami. Tiada analitik, tiada penjualan data. (Satu pengesahan lesen tanpa nama dihantar
-  setiap kali anda mengisi — lihat Seksyen 4.)</p>
+  semasa anda mengisi keputusan PBD; lihat Seksyen 4.)</p>
 
   <h2>1. Pengenalan</h2>
   <p>PBD Helper ("Extension") ialah Chrome Extension yang membantu guru mengisi skor PBD
@@ -113,7 +124,7 @@
   anda sahaja):</p>
   <ul>
     <li><strong>Status lesen:</strong> Kunci lesen (jika dimasukkan) dan satu ID peranti yang dijana
-    secara rawak. Ini digunakan untuk pengesahan lesen setiap kali anda mengisi (lihat Seksyen 4).</li>
+    secara rawak. Ini digunakan untuk pengesahan lesen semasa anda mengisi keputusan PBD (lihat Seksyen 4).</li>
   </ul>
   <p>Tiada data murid disimpan dalam storan tempatan.</p>
 
@@ -130,12 +141,14 @@
     melalui Telegram (kandungan sama), semata-mata untuk membantu kami membaiki masalah. Laporan
     yang dihantar disimpan selama yang perlu untuk menyelesaikan isu, dan boleh dipadam atas
     permintaan. Tiada apa-apa dihantar melainkan anda memilih untuk menghantarnya.</li>
-    <li><strong>Pengesahan lesen (setiap kali mengisi):</strong> Untuk menyokong pelan Pro, setiap
-    kali anda klik "Isi &amp; Simpan", Extension bertanya pelayan lesen kami sama ada kelas itu
-    dibenarkan. Ia menghantar satu hash SHA-256 <strong>tanpa nama</strong> bagi ID pengguna SPPB
-    anda sendiri, ID kelas (cmid), satu ID peranti rawak, dan kunci lesen jika ada. Tiada nama atau
-    No. KP murid. Pelan percuma dibenarkan untuk 1 kelas&ndash;mata pelajaran; pelan Pro (tanpa had)
-    memerlukan kunci lesen yang sah.</li>
+    <li><strong>Pengesahan lesen (semasa mengisi keputusan PBD):</strong> Untuk menyokong pelan Pro,
+    setiap kali anda klik "Isi &amp; Simpan" bagi keputusan PBD (Tahap Penguasaan sesuatu
+    kelas&ndash;mata pelajaran), Extension bertanya pelayan lesen kami sama ada kelas itu dibenarkan.
+    Ia menghantar satu hash SHA-256 <strong>tanpa nama</strong> bagi ID pengguna SPPB anda sendiri,
+    ID kelas (cmid), satu ID peranti rawak, dan kunci lesen jika ada. Tiada nama atau No. KP murid.
+    Pengisian Ulasan Guru Kelas (percuma) tidak membuat sebarang panggilan pengesahan lesen. Pelan
+    percuma dibenarkan untuk 1 kelas&ndash;mata pelajaran; pelan Pro (tanpa had) memerlukan kunci
+    lesen yang sah.</li>
     <li><strong>Semakan status lesen (baca sahaja):</strong> Apabila anda membuka panel atau bertukar
     tab SPPB, Extension menyemak pelayan lesen kami untuk memaparkan lencana pelan anda (PERCUMA
     atau PRO) dalam panel. Ia menghantar hash SHA-256 <strong>tanpa nama</strong> yang sama bagi ID
@@ -158,12 +171,11 @@
     <li><strong>sidePanel:</strong> Memaparkan antara muka Extension sebagai panel sisi di sebelah
     halaman SPPB. Tiada data diakses oleh kebenaran ini.</li>
     <li><strong>scripting:</strong> Untuk menyuntik enjin Extension ke dalam halaman
-    moeissppb.moe.gov.my bagi membaca senarai kelas dan menulis skor. Skrip hanya berjalan pada
-    moeissppb.moe.gov.my.</li>
+    moeissppb.moe.gov.my bagi membaca halaman SPPB yang anda buka, termasuk mengenal pasti
+    kelas&ndash;mata pelajaran yang sedang dibuka, membaca senarai kelas, dan menulis skor. Skrip
+    hanya berjalan pada moeissppb.moe.gov.my.</li>
     <li><strong>storage:</strong> Untuk menyimpan status lesen (kunci + ID peranti) pada peranti
     anda. Tiada data murid disimpan.</li>
-    <li><strong>tabs:</strong> Untuk mencari tab SPPB yang terbuka, membaca URL-nya bagi mengenal
-    pasti kelas–mata pelajaran yang sedang dibuka, dan menavigasi tab itu semasa isian Excel pukal.</li>
     <li><strong>host (moeissppb.moe.gov.my):</strong> Untuk membaca senarai kelas anda sendiri dan
     menyimpan skor, dalam aplikasi SPPB yang anda sudah log masuk.</li>
     <li><strong>host (davinhub-api.davin-making.workers.dev):</strong> Untuk pengesahan lesen (setiap
@@ -195,7 +207,7 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
-          <div class="logo"><img src="icon128.png" alt="" aria-hidden="true">PBD <span>Helper</span></div>
+          <div class="logo"><img src="icon128.png" alt="" aria-hidden="true" width="26" height="26">PBD <span>Helper</span></div>
           <p>Isi skor PBD di SPPB dengan pantas. Dibina oleh Cikgu Davin di Sarawak, untuk guru-guru di seluruh Malaysia.</p>
         </div>
         <div class="footer-links">
@@ -204,6 +216,7 @@
             <a href="/panduan">Panduan</a>
             <a href="/#harga">Harga</a>
             <a href="/beli">Beli Pro</a>
+            <a href="/banding">Banding pilihan</a>
           </div>
           <div class="footer-col">
             <h3>Lain-lain</h3>

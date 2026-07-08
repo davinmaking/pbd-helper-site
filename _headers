@@ -6,3 +6,8 @@
 # or replaced screenshots would never refresh for returning visitors.
 /img/*
   Cache-Control: public, max-age=604800
+
+# Root PNGs (logo, favicon, og-image) are not covered by /img/* — cache them
+# too, but public (NOT immutable) since filenames aren't content-hashed.
+/*.png
+  Cache-Control: public, max-age=604800

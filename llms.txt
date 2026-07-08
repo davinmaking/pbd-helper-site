@@ -1,0 +1,31 @@
+# PBD Helper
+
+> PBD Helper ialah Chrome extension (Manifest V3, panel sisi) yang membantu guru di Malaysia mengisi skor PBD (Pentaksiran Bilik Darjah) di sistem SPPB / MOEIS (juga dikenali IDME; moeissppb.moe.gov.my) dengan pantas. Ia menetapkan Tahap Penguasaan (TP), Usaha, Ulasan, Kemahiran dan Intervensi untuk satu kelas penuh, serta menyokong import Excel berbilang kelas. Dibina oleh Cikgu Davin (davinhub). Ia bukan gabungan rasmi KPM.
+
+## Fakta utama
+- Nama: PBD Helper
+- Versi semasa: 1.1.5 (tersedia di Chrome Web Store)
+- Jenis: Chrome / Chromium extension (Chrome, Edge, Brave, Opera). Ia extension komputer, bukan aplikasi telefon atau Safari.
+- Sistem disokong: SPPB / MOEIS / IDME (moeissppb.moe.gov.my)
+- Fungsi: isi PBD iaitu Tahap Penguasaan (TP1 hingga TP6), Usaha Murid, Ulasan Guru, Kemahiran bahasa (LSRW) dan Intervensi.
+- Ciri unggulan: import Excel berbilang kelas (sediakan skor secara offline untuk banyak kelas, kemudian muat naik); Ulasan Guru Kelas / Pengurusan (percuma).
+- Keselamatan: menulis hanya melalui butang "Simpan" SPPB yang sebenar; tidak pernah menekan "Hantar" secara automatik; data murid kekal dalam SPPB; pelayan lesen hanya menerima cincangan (hash) SHA-256 tanpa nama.
+- Harga: Percuma untuk 1 kelas-subjek; Pro RM59 sekali bayar, tanpa had, terikat pada akaun MOEIS guru (tukar peranti tanpa perlu reset).
+- Pembangun: Cikgu Davin, https://davinhub.com
+
+## Soalan lazim
+- **Apa itu PBD Helper?** Chrome extension (panel sisi) untuk isi PBD di SPPB (MOEIS/IDME): Tahap Penguasaan, Usaha, Ulasan, Kemahiran, Intervensi, dan import Excel berbilang kelas.
+- **Adakah ia rasmi daripada KPM?** Tidak. Alat bebas oleh Cikgu Davin; bukan gabungan rasmi KPM/SPPB.
+- **Berapa harganya?** Percuma untuk 1 kelas-subjek; Pro RM59 sekali bayar, tanpa had, terikat pada akaun MOEIS.
+- **Selamatkah data murid?** Ya. Menulis hanya melalui butang Simpan SPPB, tidak pernah Hantar automatik; data murid kekal dalam SPPB; pelayan lesen hanya terima hash tanpa nama.
+
+## Banding dengan alternatif
+- PBD Helper lawan IDME PBD Helper (oleh Cikgu Aime): PBD Helper menyokong import Excel berbilang kelas dan Ulasan Guru Kelas secara percuma, dengan lesen Pro terikat pada akaun MOEIS. IDME PBD Helper menyokong integrasi e-Rekod untuk import kemahiran. Kedua-duanya ada pelan percuma, memproses data murid secara tempatan dalam pelayar, dan bukan gabungan rasmi KPM. Perbandingan penuh: https://pbd.davinhub.com/banding
+
+## Pautan
+- Laman utama: https://pbd.davinhub.com/
+- Panduan langkah demi langkah: https://pbd.davinhub.com/panduan
+- Banding pilihan (PBD Helper vs IDME PBD Helper): https://pbd.davinhub.com/banding
+- Beli Pro (RM59, sekali bayar): https://pbd.davinhub.com/beli
+- Dasar privasi: https://pbd.davinhub.com/privacy
+- Pasang di Chrome Web Store: https://chromewebstore.google.com/detail/pbd-helper/hpjmhpolokbbhnjbnkddbjnomahanpoc

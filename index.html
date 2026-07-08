@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PBD Helper | Isi Skor PBD di SPPB dengan Pantas</title>
-  <meta name="description" content="Isi skor PBD (Tahap Penguasaan) di SPPB dengan pantas — panel sisi + import Excel berbilang kelas. Untuk guru Malaysia.">
+  <meta name="description" content="Isi skor PBD (Tahap Penguasaan) di SPPB / MOEIS (IDME) dengan pantas: panel sisi + import Excel berbilang kelas. Untuk guru Malaysia.">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="icon128.png">
   <link rel="canonical" href="https://pbd.davinhub.com/">
   <meta property="og:title" content="PBD Helper | Isi Skor PBD di SPPB dengan Pantas">
-  <meta property="og:description" content="Isi skor PBD (Tahap Penguasaan) di SPPB dengan pantas — panel sisi + import Excel berbilang kelas. Untuk guru Malaysia.">
+  <meta property="og:description" content="Isi skor PBD (Tahap Penguasaan) di SPPB / MOEIS (IDME) dengan pantas: panel sisi + import Excel berbilang kelas. Untuk guru Malaysia.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://pbd.davinhub.com/">
   <meta property="og:locale" content="ms_MY">
@@ -19,7 +19,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="PBD Helper | Isi Skor PBD di SPPB dengan Pantas">
-  <meta name="twitter:description" content="Isi skor PBD (Tahap Penguasaan) di SPPB dengan pantas — panel sisi + import Excel berbilang kelas. Untuk guru Malaysia.">
+  <meta name="twitter:description" content="Isi skor PBD (Tahap Penguasaan) di SPPB / MOEIS (IDME) dengan pantas: panel sisi + import Excel berbilang kelas. Untuk guru Malaysia.">
   <meta name="twitter:image" content="https://pbd.davinhub.com/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,25 +30,40 @@
     "@graph": [
       {
         "@type": "SoftwareApplication",
+        "@id": "https://pbd.davinhub.com/#software",
         "name": "PBD Helper",
         "operatingSystem": "Chrome, Edge, Brave, Opera (Chromium)",
         "applicationCategory": "EducationalApplication",
         "applicationSubCategory": "Browser Extension",
         "url": "https://pbd.davinhub.com/",
-        "description": "Isi skor PBD (Tahap Penguasaan) dan medan-medan wajib di sistem SPPB (moeissppb.moe.gov.my) dengan pantas — panel sisi + import Excel berbilang kelas. Untuk guru Malaysia.",
+        "downloadUrl": "https://chromewebstore.google.com/detail/pbd-helper/hpjmhpolokbbhnjbnkddbjnomahanpoc",
+        "installUrl": "https://chromewebstore.google.com/detail/pbd-helper/hpjmhpolokbbhnjbnkddbjnomahanpoc",
+        "sameAs": [
+          "https://chromewebstore.google.com/detail/pbd-helper/hpjmhpolokbbhnjbnkddbjnomahanpoc",
+          "https://davinhub.com"
+        ],
+        "description": "Isi skor PBD (Tahap Penguasaan) dan medan-medan wajib di sistem SPPB / MOEIS / IDME (moeissppb.moe.gov.my) dengan pantas: panel sisi + import Excel berbilang kelas. Untuk guru Malaysia.",
+        "keywords": "PBD, isi PBD, SPPB, MOEIS, IDME, Tahap Penguasaan, TP, Ulasan Guru Kelas, Pentaksiran Bilik Darjah, extension guru Malaysia",
         "inLanguage": "ms-MY",
         "image": "https://pbd.davinhub.com/og-image.png",
         "screenshot": "https://pbd.davinhub.com/og-image.png",
-        "softwareVersion": "1.1.2",
+        "softwareVersion": "1.1.5",
+        "featureList": [
+          "Set Tahap Penguasaan TP1–TP6 satu kelas",
+          "Auto-isi Usaha, Ulasan dan Kemahiran (LSRW) daripada TP",
+          "Isi Intervensi",
+          "Import Excel berbilang kelas",
+          "Ulasan Guru Kelas (Pengurusan) percuma",
+          "Sahkan semula dengan baca balik daripada SPPB"
+        ],
         "author": {
           "@type": "Person",
-          "name": "Davin Wong",
+          "name": "Cikgu Davin",
+          "alternateName": "Davin Wong",
           "url": "https://davinhub.com"
         },
         "publisher": {
-          "@type": "Organization",
-          "name": "davinhub",
-          "url": "https://davinhub.com"
+          "@id": "https://pbd.davinhub.com/#organization"
         },
         "offers": [
           {
@@ -69,8 +84,41 @@
         ]
       },
       {
+        "@type": "Organization",
+        "@id": "https://pbd.davinhub.com/#organization",
+        "name": "PBD Helper",
+        "url": "https://pbd.davinhub.com/",
+        "sameAs": [
+          "https://chromewebstore.google.com/detail/pbd-helper/hpjmhpolokbbhnjbnkddbjnomahanpoc",
+          "https://davinhub.com"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://pbd.davinhub.com/#website",
+        "name": "PBD Helper",
+        "url": "https://pbd.davinhub.com/",
+        "inLanguage": "ms-MY"
+      },
+      {
         "@type": "FAQPage",
         "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Apa itu PBD Helper?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "PBD Helper ialah extension Chrome (panel sisi) yang membantu guru mengisi skor PBD di sistem SPPB (juga dikenali MOEIS atau IDME). Ia menetapkan Tahap Penguasaan (TP1 hingga TP6), Usaha, Ulasan, Kemahiran dan Intervensi untuk satu kelas penuh dengan beberapa klik, dan menyokong import Excel berbilang kelas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Adakah PBD Helper rasmi daripada KPM?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tidak. PBD Helper ialah alat bantuan bebas yang dibina oleh Cikgu Davin, dan tidak berafiliasi, ditaja atau disahkan oleh KPM/MOE atau sistem SPPB. Ia hanya menulis melalui butang Simpan SPPB yang sebenar, tidak pernah menekan Hantar secara automatik, dan semua data murid kekal dalam SPPB."
+            }
+          },
           {
             "@type": "Question",
             "name": "Pelayar apa yang disokong?",
@@ -148,8 +196,11 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     *:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; border-radius: 4px; }
     @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+    @media (prefers-reduced-motion: reduce){ *{ transition-duration:.01ms!important; animation-duration:.01ms!important } }
     body { font-family: "Hanken Grotesk", system-ui, sans-serif; color: var(--ink); background: var(--paper); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
     img { max-width: 100%; display: block; }
+    .skip-link{position:absolute;left:-9999px;top:0;z-index:100;background:var(--white);color:var(--teal-deep);padding:10px 16px;border-bottom-right-radius:8px;font-weight:700;text-decoration:none}
+    .skip-link:focus{left:0}
 
     /* Nav */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(252,250,246,0.85); backdrop-filter: saturate(180%) blur(12px); -webkit-backdrop-filter: saturate(180%) blur(12px); border-bottom: 1px solid var(--line); }
@@ -181,7 +232,7 @@
     /* Buttons */
     .btn-teal { padding: 15px 30px; background: var(--teal); color: var(--white); font-weight: 600; border-radius: 12px; border: none; cursor: pointer; font-size: 1rem; font-family: inherit; transition: background 0.15s; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; }
     .btn-teal:hover { background: var(--teal-deep); color: var(--white); }
-    .btn-light { padding: 15px 30px; background: var(--white); color: var(--n-700); font-weight: 600; border-radius: 12px; border: 1px solid var(--n-200); cursor: pointer; font-size: 1rem; font-family: inherit; transition: all 0.15s; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; }
+    .btn-light { padding: 15px 30px; background: var(--white); color: var(--n-700); font-weight: 600; border-radius: 12px; border: 1px solid var(--n-200); cursor: pointer; font-size: 1rem; font-family: inherit; transition: background-color 0.15s, border-color 0.15s; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; }
     .btn-light:hover { border-color: var(--n-300); background: var(--n-50); }
     /* Coming-soon install button — intentionally disabled state */
     .btn-teal[aria-disabled="true"] { background: var(--teal); opacity: 0.55; cursor: default; pointer-events: none; }
@@ -199,7 +250,7 @@
     @media(min-width:768px) { .hero-sub { font-size: 1.18rem; } }
     .hero-btns { display: flex; flex-direction: column; gap: 14px; justify-content: center; align-items: center; }
     @media(min-width:520px) { .hero-btns { flex-direction: row; } }
-    .hero-note { margin-top: 16px; font-size: 0.85rem; color: var(--n-500); }
+    .hero-note { margin-top: 16px; font-size: 0.85rem; color: var(--muted); }
 
     /* Browser window chrome frame (real screenshots) */
     .shot { background: var(--white); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 30px 70px -28px rgba(11,94,77,0.28); overflow: hidden; }
@@ -295,7 +346,7 @@
     .promo-pill { font-size: 0.68rem; font-weight: 700; padding: 4px 11px; background: var(--teal); color: var(--white); border-radius: 99px; letter-spacing: 0.06em; flex-shrink: 0; }
     .promo-price { font-weight: 700; color: var(--n-900); }
     .promo-price b { font-size: 1.3rem; color: var(--teal-deep); }
-    .promo-price .old { font-size: 0.95rem; text-decoration: line-through; color: var(--n-400); font-weight: 500; margin-left: 6px; }
+    .promo-price .old { font-size: 0.95rem; text-decoration: line-through; color: var(--muted); font-weight: 500; margin-left: 6px; }
     .pricing-grid { display: grid; grid-template-columns: 1fr; gap: 28px; margin: 36px auto 0; max-width: 760px; }
     @media(min-width:768px) { .pricing-grid { grid-template-columns: 1fr 1fr; } }
     .plan { padding: 32px; border-radius: 18px; position: relative; }
@@ -320,7 +371,7 @@
     .plan.default .plan-features li svg { color: var(--teal); }
     .plan.popular .plan-features li svg { color: #9bd8c6; }
     .plan.popular .plan-features li { color: rgba(255,255,255,0.94); }
-    .plan-btn { display: block; width: 100%; padding: 14px; min-height: 44px; border-radius: 12px; font-size: 0.9rem; font-weight: 700; text-align: center; text-decoration: none; border: none; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    .plan-btn { display: block; width: 100%; padding: 14px; min-height: 44px; border-radius: 12px; font-size: 0.9rem; font-weight: 700; text-align: center; text-decoration: none; border: none; cursor: pointer; font-family: inherit; transition: background-color 0.15s, color 0.15s; }
     .plan.default .plan-btn { background: var(--teal); color: var(--white); }
     .plan.default .plan-btn[aria-disabled="true"] { opacity: 0.55; pointer-events: none; }
     .plan.default .plan-btn:hover { background: var(--teal-deep); }
@@ -336,8 +387,8 @@
     .faq-item button:hover { background: var(--n-50); }
     .faq-item button svg { width: 20px; height: 20px; color: var(--n-400); flex-shrink: 0; transition: transform 0.2s; }
     .faq-item.open button svg { transform: rotate(180deg); }
-    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out; }
-    .faq-item.open .faq-answer { max-height: 500px; }
+    .faq-answer { max-height: 0; overflow: hidden; visibility: hidden; transition: max-height 0.25s ease-out, visibility 0s linear 0.25s; }
+    .faq-item.open .faq-answer { max-height: 500px; visibility: visible; transition: max-height 0.25s ease-out, visibility 0s linear 0s; }
     .faq-answer p { padding: 4px 22px 0; font-size: 0.92rem; color: var(--muted); line-height: 1.7; }
     .faq-answer p:last-child { padding-bottom: 20px; }
     .faq-answer a { color: var(--teal); }
@@ -357,7 +408,7 @@
     /* Support */
     .support-grid { display: grid; grid-template-columns: 1fr; gap: 16px; max-width: 760px; margin: 40px auto 0; }
     @media(min-width:640px) { .support-grid { grid-template-columns: 1fr 1fr 1fr; } }
-    .support-card { display: flex; align-items: center; gap: 14px; padding: 20px 22px; background: var(--white); border: 1px solid var(--line); border-radius: 14px; text-decoration: none; transition: all 0.15s; color: var(--n-900); }
+    .support-card { display: flex; align-items: center; gap: 14px; padding: 20px 22px; background: var(--white); border: 1px solid var(--line); border-radius: 14px; text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s; color: var(--n-900); }
     .support-card:hover { border-color: #cfe3dc; box-shadow: 0 8px 22px -12px rgba(11,94,77,0.22); }
     .support-icon { width: 44px; height: 44px; border-radius: 11px; background: var(--teal-tint); color: var(--teal-deep); display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .support-card strong { display: block; font-size: 0.95rem; font-weight: 700; }
@@ -376,7 +427,7 @@
     .footer-col h3 { font-weight: 700; color: var(--n-700); margin-bottom: 10px; font-size: 0.875rem; }
     .footer-col a { display: block; font-size: 0.875rem; color: var(--muted); text-decoration: none; padding: 10px 0; min-height: 40px; transition: color 0.15s; }
     .footer-col a:hover { color: var(--n-900); }
-    .footer-disclaimer { max-width: 1152px; margin: 36px auto 0; font-size: 0.78rem; color: var(--n-500); line-height: 1.6; padding-top: 24px; border-top: 1px solid var(--line); }
+    .footer-disclaimer { max-width: 1152px; margin: 36px auto 0; font-size: 0.78rem; color: var(--muted); line-height: 1.6; padding-top: 24px; border-top: 1px solid var(--line); }
     .footer-bottom { max-width: 1152px; margin: 16px auto 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: 0.85rem; color: var(--muted); }
     .footer-bottom a { color: var(--muted); text-decoration: none; }
     .footer-bottom a:hover { color: var(--teal); }
@@ -388,6 +439,7 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Langkau ke kandungan</a>
   <!-- SVG symbol sprite for repeated icons -->
   <svg style="display:none" aria-hidden="true">
     <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></symbol>
@@ -399,7 +451,7 @@
   <!-- Nav -->
   <nav aria-label="Navigasi utama">
     <div class="nav-inner">
-      <a href="#" class="nav-logo"><img src="icon128.png" alt="" aria-hidden="true">PBD <span>Helper</span></a>
+      <a href="#" class="nav-logo"><img src="icon128.png" alt="" aria-hidden="true" width="28" height="28">PBD <span>Helper</span></a>
       <div class="nav-links">
         <a href="#ciri">Ciri-ciri</a>
         <a href="#cara">Cara guna</a>
@@ -422,16 +474,16 @@
     </div>
   </nav>
 
-  <main>
+  <main id="main">
 
   <!-- Hero -->
   <section class="hero">
     <div class="container">
       <div class="hero-badge"><span class="dot"></span> Untuk guru Malaysia</div>
-      <h1>Isi skor PBD di SPPB<br><span class="emph">dengan pantas.</span></h1>
-      <p class="hero-sub">PBD Helper membantu guru-guru di Malaysia mengisi skor PBD (Pentaksiran Bilik Darjah) — Tahap Penguasaan dan medan-medan wajib — di sistem SPPB (moeissppb.moe.gov.my) dengan lebih cepat.</p>
+      <h1>Isi skor PBD di SPPB,<br><span class="emph">dalam minit bukan jam.</span></h1>
+      <p class="hero-sub">Tetapkan TP, Ulasan, Usaha dan Kemahiran untuk berpuluh murid dalam beberapa klik, terus di panel sisi sebelah SPPB (MOEIS / IDME), atau import Excel berbilang kelas sekali gus.</p>
       <div class="hero-btns">
-        <a href="https://chromewebstore.google.com/detail/pbd-helper/hpjmhpolokbbhnjbnkddbjnomahanpoc" id="cwsBtn" class="btn-teal" target="_blank" rel="noopener" aria-describedby="cwsNote">Pasang dari Chrome Web Store</a>
+        <a href="https://chromewebstore.google.com/detail/pbd-helper/hpjmhpolokbbhnjbnkddbjnomahanpoc" id="cwsBtn" class="btn-teal" target="_blank" rel="noopener" aria-describedby="cwsNote">Pasang percuma dari Chrome Web Store</a>
         <a href="/panduan" class="btn-light">Lihat panduan</a>
       </div>
       <p class="hero-note" id="cwsNote">Percuma untuk 1 kelas&ndash;subjek · Chrome, Edge, Brave, Opera.</p>
@@ -442,7 +494,7 @@
           <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
           <span class="shot-url"><span class="lock">&#128274;</span>moeissppb.moe.gov.my</span>
         </div>
-        <img src="img/01-kelas-semasa.png" width="1280" height="800" alt="Panel Kelas Semasa PBD Helper: senarai murid dengan butang bersegmen TP1 hingga TP6 dan bar status sambungan kelas.">
+        <img src="img/01-kelas-semasa.png" width="1280" height="800" fetchpriority="high" alt="Panel Kelas Semasa PBD Helper: senarai murid dengan butang bersegmen TP1 hingga TP6 dan bar status sambungan kelas.">
       </div>
     </div>
   </section>
@@ -468,12 +520,12 @@
           </div>
           <div class="vs-chips">
             <div class="vs-chip vs-chip-bad">
-              <svg><use href="#icon-clock"/></svg>
+              <svg aria-hidden="true" focusable="false"><use href="#icon-clock"/></svg>
               <span class="vs-chip-label">Manual</span>
               <span>Klik radio, murid demi murid</span>
             </div>
             <div class="vs-chip vs-chip-good">
-              <svg><use href="#icon-check"/></svg>
+              <svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>
               <span class="vs-chip-label">PBD Helper</span>
               <span>Set TP semua atau berkumpulan</span>
             </div>
@@ -487,12 +539,12 @@
           </div>
           <div class="vs-chips">
             <div class="vs-chip vs-chip-bad">
-              <svg><use href="#icon-clock"/></svg>
+              <svg aria-hidden="true" focusable="false"><use href="#icon-clock"/></svg>
               <span class="vs-chip-label">Manual</span>
               <span>Buka dialog, taip, tutup, ulang</span>
             </div>
             <div class="vs-chip vs-chip-good">
-              <svg><use href="#icon-check"/></svg>
+              <svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>
               <span class="vs-chip-label">PBD Helper</span>
               <span>Diisi automatik mengikut TP</span>
             </div>
@@ -506,12 +558,12 @@
           </div>
           <div class="vs-chips">
             <div class="vs-chip vs-chip-bad">
-              <svg><use href="#icon-clock"/></svg>
+              <svg aria-hidden="true" focusable="false"><use href="#icon-clock"/></svg>
               <span class="vs-chip-label">Manual</span>
               <span>Empat set radio setiap murid</span>
             </div>
             <div class="vs-chip vs-chip-good">
-              <svg><use href="#icon-check"/></svg>
+              <svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>
               <span class="vs-chip-label">PBD Helper</span>
               <span>Diisi automatik mengikut TP</span>
             </div>
@@ -525,12 +577,12 @@
           </div>
           <div class="vs-chips">
             <div class="vs-chip vs-chip-bad">
-              <svg><use href="#icon-clock"/></svg>
+              <svg aria-hidden="true" focusable="false"><use href="#icon-clock"/></svg>
               <span class="vs-chip-label">Manual</span>
               <span>Buka semula, semak satu-satu</span>
             </div>
             <div class="vs-chip vs-chip-good">
-              <svg><use href="#icon-check"/></svg>
+              <svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>
               <span class="vs-chip-label">PBD Helper</span>
               <span>Baca semula, tanda &#10003;/&#10007;</span>
             </div>
@@ -556,7 +608,7 @@
             <div class="feat-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
             </div>
-            <h3>Panel Sisi Pantas</h3>
+            <h3>Set satu kelas dalam beberapa klik</h3>
             <p>Buka satu kelas PBD, set Tahap Penguasaan setiap murid dengan butang TP1–TP6. Status sambungan jelas menunjukkan kelas yang sedang dibaca, terus di sebelah halaman SPPB.</p>
           </div>
           <div class="feat-shot shot" role="img" aria-label="Panel sisi PBD Helper memaparkan butang TP1 hingga TP6 untuk setiap murid.">
@@ -572,7 +624,7 @@
           <div class="feat-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 3.5a2.12 2.12 0 0 1 3 3L7 18l-4 1 1-4Z"/><path d="M12 21h9"/></svg>
           </div>
-          <h3>Isi Automatik Medan Wajib</h3>
+          <h3>Ulasan, Usaha &amp; Kemahiran isi sendiri</h3>
           <p>Ulasan Guru (kategori ikut TP), Usaha Murid, dan Kemahiran (4 komponen untuk subjek bahasa) diisi automatik mengikut TP. Anda nampak apa yang akan ditulis pada setiap baris sebelum simpan.</p>
         </div>
 
@@ -638,7 +690,7 @@
       <div class="feat-embed">
         <div class="feat-embed-inner">
           <div class="feat-embed-text">
-            <h3>Baharu: Ulasan Guru Kelas, percuma untuk semua</h3>
+            <h3>Ulasan Guru Kelas, percuma untuk semua</h3>
             <p>Anda guru kelas? Buka halaman Pengurusan dan isi Ulasan Guru Kelas untuk seluruh kelas anda: pilih dari senarai ulasan biasa atau taip sendiri, isi berkumpulan, dan sahkan selepas simpan. Ada juga template Excel khas untuk guru kelas. Tidak dikira dalam had pelan percuma.</p>
           </div>
           <div class="shot" role="img" aria-label="Panel Ulasan Guru Kelas PBD Helper dengan senarai murid dan pilihan ulasan biasa.">
@@ -713,16 +765,16 @@
             <img src="img/03-disahkan.png" width="1280" height="800" loading="lazy" alt="Keputusan simpan: tanda hijau disahkan bagi setiap murid dalam senarai.">
           </div>
           <ul class="verify-list">
-            <li><svg><use href="#icon-check"/></svg> Baca semula TP, Usaha, Ulasan dan Intervensi selepas simpan</li>
-            <li><svg><use href="#icon-check"/></svg> Tanda &#10003; disahkan atau &#10007; perlu semak untuk setiap murid</li>
-            <li><svg><use href="#icon-check"/></svg> Anda tahu apa yang benar-benar tercatat di SPPB</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Baca semula TP, Usaha, Ulasan dan Intervensi selepas simpan</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Tanda &#10003; disahkan atau &#10007; perlu semak untuk setiap murid</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Anda tahu apa yang benar-benar tercatat di SPPB</li>
           </ul>
         </div>
         <div class="teaser-card">
           <span class="teaser-tag">Panduan Lengkap</span>
           <h3>Mahu lihat setiap langkah dengan screenshot?</h3>
           <p>Panduan langkah-demi-langkah lengkap: pemasangan, set TP, Isi &amp; Simpan, dan aliran Excel pukal untuk semua kelas anda.</p>
-          <a href="/panduan">Buka Panduan Lengkap <svg width="16" height="16"><use href="#icon-arrow"/></svg></a>
+          <a href="/panduan">Buka Panduan Lengkap <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-arrow"/></svg></a>
         </div>
       </div>
     </div>
@@ -735,6 +787,7 @@
         <p class="sh-label">Harga</p>
         <h2 class="sh-title" id="harga-title">Sekali bayar. Bukan langganan.</h2>
         <p class="sh-sub">Mula percuma dengan 1 kelas-subjek. Naik taraf ke Pro untuk penggunaan tanpa had: bayar sekali, terikat pada akaun MOEIS anda.</p>
+        <p class="sh-sub" style="margin-top:10px;color:var(--teal-deep);font-weight:600">Satu penggal PBD boleh makan berjam-jam. RM59 sekali bayar memulangkan masa itu untuk semua kelas anda, selamanya.</p>
       </div>
 
       <!-- Static promo strip (no JS, no countdown) -->
@@ -746,33 +799,33 @@
 
       <div class="pricing-grid">
         <div class="plan default">
-          <div class="plan-name">Percuma</div>
+          <h3 class="plan-name">Percuma</h3>
           <div class="plan-desc">Untuk mencuba aliran penuh</div>
           <div class="plan-price">RM0</div>
           <div class="plan-period">1 kelas-subjek</div>
           <ul class="plan-features">
-            <li><svg><use href="#icon-check"/></svg> 1 kelas-subjek</li>
-            <li><svg><use href="#icon-check"/></svg> Panel sisi + set TP1–TP6</li>
-            <li><svg><use href="#icon-check"/></svg> Isi automatik medan wajib</li>
-            <li><svg><use href="#icon-check"/></svg> Tetapkan berkumpulan</li>
-            <li><svg><use href="#icon-check"/></svg> Simpan &amp; sahkan setiap murid</li>
-            <li><svg><use href="#icon-check"/></svg> Ulasan Guru Kelas (untuk guru kelas)</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> 1 kelas-subjek</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Panel sisi + set TP1–TP6</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Isi automatik medan wajib</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Tetapkan berkumpulan</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Simpan &amp; sahkan setiap murid</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Ulasan Guru Kelas (untuk guru kelas)</li>
           </ul>
           <a href="https://chromewebstore.google.com/detail/pbd-helper/hpjmhpolokbbhnjbnkddbjnomahanpoc" class="plan-btn" target="_blank" rel="noopener">Pasang percuma</a>
         </div>
         <div class="plan popular">
           <span class="plan-pop-badge">Popular</span>
-          <div class="plan-name">Pro</div>
+          <h3 class="plan-name">Pro</h3>
           <div class="plan-desc">Untuk semua kelas anda</div>
           <div class="plan-price">RM59 <span class="old">RM79</span></div>
           <div class="plan-period">Sekali bayar &middot; akaun MOEIS anda</div>
           <ul class="plan-features">
-            <li><svg><use href="#icon-check"/></svg> Semua ciri Percuma</li>
-            <li><svg><use href="#icon-check"/></svg> Tanpa had kelas-subjek</li>
-            <li><svg><use href="#icon-check"/></svg> Excel pukal (semua kelas sekali gus)</li>
-            <li><svg><use href="#icon-check"/></svg> Ulasan fleksibel &amp; lindungi kerja sedia ada</li>
-            <li><svg><use href="#icon-check"/></svg> RM59 sekali bayar (bukan langganan)</li>
-            <li><svg><use href="#icon-check"/></svg> Terikat pada akaun MOEIS, boleh tukar peranti</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Semua ciri Percuma</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Tanpa had kelas-subjek</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Excel pukal (semua kelas sekali gus)</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Ulasan fleksibel &amp; lindungi kerja sedia ada</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> RM59 sekali bayar (bukan langganan)</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Terikat pada akaun MOEIS, boleh tukar peranti</li>
           </ul>
           <a href="/beli" class="plan-btn">Beli Pro — RM59</a>
         </div>
@@ -793,13 +846,15 @@
         <p class="sh-sub">Semua yang anda perlu tahu sebelum bermula.</p>
       </div>
       <div class="faq-list" id="faqList">
-        <div class="faq-item"><button><span>Pelayar apa yang disokong?</span><svg><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Chrome, Edge, Brave, dan Opera (semua pelayar berasaskan Chromium). PBD Helper ialah extension komputer, jadi ia tidak berfungsi pada telefon atau Safari.</p></div></div>
-        <div class="faq-item"><button><span>Adakah data murid saya selamat?</span><svg><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Ya. Tiada nama atau nombor kad pengenalan murid dikeluarkan dari peranti anda. Extension hanya menulis skor melalui butang "Simpan" SPPB yang sebenar, dan semua data murid kekal dalam SPPB. Pelayan lesen hanya menerima cincangan (hash) SHA-256 tanpa nama serta id peranti. <a href="/privacy">Baca dasar privasi penuh</a>.</p></div></div>
-        <div class="faq-item"><button><span>Bagaimana saya aktifkan kunci Pro?</span><svg><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Beli Pro di <a href="/beli">pbd.davinhub.com/beli</a> melalui Billplz (FPX). Anda akan terima kunci lesen bermula dengan <strong>PBDH-</strong> beserta emel. Tampal kunci itu ke dalam panel PBD Helper dan klik "Aktifkan".</p></div></div>
-        <div class="faq-item"><button><span>Apa beza percuma vs Pro?</span><svg><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Percuma membolehkan anda mengisi 1 kelas-subjek dengan aliran penuh (set TP, isi medan wajib, simpan dan sahkan). Pro (RM59, sekali bayar) membuka penggunaan tanpa had kelas-subjek serta Excel pukal untuk semua kelas sekali gus.</p></div></div>
-        <div class="faq-item"><button><span>Boleh tukar peranti?</span><svg><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Boleh. Lesen Pro terikat pada akaun MOEIS anda, bukan pada komputer. Jika anda menukar komputer atau pelayar, aktifkan semula dengan kunci yang sama dan teruskan seperti biasa.</p></div></div>
-        <div class="faq-item"><button><span>Saya ada dua akaun SPPB. Satu kunci cukup?</span><svg><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Satu kunci Pro terikat pada <strong>satu akaun MOEIS</strong>. Akaun kedua perlukan kunci sendiri. Selepas kedua-dua akaun mempunyai kunci, anda boleh bertukar akaun dengan bebas &mdash; Pro mengikut akaun yang sedang log masuk.</p></div></div>
-        <div class="faq-item"><button><span>Adakah kelas saya akan dikunci?</span><svg><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Tidak. PBD Helper hanya menulis melalui butang "Simpan" SPPB dan tidak pernah menekan "Hantar" secara automatik. Kelas anda tidak akan dikunci, dan simpanan separa dibenarkan.</p></div></div>
+        <div class="faq-item"><button><span>Apa itu PBD Helper?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>PBD Helper ialah extension Chrome (panel sisi) yang membantu guru mengisi skor PBD di sistem SPPB (juga dikenali MOEIS atau IDME): Tahap Penguasaan (TP1 hingga TP6), Usaha, Ulasan, Kemahiran dan Intervensi untuk satu kelas penuh dengan beberapa klik. Ia juga menyokong import Excel berbilang kelas.</p></div></div>
+        <div class="faq-item"><button><span>Adakah PBD Helper rasmi daripada KPM?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Tidak. PBD Helper ialah alat bantuan bebas yang dibina oleh Cikgu Davin, dan tidak berafiliasi, ditaja atau disahkan oleh KPM/MOE atau sistem SPPB. Ia hanya menulis melalui butang "Simpan" SPPB yang sebenar, tidak pernah menekan "Hantar" secara automatik, dan semua data murid kekal dalam SPPB.</p></div></div>
+        <div class="faq-item"><button><span>Pelayar apa yang disokong?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Chrome, Edge, Brave, dan Opera (semua pelayar berasaskan Chromium). PBD Helper ialah extension komputer, jadi ia tidak berfungsi pada telefon atau Safari.</p></div></div>
+        <div class="faq-item"><button><span>Adakah data murid saya selamat?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Ya. Tiada nama atau nombor kad pengenalan murid dikeluarkan dari peranti anda. Extension hanya menulis skor melalui butang "Simpan" SPPB yang sebenar, dan semua data murid kekal dalam SPPB. Pelayan lesen hanya menerima cincangan (hash) SHA-256 tanpa nama serta id peranti. <a href="/privacy">Baca dasar privasi penuh</a>.</p></div></div>
+        <div class="faq-item"><button><span>Bagaimana saya aktifkan kunci Pro?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Beli Pro di <a href="/beli">pbd.davinhub.com/beli</a> melalui Billplz (FPX). Anda akan terima kunci lesen bermula dengan <strong>PBDH-</strong> beserta emel. Tampal kunci itu ke dalam panel PBD Helper dan klik "Aktifkan".</p></div></div>
+        <div class="faq-item"><button><span>Apa beza percuma vs Pro?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Percuma membolehkan anda mengisi 1 kelas-subjek dengan aliran penuh (set TP, isi medan wajib, simpan dan sahkan). Pro (RM59, sekali bayar) membuka penggunaan tanpa had kelas-subjek serta Excel pukal untuk semua kelas sekali gus.</p></div></div>
+        <div class="faq-item"><button><span>Boleh tukar peranti?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Boleh. Lesen Pro terikat pada akaun MOEIS anda, bukan pada komputer. Jika anda menukar komputer atau pelayar, aktifkan semula dengan kunci yang sama dan teruskan seperti biasa.</p></div></div>
+        <div class="faq-item"><button><span>Saya ada dua akaun SPPB. Satu kunci cukup?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Satu kunci Pro terikat pada <strong>satu akaun MOEIS</strong>. Akaun kedua perlukan kunci sendiri. Selepas kedua-dua akaun mempunyai kunci, anda boleh bertukar akaun dengan bebas &mdash; Pro mengikut akaun yang sedang log masuk.</p></div></div>
+        <div class="faq-item"><button><span>Adakah kelas saya akan dikunci?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Tidak. PBD Helper hanya menulis melalui butang "Simpan" SPPB dan tidak pernah menekan "Hantar" secara automatik. Kelas anda tidak akan dikunci, dan simpanan separa dibenarkan.</p></div></div>
       </div>
     </div>
   </section>
@@ -870,7 +925,7 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
-          <div class="logo"><img src="icon128.png" alt="" aria-hidden="true">PBD <span>Helper</span></div>
+          <div class="logo"><img src="icon128.png" alt="" aria-hidden="true" width="26" height="26">PBD <span>Helper</span></div>
           <p>Isi skor PBD di SPPB dengan pantas. Dibina oleh Cikgu Davin di Sarawak, untuk guru-guru di seluruh Malaysia.</p>
         </div>
         <div class="footer-links">
@@ -879,6 +934,7 @@
             <a href="/panduan">Panduan</a>
             <a href="#harga">Harga</a>
             <a href="/beli">Beli Pro</a>
+            <a href="/banding">Banding pilihan</a>
           </div>
           <div class="footer-col">
             <h3>Lain-lain</h3>

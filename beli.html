@@ -24,6 +24,34 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Laman utama", "item": "https://pbd.davinhub.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Beli Pro", "item": "https://pbd.davinhub.com/beli" }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "PBD Helper Pro",
+        "applicationCategory": "BrowserApplication",
+        "operatingSystem": "Chrome",
+        "url": "https://pbd.davinhub.com/beli",
+        "offers": {
+          "@type": "Offer",
+          "price": "59",
+          "priceCurrency": "MYR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://pbd.davinhub.com/beli"
+        }
+      }
+    ]
+  }
+  </script>
   <style>
     :root {
       --teal: #0e7c66; --teal-deep: #0b5e4d; --teal-tint: #e7f1ee;
@@ -40,6 +68,9 @@
     body { font-family: "Hanken Grotesk", system-ui, sans-serif; color: var(--ink); background: var(--paper); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
     img { max-width: 100%; display: block; }
     a { color: var(--teal); }
+
+    .skip-link{position:absolute;left:-9999px;top:0;z-index:100;background:var(--white);color:var(--teal-deep);padding:10px 16px;border-bottom-right-radius:8px;font-weight:700;text-decoration:none}
+    .skip-link:focus{left:0}
 
     /* Nav (matches index.html) */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(252,250,246,0.85); backdrop-filter: saturate(180%) blur(12px); -webkit-backdrop-filter: saturate(180%) blur(12px); border-bottom: 1px solid var(--line); }
@@ -71,11 +102,12 @@
     .promo-pill { font-size: 0.68rem; font-weight: 700; padding: 4px 11px; background: var(--teal); color: var(--white); border-radius: 99px; letter-spacing: 0.06em; flex-shrink: 0; }
     .promo-price { font-weight: 700; color: var(--n-900); }
     .promo-price b { font-size: 1.3rem; color: var(--teal-deep); }
-    .promo-price .old { font-size: 0.95rem; text-decoration: line-through; color: var(--n-400); font-weight: 500; margin-left: 6px; }
+    .promo-price .old { font-size: 0.95rem; text-decoration: line-through; color: var(--muted); font-weight: 500; margin-left: 6px; }
 
     /* Buy grid: benefits panel + form card */
     .buy-grid { display: grid; grid-template-columns: 1fr; gap: 24px; max-width: 900px; margin: 0 auto; align-items: start; }
     @media(min-width:860px) { .buy-grid { grid-template-columns: 1fr 1fr; gap: 28px; } }
+    @media(max-width:859px) { .buy-grid .buy-card { order: -1; } }  /* mobile: pay form leads, benefits panel below */
 
     /* Benefits panel (teal-deep, matches index teaser/plan.popular) */
     .buy-panel { background: var(--teal-deep); color: var(--white); border-radius: 18px; padding: 32px 28px; box-shadow: 0 24px 50px -24px rgba(11,94,77,0.5); }
@@ -107,7 +139,7 @@
       font: inherit; font-size: 0.95rem; color: var(--ink); background: var(--white);
       outline: none; transition: border-color 0.15s, box-shadow 0.15s;
     }
-    input::placeholder { color: var(--n-400); }
+    input::placeholder { color: var(--muted); }
     input:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(14,124,102,0.12); }
 
     /* Pay button (matches index .btn-teal) */
@@ -142,7 +174,7 @@
     .footer-col h3 { font-weight: 700; color: var(--n-700); margin-bottom: 10px; font-size: 0.875rem; }
     .footer-col a { display: block; font-size: 0.875rem; color: var(--muted); text-decoration: none; padding: 10px 0; min-height: 40px; transition: color 0.15s; }
     .footer-col a:hover { color: var(--n-900); }
-    .footer-disclaimer { max-width: 1152px; margin: 36px auto 0; font-size: 0.78rem; color: var(--n-500); line-height: 1.6; padding-top: 24px; border-top: 1px solid var(--line); }
+    .footer-disclaimer { max-width: 1152px; margin: 36px auto 0; font-size: 0.78rem; color: var(--muted); line-height: 1.6; padding-top: 24px; border-top: 1px solid var(--line); }
     .footer-bottom { max-width: 1152px; margin: 16px auto 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: 0.85rem; color: var(--muted); }
     .footer-bottom a { color: var(--muted); text-decoration: none; }
     .footer-bottom a:hover { color: var(--teal); }
@@ -164,6 +196,7 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Langkau ke kandungan</a>
   <!-- SVG symbol sprite -->
   <svg style="display:none" aria-hidden="true">
     <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></symbol>
@@ -174,12 +207,12 @@
   <!-- Nav -->
   <nav aria-label="Navigasi utama">
     <div class="nav-inner">
-      <a href="/" class="nav-logo"><img src="icon128.png" alt="" aria-hidden="true">PBD <span>Helper</span></a>
+      <a href="/" class="nav-logo"><img src="icon128.png" alt="" aria-hidden="true" width="28" height="28">PBD <span>Helper</span></a>
       <a class="nav-back" href="/">&larr; Laman utama</a>
     </div>
   </nav>
 
-  <main class="page">
+  <main class="page" id="main">
     <div class="container">
       <div class="buy-head">
         <p class="sh-label">Naik taraf</p>
@@ -201,22 +234,22 @@
           <h2>Semua kelas, satu bayaran</h2>
           <p class="panel-sub">Mula percuma dengan 1 kelas-subjek. Naik taraf ke Pro untuk buka semuanya.</p>
           <ul class="panel-list">
-            <li><svg><use href="#icon-check"/></svg> Semua ciri Percuma &mdash; ulasan fleksibel &amp; lindungi kerja sedia ada</li>
-            <li><svg><use href="#icon-check"/></svg> Tanpa had kelas-subjek</li>
-            <li><svg><use href="#icon-check"/></svg> Excel pukal (semua kelas sekali gus)</li>
-            <li><svg><use href="#icon-check"/></svg> RM59 sekali bayar (bukan langganan)</li>
-            <li><svg><use href="#icon-check"/></svg> Terikat pada akaun MOEIS, boleh tukar peranti</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Semua ciri Percuma &mdash; ulasan fleksibel &amp; lindungi kerja sedia ada</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Tanpa had kelas-subjek</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Excel pukal (semua kelas sekali gus)</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> RM59 sekali bayar (bukan langganan)</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Terikat pada akaun MOEIS, boleh tukar peranti</li>
           </ul>
           <div class="panel-trust">
             <div class="panel-trust-item">
-              <svg><use href="#icon-shield"/></svg>
+              <svg aria-hidden="true" focusable="false"><use href="#icon-shield"/></svg>
               <div>
                 <strong>Selamat untuk kelas anda</strong>
                 <small>Hanya menulis melalui butang "Simpan" SPPB yang sebenar — tidak pernah menekan "Hantar" secara automatik. Kelas anda tidak akan dikunci; semua data murid kekal dalam SPPB.</small>
               </div>
             </div>
             <div class="panel-trust-item">
-              <svg><use href="#icon-lock"/></svg>
+              <svg aria-hidden="true" focusable="false"><use href="#icon-lock"/></svg>
               <div>
                 <strong>Privasi murid dijaga</strong>
                 <small>Tiada nama atau IC murid dikeluarkan dari peranti. Pelayan lesen hanya menerima cincangan (hash) SHA-256 tanpa nama serta id peranti.</small>
@@ -257,6 +290,7 @@
             <p id="err" role="alert" aria-live="polite"></p>
           </form>
 
+          <p style="font-size:0.86rem;color:var(--muted);text-align:center;margin-top:14px;line-height:1.55">Kunci lesen sampai ke emel anda serta-merta selepas pembayaran disahkan, terus aktifkan dalam panel. Ada masalah aktivasi? Emel <a href="mailto:hi@davinhub.com">hi@davinhub.com</a>, saya balas peribadi.</p>
           <p class="trust">Pembayaran diproses oleh Billplz (FPX).<br>Resit dikeluarkan oleh EDUHELPER RESOURCES.</p>
         </div>
       </div>
@@ -272,7 +306,7 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
-          <div class="logo"><img src="icon128.png" alt="" aria-hidden="true">PBD <span>Helper</span></div>
+          <div class="logo"><img src="icon128.png" alt="" aria-hidden="true" width="26" height="26">PBD <span>Helper</span></div>
           <p>Isi skor PBD di SPPB dengan pantas. Dibina oleh Cikgu Davin di Sarawak, untuk guru-guru di seluruh Malaysia.</p>
         </div>
         <div class="footer-links">
@@ -281,6 +315,7 @@
             <a href="/panduan">Panduan</a>
             <a href="/#harga">Harga</a>
             <a href="/beli">Beli Pro</a>
+            <a href="/banding">Banding pilihan</a>
           </div>
           <div class="footer-col">
             <h3>Lain-lain</h3>
