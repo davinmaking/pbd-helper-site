@@ -196,6 +196,7 @@
     .shot-url { margin-left: 10px; font-size: 0.76rem; color: var(--n-500); padding: 4px 13px; background: var(--white); border: 1px solid var(--line); border-radius: 99px; flex: 1; text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 380px; }
     .shot-url .lock { color: var(--teal); margin-right: 6px; }
     .shot img { width: 100%; height: auto; display: block; }
+    .shot video { width: 100%; height: auto; display: block; background: var(--n-100); }
     .step-media figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 10px; text-align: center; font-style: italic; }
     .step-media-placeholder { border: 2px dashed var(--n-300); border-radius: 12px; background: var(--n-50); padding: 56px 20px; text-align: center; color: var(--muted); font-size: 0.9rem; }
     .step-media-placeholder strong { color: var(--n-700); display: block; margin-bottom: 4px; }
@@ -547,12 +548,14 @@
             <p>Tanda kotak semak di sebelah murid untuk pilih sekumpulan (atau pilih semua), kemudian dari bar tindakan tekan <strong>Set TP&hellip;</strong> atau <strong>Set Usaha&hellip;</strong>. Seluruh kumpulan yang ditanda diisi sekali gus — contohnya sebahagian &ldquo;Tinggi&rdquo;, sebahagian &ldquo;Sederhana&rdquo;.</p>
           </div>
           <figure class="step-media">
-            <div class="shot" role="img" aria-label="Bar tindakan berkumpulan PBD Helper: beberapa murid ditanda dengan pilihan Set TP dan Set Usaha.">
+            <div class="shot">
               <div class="shot-bar" aria-hidden="true">
                 <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
                 <span class="shot-url"><span class="lock">&#128274;</span>moeissppb.moe.gov.my</span>
               </div>
-              <img src="img/02-set-berkumpulan.png" width="1280" height="800" loading="lazy" alt="Set berkumpulan: beberapa murid ditanda dengan bar Set TP dan Set Usaha.">
+              <video class="step-clip" autoplay muted loop playsinline preload="metadata" width="1280" height="800" poster="media/panduan-set-tp-poster.jpg" aria-label="Rakaman skrin: Set TP digunakan pada semua murid melalui dropdown, kemudian Usaha ditetapkan berkumpulan dan banner pengesahan dipaparkan.">
+                <source src="media/panduan-set-tp.mp4" type="video/mp4">
+              </video>
             </div>
           </figure>
         </article>
@@ -574,7 +577,15 @@
             <p>Status setiap murid dipaparkan secara langsung dalam panel semasa proses berjalan.</p>
           </div>
           <figure class="step-media">
-            <div class="step-media-placeholder"><strong>Skrinsut akan ditambah</strong>Panel semasa &ldquo;Isi &amp; Simpan&rdquo; berjalan, status langsung bagi setiap murid</div>
+            <div class="shot">
+              <div class="shot-bar" aria-hidden="true">
+                <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
+                <span class="shot-url"><span class="lock">&#128274;</span>moeissppb.moe.gov.my</span>
+              </div>
+              <video class="step-clip" autoplay muted loop playsinline preload="metadata" width="1280" height="800" poster="media/panduan-isi-simpan-poster.jpg" aria-label="Rakaman skrin: proses Isi dan Simpan berjalan dengan kiraan murid 23/23, kemudian butang pulih dan setiap murid mendapat tanda disahkan.">
+                <source src="media/panduan-isi-simpan.mp4" type="video/mp4">
+              </video>
+            </div>
           </figure>
           <div class="step-callout">
             <div class="callout is-warn"><span class="callout-icon" aria-hidden="true">&#9888;</span>
@@ -676,7 +687,15 @@
             <p>Anda boleh isi di komputer sendiri atau muat naik fail ke Google Sheets untuk beberapa guru isi serentak, kemudian muat turun semula sebagai <code>.xlsx</code>.</p>
           </div>
           <figure class="step-media">
-            <div class="step-media-placeholder"><strong>Skrinsut akan ditambah</strong>Tab kelas dalam Excel dengan lajur TP, Usaha, Ulasan, dan Intervensi diisi</div>
+            <div class="shot">
+              <div class="shot-bar" aria-hidden="true">
+                <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
+                <span class="shot-url">Excel &middot; PBD_DEMO.xlsx</span>
+              </div>
+              <video class="step-clip" autoplay muted loop playsinline preload="metadata" width="800" height="500" poster="media/panduan-excel-auto-poster.jpg" aria-label="Rakaman skrin Excel: nilai TP ditaip dan lajur Usaha serta Ulasan terisi automatik melalui formula dalam fail.">
+                <source src="media/panduan-excel-auto.mp4" type="video/mp4">
+              </video>
+            </div>
           </figure>
           <div class="step-callout">
             <div class="callout is-tip"><span class="callout-icon" aria-hidden="true">&#128161;</span>
@@ -698,12 +717,14 @@
             <p>Extension akan membaca setiap tab, mengesahkan format (TP <code>4</code> atau <code>TP4</code>, kategori ulasan), dan memaparkan ringkasan kelas serta murid yang dikesan.</p>
           </div>
           <figure class="step-media">
-            <div class="shot" role="img" aria-label="Aliran Excel pukal PBD Helper: zon lepas fail dengan butang Jana template dan Muat naik.">
+            <div class="shot">
               <div class="shot-bar" aria-hidden="true">
                 <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
                 <span class="shot-url">PBD Helper &middot; Excel Pukal</span>
               </div>
-              <img src="img/04-excel-pukal.png" width="1280" height="800" loading="lazy" alt="Excel pukal: zon lepas fail dengan Jana template dan aliran Muat naik untuk semua kelas.">
+              <video class="step-clip" autoplay muted loop playsinline preload="metadata" width="1280" height="800" poster="media/panduan-upload-gate-poster.jpg" aria-label="Rakaman skrin: fail Excel diseret ke zon lepas fail, extension membaca senarai kelas, dan gate pengesahan memaparkan kelas serta bilangan murid dengan butang Sahkan dan Isi.">
+                <source src="media/panduan-upload-gate.mp4" type="video/mp4">
+              </video>
             </div>
           </figure>
         </article>
@@ -777,7 +798,15 @@
             <p>Paparan ini hanya untuk <strong>guru kelas</strong> bagi kelas berkenaan. Jika kelas sudah dikunci, panel menjadi paparan baca sahaja (tiada butang Simpan).</p>
           </div>
           <figure class="step-media">
-            <div class="step-media-placeholder"><strong>Skrinsut akan ditambah</strong>Panel Ulasan Guru Kelas dengan senarai murid dan ulasan biasa</div>
+            <div class="shot">
+              <div class="shot-bar" aria-hidden="true">
+                <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
+                <span class="shot-url"><span class="lock">&#128274;</span>moeissppb.moe.gov.my</span>
+              </div>
+              <video class="step-clip" autoplay muted loop playsinline preload="metadata" width="1280" height="800" poster="media/panduan-ulasan-kelas-poster.jpg" aria-label="Rakaman skrin: ulasan dipilih dari senarai Set Ulasan, kemudian extension membuka dialog ulasan setiap murid di SPPB dan menyimpannya satu per satu.">
+                <source src="media/panduan-ulasan-kelas.mp4" type="video/mp4">
+              </video>
+            </div>
           </figure>
         </article>
 
@@ -1068,6 +1097,31 @@
       }
       window.addEventListener('scroll', onScroll, { passive: true });
       onScroll();
+    })();
+
+    // Step clips: honour prefers-reduced-motion (no autoplay, show controls);
+    // otherwise only play while visible to save battery.
+    (function () {
+      var clips = document.querySelectorAll('video.step-clip');
+      if (!clips.length) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        clips.forEach(function (v) {
+          v.removeAttribute('autoplay');
+          v.setAttribute('controls', '');
+          v.pause();
+        });
+        return;
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            var v = entry.target;
+            if (entry.isIntersecting) { v.play().catch(function () {}); }
+            else { v.pause(); }
+          });
+        }, { rootMargin: '100px' });
+        clips.forEach(function (v) { io.observe(v); });
+      }
     })();
   </script>
 
