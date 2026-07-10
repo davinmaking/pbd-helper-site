@@ -196,5 +196,22 @@
       });
     }
   </script>
+  <script>
+    /* Fire-and-forget pageview beacon -> davinhub /api/stats/hit.
+       "/pbd" path prefix = site discriminator (page_events has no host column).
+       Never blocks the page; skipped on local preview. */
+    (() => {
+      try {
+        if (/^(localhost|127\.)/.test(location.hostname)) return;
+        const payload = JSON.stringify({
+          path: '/pbd' + location.pathname,
+          ref: document.referrer || undefined,
+        });
+        const url = 'https://davinhub-api.davin-making.workers.dev/api/stats/hit';
+        if (navigator.sendBeacon) navigator.sendBeacon(url, payload);
+        else fetch(url, { method: 'POST', body: payload, keepalive: true });
+      } catch (_) { /* ignore */ }
+    })();
+  </script>
 </body>
 </html>
