@@ -97,7 +97,7 @@
 
   <main class="page-main" id="main">
   <h1>Dasar Privasi / Privacy Policy</h1>
-  <p class="updated">Kemaskini terakhir: 18 Julai 2026</p>
+  <p class="updated">Kemaskini terakhir: 23 Julai 2026</p>
 
   <p class="lede"><strong>Ringkasnya:</strong> PBD Helper <strong>tidak mengumpul data murid</strong>. Nama,
   No. KP dan Tahap Penguasaan murid hanya dibaca dari dan ditulis semula ke SPPB
@@ -157,14 +157,14 @@
     setiap kali anda klik "Isi &amp; Simpan" bagi keputusan PBD (Tahap Penguasaan sesuatu
     kelas&ndash;mata pelajaran), Extension bertanya pelayan lesen kami sama ada kelas itu dibenarkan.
     Ia menghantar satu hash SHA-256 <strong>tanpa nama</strong> bagi ID pengguna SPPB anda sendiri,
-    ID kelas (cmid), satu ID peranti rawak, dan kunci lesen jika ada. Tiada nama atau No. KP murid.
+    ID kelas (cmid), satu ID peranti rawak, kunci lesen jika ada, serta versi Extension. Tiada nama atau No. KP murid.
     Pengisian Ulasan Guru Kelas (percuma) tidak membuat sebarang panggilan pengesahan lesen. Pelan
     percuma dibenarkan untuk 1 kelas&ndash;mata pelajaran; pelan Pro (tanpa had) memerlukan kunci
     lesen yang sah.</li>
     <li><strong>Semakan status lesen (baca sahaja):</strong> Apabila anda membuka panel atau bertukar
     tab SPPB, Extension menyemak pelayan lesen kami untuk memaparkan lencana pelan anda (PERCUMA
     atau PRO) dalam panel. Ia menghantar hash SHA-256 <strong>tanpa nama</strong> yang sama bagi ID
-    pengguna SPPB anda, penanda produk, dan kunci lesen jika ada &mdash; tiada nama atau No. KP
+    pengguna SPPB anda, penanda produk, kunci lesen jika ada, serta versi Extension &mdash; tiada nama atau No. KP
     murid. Semakan ini baca sahaja: ia tidak mendaftarkan kunci dan tidak menuntut kuota percuma.
     Hasilnya disimpan sementara (lebih kurang 10 minit) pada peranti anda supaya pertukaran tab
     tidak menghantar permintaan berulang.</li>
@@ -184,7 +184,10 @@
     halaman SPPB. Tiada data diakses oleh kebenaran ini.</li>
     <li><strong>scripting:</strong> Untuk menyuntik enjin Extension ke dalam halaman
     moeissppb.moe.gov.my bagi membaca halaman SPPB yang anda buka, termasuk mengenal pasti
-    kelas&ndash;mata pelajaran yang sedang dibuka, membaca senarai kelas, dan menulis skor. Skrip
+    kelas&ndash;mata pelajaran yang sedang dibuka, membaca senarai kelas, dan menulis skor. Pada
+    halaman senarai Laporan SPPB, Extension turut memaparkan satu kad pintasan kecil pada skrin
+    (dengan lencana pada bar alat) yang membuka panel sisi &mdash; pintasan untuk kemudahan sahaja: ia
+    tidak membaca data halaman, tidak menulis apa-apa, dan tidak menghantar apa-apa. Skrip
     hanya berjalan pada moeissppb.moe.gov.my.</li>
     <li><strong>storage:</strong> Untuk menyimpan status lesen (kunci + ID peranti) pada peranti
     anda. Tiada data murid disimpan.</li>
