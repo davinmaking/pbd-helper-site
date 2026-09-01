@@ -47,13 +47,16 @@
         "inLanguage": "ms-MY",
         "image": "https://pbd.davinhub.com/og-image.png",
         "screenshot": "https://pbd.davinhub.com/og-image.png",
-        "softwareVersion": "1.2.2",
+        "softwareVersion": "1.3.0",
         "featureList": [
-          "Set Tahap Penguasaan TP1–TP6 satu kelas",
-          "Auto-isi Usaha, Ulasan dan Kemahiran (LSRW) daripada TP",
+          "Rumah: pilih tugas, kemudian pilih kelas terus dalam panel",
+          "Set Tahap Penguasaan TP1–TP6 satu kelas (Semua: 1–6)",
+          "Auto-isi Usaha, Ulasan dan Kemahiran bahasa mengikut TP",
           "Isi Intervensi",
-          "Import Excel berbilang kelas",
+          "Semak sebelum tulis: ringkasan apa yang akan ditulis dan apa yang tidak disentuh",
+          "Excel pukal berbilang kelas dalam tiga langkah",
           "Ulasan Guru Kelas (Pengurusan) percuma",
+          "Cetakan Laporan PBD percuma",
           "Sahkan semula dengan baca balik daripada SPPB"
         ],
         "author": {
@@ -121,7 +124,7 @@
             "name": "Apa itu PBD Helper?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "PBD Helper ialah extension Chrome (panel sisi) yang membantu guru mengisi skor PBD di sistem SPPB (juga dikenali MOEIS atau IDME). Ia menetapkan Tahap Penguasaan (TP1 hingga TP6), Usaha, Ulasan, Kemahiran dan Intervensi untuk satu kelas penuh dengan beberapa klik, dan menyokong import Excel berbilang kelas."
+              "text": "PBD Helper ialah extension Chrome (panel sisi) yang membantu guru mengisi skor PBD di sistem SPPB (juga dikenali MOEIS atau IDME). Panel dibuka dengan skrin Rumah: pilih tugas, pilih kelas, kemudian tetapkan Tahap Penguasaan (TP1 hingga TP6) untuk satu kelas penuh — Usaha, Ulasan dan Kemahiran bahasa dicadangkan mengikut TP. Sebelum apa-apa ditulis, skrin Semak sebelum tulis menunjukkan apa yang akan ditulis. Ia juga menyokong Excel pukal berbilang kelas."
             }
           },
           {
@@ -161,7 +164,7 @@
             "name": "Apa beza percuma vs Pro?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Percuma membolehkan anda mengisi 1 kelas-subjek dengan aliran penuh (set TP, isi medan wajib, simpan dan sahkan). Pro (RM59, sekali bayar) membuka penggunaan tanpa had kelas-subjek serta Excel pukal untuk semua kelas sekali gus."
+              "text": "Percuma membolehkan anda mengisi 1 kelas-subjek dengan aliran penuh (set TP, Semak sebelum tulis, Tulis, dan pengesahan baca-balik). Pro (RM59, sekali bayar) membuka penggunaan tanpa had kelas-subjek serta Excel pukal untuk semua kelas sekali gus."
             }
           },
           {
@@ -186,6 +189,14 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Tidak. PBD Helper hanya menulis melalui butang Simpan SPPB dan tidak pernah menekan Hantar secara automatik. Kelas anda tidak akan dikunci, dan simpanan separa dibenarkan."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kelas saya sudah dihantar atau disahkan. Boleh guna lagi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Boleh lihat, tetapi tidak boleh tulis. Kelas yang sudah dihantar atau disahkan ditanda dikunci sejak skrin Rumah, dan butang tulis dimatikan \u2014 PBD Helper tidak akan menulis apa-apa ke kelas yang dikunci. Kelas itu tetap dimuatkan ke dalam fail Excel sebagai rujukan, dan Cetakan Laporan masih boleh dijana."
             }
           },
           {
@@ -514,7 +525,7 @@
     <div class="container">
       <div class="hero-badge"><span class="dot"></span> Untuk guru Malaysia</div>
       <h1>Isi skor PBD di SPPB,<br><span class="emph">dalam minit bukan jam.</span></h1>
-      <p class="hero-sub">Tetapkan TP, Ulasan, Usaha dan Kemahiran untuk berpuluh murid dalam beberapa klik, terus di panel sisi sebelah SPPB (MOEIS / IDME), atau import Excel berbilang kelas sekali gus.</p>
+      <p class="hero-sub">Tetapkan TP untuk berpuluh murid dalam beberapa klik &mdash; Ulasan, Usaha dan Kemahiran mengikut TP. Semak dahulu apa yang akan ditulis, kemudian tulis. Terus di panel sisi sebelah SPPB (MOEIS / IDME), atau Excel pukal untuk semua kelas sekali gus.</p>
       <div class="hero-btns">
         <a href="https://chromewebstore.google.com/detail/pbd-helper/hpjmhpolokbbhnjbnkddbjnomahanpoc" id="cwsBtn" class="btn-teal" target="_blank" rel="noopener" aria-describedby="cwsNote">Pasang percuma dari Chrome Web Store</a>
         <a href="/panduan" class="btn-light">Lihat panduan</a>
@@ -565,7 +576,7 @@
             <div class="vs-chip vs-chip-good">
               <svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>
               <span class="vs-chip-label">PBD Helper</span>
-              <span>Set TP semua atau berkumpulan</span>
+              <span>&ldquo;Semua: 1&ndash;6&rdquo; untuk seluruh senarai</span>
             </div>
           </div>
         </div>
@@ -591,14 +602,14 @@
 
         <div class="vs-row">
           <div class="vs-task">
-            <strong>Isi Kemahiran 4 komponen (subjek bahasa)</strong>
-            <small>Empat komponen kemahiran bahasa setiap murid</small>
+            <strong>Isi Kemahiran setiap komponen (subjek bahasa)</strong>
+            <small>Setiap komponen kemahiran bahasa, setiap murid</small>
           </div>
           <div class="vs-chips">
             <div class="vs-chip vs-chip-bad">
               <svg aria-hidden="true" focusable="false"><use href="#icon-clock"/></svg>
               <span class="vs-chip-label">Manual</span>
-              <span>Empat set radio setiap murid</span>
+              <span>Satu set radio bagi setiap komponen, setiap murid</span>
             </div>
             <div class="vs-chip vs-chip-good">
               <svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>
@@ -646,9 +657,10 @@
             <div class="feat-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
             </div>
-            <h3>Set satu kelas dalam beberapa klik</h3>
-            <p>Buka satu kelas PBD, set Tahap Penguasaan setiap murid dengan butang TP1–TP6. Status sambungan jelas menunjukkan kelas yang sedang dibaca, terus di sebelah halaman SPPB.</p>
+            <h3>Satu kelas, ikut lajur</h3>
+            <p>Skrin <strong>Isi PBD</strong> dibahagi kepada lajur <strong>TP &middot; Usaha &middot; Ulasan &middot; Intervensi</strong>. Anda hanya isi TP; Usaha dan Ulasan dicadangkan mengikut TP dan ditanda <em>auto</em> sehingga anda ubah sendiri. Penapis <strong>Belum &middot; Sudah &middot; Semua</strong> menunjukkan siapa yang masih belum ada TP.</p>
           </div>
+          <!-- TODO v1.3 media: gantikan img/01-kelas-semasa.png dengan tangkapan panel v1.3 skrin "Isi PBD" (lajur TP dipilih, pil Belum/Sudah/Semua, baris "Semua: 1-6"). Blur: nama murid + nama sekolah/guru. Imej pegun 1280x800. -->
           <div class="feat-shot shot" role="img" aria-label="Panel sisi PBD Helper memaparkan butang TP1 hingga TP6 untuk setiap murid.">
             <div class="shot-bar" aria-hidden="true">
               <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
@@ -660,42 +672,58 @@
 
         <div class="feat">
           <div class="feat-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>
+          </div>
+          <h3>Rumah: pilih tugas, pilih kelas</h3>
+          <p>Panel dibuka dengan <strong>Rumah</strong>: Isi PBD &middot; Excel pukal &middot; Ulasan Guru Kelas &middot; Cetak Laporan PBD, setiap satu dengan baris status. Tekan satu tugas dan panel menyenaraikan kelas anda &mdash; pilih kelas, dan tab SPPB dibawa ke halaman yang betul. Butang <strong>&lsaquo; Pilih kelas</strong> dan <strong>&lsaquo; Rumah</strong> membawa anda kembali.</p>
+        </div>
+
+        <div class="feat">
+          <div class="feat-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/><path d="M8.5 11l2 2 4-4"/></svg>
+          </div>
+          <h3>&ldquo;Semak sebelum tulis&rdquo;</h3>
+          <p>Sebelum apa-apa ditulis, satu skrin menyenaraikan berapa murid akan ditulis, medan demi medan, dan <strong>apa yang tidak disentuh</strong>. Anda tekan <strong>Tulis</strong> hanya selepas angka itu betul.</p>
+        </div>
+
+        <div class="feat">
+          <div class="feat-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
           </div>
-          <h3>BARU: Cetakan Laporan (percuma)</h3>
-          <p>Buka Laporan Individu kelas anda dan tekan "Jana Cetakan Kelas" — laporan Keseluruhan PBD &amp; Kemahiran seluruh kelas disusun kemas, setiap murid satu muka surat, siap tandatangan digital dan nama Guru Besar. Data dipaparkan 1:1 dari SPPB. Cetak terus, atau simpan sebagai PDF.</p>
+          <h3>Cetakan Laporan (percuma)</h3>
+          <p>Dari Rumah, pilih <strong>Cetak Laporan PBD</strong> dan kelas anda &mdash; kemudian tekan <strong>Jana cetakan kelas</strong>. Laporan Keseluruhan PBD &amp; Kemahiran seluruh kelas disusun kemas, setiap murid satu muka surat, siap tandatangan digital dan nama Guru Besar. Data dipaparkan 1:1 dari SPPB. Cetak terus, atau simpan sebagai PDF.</p>
         </div>
 
         <div class="feat">
           <div class="feat-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 3.5a2.12 2.12 0 0 1 3 3L7 18l-4 1 1-4Z"/><path d="M12 21h9"/></svg>
           </div>
-          <h3>Ulasan, Usaha &amp; Kemahiran isi sendiri</h3>
-          <p>Ulasan Guru (kategori ikut TP), Usaha Murid, dan Kemahiran (semua komponen untuk subjek bahasa) diisi automatik mengikut TP. Anda nampak apa yang akan ditulis pada setiap baris sebelum simpan.</p>
+          <h3>Ulasan, Usaha &amp; Kemahiran ikut TP</h3>
+          <p>Ulasan Guru (kategori ikut TP), Usaha Murid, dan Kemahiran (semua komponen untuk subjek bahasa) dicadangkan mengikut TP dan ditanda <em>auto</em>. Untuk subjek bahasa, Kemahiran dipaparkan terus di bawah TP murid itu &mdash; termasuk gred komponen yang sudah tersimpan di SPPB.</p>
         </div>
 
         <div class="feat">
           <div class="feat-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <h3>Tetapkan Berkumpulan</h3>
-          <p>Tetapkan TP atau Usaha untuk semua murid sekali gus, atau tanda sekumpulan murid sahaja (contoh: sebahagian "Tinggi", sebahagian "Sederhana").</p>
+          <h3>&ldquo;Semua: 1&ndash;6&rdquo; sekali tekan</h3>
+          <p>Baris <strong>Semua:</strong> di atas senarai menetapkan TP untuk setiap murid yang sedang dipaparkan &mdash; jadi tapis dahulu (Belum &middot; Sudah &middot; Semua), kemudian tekan satu nombor. Lajur Usaha dan Ulasan pula ada &ldquo;Ganti usaha auto&hellip;&rdquo; dan &ldquo;Ganti ulasan auto&hellip;&rdquo; yang hanya menyentuh nilai auto.</p>
         </div>
 
         <div class="feat">
           <div class="feat-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
           </div>
-          <h3>Simpan &amp; Sahkan</h3>
-          <p>Selepas simpan, extension membaca semula data dari SPPB dan menanda &#10003;/&#10007; setiap murid, supaya anda tahu apa yang benar-benar tersimpan.</p>
+          <h3>Baca semula &amp; sahkan</h3>
+          <p>Semasa menulis, panel menunjukkan <strong>m daripada n murid</strong>, nama murid semasa, anggaran masa, dan butang <strong>Berhenti selepas murid ini</strong>. Selepas siap, data dibaca semula dari SPPB dan kad keputusan menunjukkan <strong>m daripada n disahkan</strong> &mdash; dengan <strong>Cuba lagi</strong> untuk murid yang gagal.</p>
         </div>
 
         <div class="feat">
           <div class="feat-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg>
           </div>
-          <h3>Excel Pukal (semua kelas sekali gus)</h3>
-          <p>"Jana Excel" memuat turun satu fail dengan satu tab untuk setiap kelas–mata pelajaran. Isi TP sahaja (taip "TP4" atau "4") dan Usaha serta Ulasan terisi automatik mengikut TP, kemudian "Muat naik" → sahkan → isi semua kelas. Butang "Berhenti" ada bila-bila masa.</p>
+          <h3>Excel Pukal (tiga langkah)</h3>
+          <p><strong>Jana fail Excel</strong> memuat turun satu fail dengan satu tab untuk setiap kelas&ndash;mata pelajaran. Isi TP sahaja (taip &ldquo;TP4&rdquo; atau &ldquo;4&rdquo;) dan Usaha serta Ulasan terisi automatik mengikut TP, kemudian <strong>Muat naik semula</strong> &rarr; semak senarai &rarr; tulis kelas demi kelas. Butang <strong>Berhenti selepas kelas ini</strong> ada bila-bila masa.</p>
         </div>
 
         <div class="feat">
@@ -703,50 +731,53 @@
             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           </div>
           <h3>Ulasan Fleksibel</h3>
-          <p>Pilih ulasan dari senarai (dikumpulkan ikut kategori) atau taip ulasan anda sendiri, ikut gaya penulisan anda.</p>
+          <p>Pilih ulasan dari senarai (dikumpulkan ikut kategori) atau taip ulasan anda sendiri, ikut gaya penulisan anda. Sebaik anda taip sendiri, ulasan itu tidak lagi diubah oleh TP.</p>
         </div>
 
         <div class="feat">
           <div class="feat-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
           </div>
-          <h3>Lindungi Kerja Sedia Ada</h3>
-          <p>Pilihan "Hanya isi yang kosong" melangkau murid yang sudah dinilai. Isi berulang tidak akan menimpa nilai yang sudah betul atau suntingan manual anda.</p>
+          <h3>Lindungi kerja sedia ada</h3>
+          <p>Hanya murid yang <strong>belum ada TP tersimpan</strong>, atau yang <strong>anda ubah kali ini</strong>, akan ditulis. Ulasan yang anda taip sendiri di SPPB tidak ditulis ganti melalui skrin ini. Kelas yang sudah dihantar atau disahkan ditanda <strong>dikunci</strong> &mdash; lihat sahaja, tiada butang tulis (Excel dan Cetakan Laporan masih boleh).</p>
         </div>
       </div>
 
-      <!-- Group-set embed -->
+      <!-- Bulk-set embed -->
       <div class="feat-embed">
         <div class="feat-embed-inner">
           <div class="feat-embed-text">
-            <h3>Tetapkan seluruh kelas dalam satu langkah</h3>
-            <p>Tanda sekumpulan murid, tekan "Set TP…" atau "Set Usaha…" dari bar tindakan, dan seluruh pilihan diisi sekali gus. Tidak perlu klik radio yang sama berpuluh kali.</p>
+            <h3>Tetapkan seluruh senarai dalam satu langkah</h3>
+            <p>Tapis kepada murid yang <strong>Belum</strong> ada TP, kemudian tekan satu nombor pada baris <strong>&ldquo;Semua: 1&ndash;6&rdquo;</strong> &mdash; setiap murid yang dipaparkan diisi sekali gus. Tidak perlu klik radio yang sama berpuluh kali. Selepas itu ubah yang perlu, seorang demi seorang.</p>
           </div>
-          <div class="shot" role="img" aria-label="Bar tindakan berkumpulan PBD Helper: beberapa murid ditanda dengan pilihan Set TP dan Set Usaha.">
+          <!-- TODO v1.3 media: gantikan img/02-set-berkumpulan.png dengan tangkapan panel v1.3 baris "Semua: 1-6" + pil penapis (kotak semak & bar "Set TP..." sudah tiada dalam Isi PBD). Blur: nama murid + nama sekolah/guru. Imej pegun 1280x800. -->
+          <div class="shot" role="img" aria-label="Panel PBD Helper: senarai murid dengan kawalan menetapkan Tahap Penguasaan untuk ramai murid sekali gus.">
             <div class="shot-bar" aria-hidden="true">
               <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
               <span class="shot-url"><span class="lock">&#128274;</span>moeissppb.moe.gov.my</span>
             </div>
-            <img src="img/02-set-berkumpulan.png" width="1280" height="800" loading="lazy" alt="Set berkumpulan: murid ditanda dengan bar Set TP dan Set Usaha.">
+            <img src="img/02-set-berkumpulan.png" width="1280" height="800" loading="lazy" alt="Panel PBD Helper: senarai murid dengan kawalan menetapkan Tahap Penguasaan untuk ramai murid sekali gus.">
           </div>
         </div>
       </div>
 
-      <!-- Ulasan Guru Kelas embed (v1.1, free) -->
+      <!-- Ulasan Guru Kelas embed (free) -->
       <div class="feat-embed">
         <div class="feat-embed-inner">
           <div class="feat-embed-text">
             <h3>Ulasan Guru Kelas, percuma untuk semua</h3>
-            <p>Anda guru kelas? Buka halaman Pengurusan dan isi Ulasan Guru Kelas untuk seluruh kelas anda: pilih dari senarai ulasan biasa atau taip sendiri, isi berkumpulan, dan sahkan selepas simpan. Ada juga template Excel khas untuk guru kelas. Tidak dikira dalam had pelan percuma.</p>
+            <p>Anda guru kelas? Dari Rumah pilih <strong>Ulasan Guru Kelas</strong> dan kelas anda: pilih dari senarai ulasan biasa atau taip sendiri, tanda beberapa murid untuk isi berkumpulan, kemudian <strong>Tulis ulasan ke SPPB</strong> &mdash; dengan pengesahan baca-balik seperti biasa. Ada juga Excel pukal khas untuk guru kelas. Tidak dikira dalam had pelan percuma.</p>
           </div>
+          <!-- TODO v1.3 media: sahkan semula img/06-ulasan-guru-kelas.png terhadap panel v1.3 (tajuk skrin "Ulasan Guru Kelas" + butang "Tulis ulasan ke SPPB"); tangkap semula jika perlu. Blur: nama murid + nama sekolah/guru. -->
           <div class="shot" role="img" aria-label="Panel Ulasan Guru Kelas PBD Helper dengan senarai murid dan pilihan ulasan biasa.">
             <div class="shot-bar" aria-hidden="true">
               <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
               <span class="shot-url"><span class="lock">&#128274;</span>moeissppb.moe.gov.my</span>
             </div>
-            <img src="img/06-ulasan-guru-kelas.png" width="1280" height="800" loading="lazy" alt="Panel Ulasan Guru Kelas: senarai murid dengan ulasan dan butang Isi &amp; Simpan.">
+            <img src="img/06-ulasan-guru-kelas.png" width="1280" height="800" loading="lazy" alt="Panel Ulasan Guru Kelas: senarai murid dengan ulasan dan butang untuk menulis ulasan ke SPPB.">
           </div>
         </div>
+      </div>
       </div>
     </div>
   </section>
@@ -763,28 +794,29 @@
         <div class="how-step">
           <div class="how-num">1</div>
           <div class="how-step-body">
-            <h3>Buka satu kelas–mata pelajaran</h3>
-            <p>Log masuk SPPB (moeissppb.moe.gov.my), pergi ke Keputusan › PBD, dan buka satu kelas–mata pelajaran.</p>
+            <h3>Buka panel &rarr; Rumah &rarr; Isi PBD</h3>
+            <p>Log masuk SPPB (moeissppb.moe.gov.my) dan buka panel PBD Helper. Di skrin <strong>Rumah</strong>, tekan <strong>Isi PBD kelas ini</strong> &mdash; panel menyenaraikan kelas anda, dan kelas yang anda pilih dibuka terus di tab SPPB.</p>
           </div>
         </div>
         <div class="how-step">
           <div class="how-num">2</div>
           <div class="how-step-body">
-            <h3>Set TP → Isi &amp; Simpan</h3>
-            <p>Buka panel PBD Helper, set TP setiap murid (atau berkumpulan), kemudian klik "Isi &amp; Simpan". Extension mengisi medan wajib dan mengesahkan setiap murid.</p>
+            <h3>Set TP &rarr; Semak &rarr; Tulis</h3>
+            <p>Set TP setiap murid (atau tekan satu nombor pada baris &ldquo;Semua: 1&ndash;6&rdquo;), kemudian <strong>&ldquo;Semak sebelum tulis&rdquo;</strong>. Skrin semak menunjukkan apa yang akan ditulis dan apa yang tidak disentuh; tekan <strong>Tulis</strong> dan setiap murid ditanda &#10003;/&#10007; selepas dibaca semula.</p>
           </div>
         </div>
         <div class="how-step">
           <div class="how-num">3</div>
           <div class="how-step-body">
             <h3>Atau banyak kelas: Excel pukal</h3>
-            <p>Untuk banyak kelas: "Jana Excel" → isi fail → "Muat naik" → "Sahkan &amp; Isi". Satu fail meliputi semua kelas–mata pelajaran anda.</p>
-            <div class="how-step-shot shot" role="img" aria-label="Aliran Excel pukal PBD Helper: zon lepas fail dengan butang Jana template dan Muat naik.">
+            <p>Untuk banyak kelas: <strong>Jana fail Excel</strong> &rarr; isi fail di rumah &rarr; <strong>Muat naik semula</strong> &rarr; semak senarai kelas &rarr; tulis. Satu fail meliputi semua kelas&ndash;mata pelajaran anda.</p>
+            <!-- TODO v1.3 media: gantikan img/04-excel-pukal.png dengan tangkapan skrin "Excel pukal" v1.3 (suis "Isi PBD | Ulasan Guru Kelas", tiga kad berangka: 1 Jana fail Excel, 2 Isi dalam Excel, 3 Muat naik semula). Blur: nama kelas/sekolah. Imej pegun 1280x800. -->
+            <div class="how-step-shot shot" role="img" aria-label="Aliran Excel pukal PBD Helper: jana fail, isi di luar talian, kemudian muat naik semula.">
               <div class="shot-bar" aria-hidden="true">
                 <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
                 <span class="shot-url">PBD Helper &middot; Excel Pukal</span>
               </div>
-              <img src="img/04-excel-pukal.png" width="1280" height="800" loading="lazy" alt="Excel pukal: zon lepas fail dengan Jana template dan aliran Muat naik untuk semua kelas.">
+              <img src="img/04-excel-pukal.png" width="1280" height="800" loading="lazy" alt="Skrin Excel pukal PBD Helper: jana fail Excel untuk semua kelas, kemudian muat naik semula.">
             </div>
           </div>
         </div>
@@ -799,27 +831,29 @@
       <div style="text-align:center">
         <p class="sh-label">Simpan &amp; Sahkan</p>
         <h2 class="sh-title" id="verify-title">Setiap murid dapat tanda hijau</h2>
-        <p class="sh-sub">Mesej "Berjaya" tidak cukup. PBD Helper membaca semula dari SPPB untuk pastikan skor benar-benar tersimpan.</p>
+        <p class="sh-sub">Mesej "Berjaya" tidak cukup. Selepas <strong>Tulis</strong>, PBD Helper membaca semula dari SPPB untuk pastikan skor benar-benar tersimpan.</p>
       </div>
       <div class="verify-grid">
         <div class="verify-card">
-          <div class="shot" role="img" aria-label="Keputusan simpan PBD Helper: tanda hijau disahkan merentasi senarai murid.">
+          <!-- TODO v1.3 media: gantikan img/03-disahkan.png dengan tangkapan kad keputusan v1.3 ("Selesai - m daripada n disahkan", senarai murid dengan tanda, butang "Cuba lagi"). Blur: nama murid + nama sekolah/guru. Imej pegun 1280x800. -->
+          <div class="shot" role="img" aria-label="Keputusan selepas menulis: tanda hijau disahkan bagi murid dalam senarai.">
             <div class="shot-bar" aria-hidden="true">
               <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
               <span class="shot-url"><span class="lock">&#128274;</span>moeissppb.moe.gov.my</span>
             </div>
-            <img src="img/03-disahkan.png" width="1280" height="800" loading="lazy" alt="Keputusan simpan: tanda hijau disahkan bagi setiap murid dalam senarai.">
+            <img src="img/03-disahkan.png" width="1280" height="800" loading="lazy" alt="Keputusan selepas menulis: tanda hijau disahkan bagi setiap murid dalam senarai.">
           </div>
           <ul class="verify-list">
             <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Baca semula TP, Usaha, Ulasan dan Intervensi selepas simpan</li>
             <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Tanda &#10003; disahkan atau &#10007; perlu semak untuk setiap murid</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Kad keputusan: &ldquo;m daripada n disahkan&rdquo;, dengan &ldquo;Cuba lagi&rdquo; untuk yang gagal</li>
             <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Anda tahu apa yang benar-benar tercatat di SPPB</li>
           </ul>
         </div>
         <div class="teaser-card">
           <span class="teaser-tag">Panduan Lengkap</span>
           <h3>Mahu lihat setiap langkah dengan screenshot?</h3>
-          <p>Panduan langkah-demi-langkah lengkap: pemasangan, set TP, Isi &amp; Simpan, dan aliran Excel pukal untuk semua kelas anda.</p>
+          <p>Panduan langkah-demi-langkah lengkap: pemasangan, Rumah dan pilih kelas, set TP, Semak sebelum tulis, dan aliran Excel pukal untuk semua kelas anda.</p>
           <a href="/panduan">Buka Panduan Lengkap <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-arrow"/></svg></a>
         </div>
       </div>
@@ -851,11 +885,12 @@
           <div class="plan-period">1 kelas-subjek</div>
           <ul class="plan-features">
             <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> 1 kelas-subjek</li>
-            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Panel sisi + set TP1–TP6</li>
-            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Isi automatik medan wajib</li>
-            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Tetapkan berkumpulan</li>
-            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Simpan &amp; sahkan setiap murid</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Panel sisi: Rumah, pilih kelas, set TP1–TP6</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Isi automatik medan wajib mengikut TP</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> &ldquo;Semua: 1&ndash;6&rdquo; &amp; penapis Belum / Sudah / Semua</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Semak sebelum tulis, kemudian sahkan setiap murid</li>
             <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Ulasan Guru Kelas (untuk guru kelas)</li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Cetakan Laporan PBD</li>
           </ul>
           <a href="https://chromewebstore.google.com/detail/pbd-helper/hpjmhpolokbbhnjbnkddbjnomahanpoc" class="plan-btn" target="_blank" rel="noopener">Pasang percuma</a>
         </div>
@@ -892,15 +927,16 @@
         <p class="sh-sub">Semua yang anda perlu tahu sebelum bermula.</p>
       </div>
       <div class="faq-list" id="faqList">
-        <div class="faq-item"><button><span>Apa itu PBD Helper?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>PBD Helper ialah extension Chrome (panel sisi) yang membantu guru mengisi skor PBD di sistem SPPB (juga dikenali MOEIS atau IDME): Tahap Penguasaan (TP1 hingga TP6), Usaha, Ulasan, Kemahiran dan Intervensi untuk satu kelas penuh dengan beberapa klik. Ia juga menyokong import Excel berbilang kelas.</p></div></div>
+        <div class="faq-item"><button><span>Apa itu PBD Helper?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>PBD Helper ialah extension Chrome (panel sisi) yang membantu guru mengisi skor PBD di sistem SPPB (juga dikenali MOEIS atau IDME). Panel dibuka dengan skrin <strong>Rumah</strong>: pilih tugas, pilih kelas, kemudian tetapkan Tahap Penguasaan (TP1 hingga TP6) untuk satu kelas penuh &mdash; Usaha, Ulasan dan Kemahiran bahasa dicadangkan mengikut TP. Sebelum apa-apa ditulis, skrin <strong>&ldquo;Semak sebelum tulis&rdquo;</strong> menunjukkan apa yang akan ditulis. Ia juga menyokong Excel pukal berbilang kelas.</p></div></div>
         <div class="faq-item"><button><span>Adakah PBD Helper rasmi daripada KPM?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Tidak. PBD Helper ialah alat bantuan bebas yang dibina oleh Cikgu Davin, dan tidak berafiliasi, ditaja atau disahkan oleh KPM/MOE atau sistem SPPB. Ia hanya menulis melalui butang "Simpan" SPPB yang sebenar, tidak pernah menekan "Hantar" secara automatik, dan semua data murid kekal dalam SPPB.</p></div></div>
         <div class="faq-item"><button><span>Pelayar apa yang disokong?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Chrome, Edge, Brave, dan Opera (semua pelayar berasaskan Chromium). PBD Helper ialah extension komputer, jadi ia tidak berfungsi pada telefon atau Safari.</p></div></div>
         <div class="faq-item"><button><span>Adakah data murid saya selamat?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Ya. Tiada nama atau nombor kad pengenalan murid dikeluarkan dari peranti anda. Extension hanya menulis skor melalui butang "Simpan" SPPB yang sebenar, dan semua data murid kekal dalam SPPB. Pelayan lesen hanya menerima cincangan (hash) SHA-256 tanpa nama serta id peranti. <a href="/privacy">Baca dasar privasi penuh</a>.</p></div></div>
         <div class="faq-item"><button><span>Bagaimana saya aktifkan kunci Pro?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Beli Pro di <a href="/beli">pbd.davinhub.com/beli</a> melalui Billplz (FPX). Anda akan terima kunci lesen bermula dengan <strong>PBDH-</strong> beserta emel. Tampal kunci itu ke dalam panel PBD Helper dan klik "Aktifkan".</p></div></div>
-        <div class="faq-item"><button><span>Apa beza percuma vs Pro?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Percuma membolehkan anda mengisi 1 kelas-subjek dengan aliran penuh (set TP, isi medan wajib, simpan dan sahkan). Pro (RM59, sekali bayar) membuka penggunaan tanpa had kelas-subjek serta Excel pukal untuk semua kelas sekali gus.</p></div></div>
+        <div class="faq-item"><button><span>Apa beza percuma vs Pro?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Percuma membolehkan anda mengisi 1 kelas-subjek dengan aliran penuh (set TP, &ldquo;Semak sebelum tulis&rdquo;, &ldquo;Tulis&rdquo;, dan pengesahan baca-balik). Pro (RM59, sekali bayar) membuka penggunaan tanpa had kelas-subjek serta Excel pukal untuk semua kelas sekali gus.</p></div></div>
         <div class="faq-item"><button><span>Boleh tukar peranti?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Boleh. Lesen Pro terikat pada akaun MOEIS anda, bukan pada komputer. Jika anda menukar komputer atau pelayar, aktifkan semula dengan kunci yang sama dan teruskan seperti biasa.</p></div></div>
         <div class="faq-item"><button><span>Saya ada dua akaun SPPB. Satu kunci cukup?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Satu kunci Pro terikat pada <strong>satu akaun MOEIS</strong>. Akaun kedua perlukan kunci sendiri. Selepas kedua-dua akaun mempunyai kunci, anda boleh bertukar akaun dengan bebas &mdash; Pro mengikut akaun yang sedang log masuk.</p></div></div>
         <div class="faq-item"><button><span>Adakah kelas saya akan dikunci?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Tidak. PBD Helper hanya menulis melalui butang "Simpan" SPPB dan tidak pernah menekan "Hantar" secara automatik. Kelas anda tidak akan dikunci, dan simpanan separa dibenarkan.</p></div></div>
+        <div class="faq-item"><button><span>Kelas saya sudah dihantar atau disahkan. Boleh guna lagi?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Boleh lihat, tetapi tidak boleh tulis. Kelas yang sudah dihantar atau disahkan ditanda <strong>dikunci</strong> sejak skrin Rumah, dan butang tulis dimatikan &mdash; PBD Helper tidak akan menulis apa-apa ke kelas yang dikunci. Kelas itu tetap dimuatkan ke dalam fail Excel sebagai rujukan, dan Cetakan Laporan masih boleh dijana.</p></div></div>
         <div class="faq-item"><button><span>Adakah Cetakan Laporan sama dengan laporan SPPB?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Susun atur dioptimumkan untuk cetakan &mdash; setiap murid satu muka surat, saiz teks konsisten &mdash; tetapi <strong>semua data dipaparkan 1:1 daripada laporan SPPB anda</strong>, tiada yang diubah. Setiap muka surat disemak secara automatik; jika ada yang tidak sepadan, paparan asal SPPB digunakan untuk murid itu.</p></div></div>
       </div>
     </div>
