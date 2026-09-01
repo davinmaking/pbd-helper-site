@@ -97,7 +97,7 @@
 
   <main class="page-main" id="main">
   <h1>Dasar Privasi / Privacy Policy</h1>
-  <p class="updated">Kemaskini terakhir: 24 Julai 2026</p>
+  <p class="updated">Kemaskini terakhir: 1 September 2026</p>
 
   <p class="lede"><strong>Ringkasnya:</strong> PBD Helper <strong>tidak mengumpul data murid</strong>. Nama,
   No. KP dan Tahap Penguasaan murid hanya dibaca dari dan ditulis semula ke SPPB
@@ -123,6 +123,10 @@
   (<code>chrome.storage.session</code>) untuk dipaparkan pada tab cetakan; ia dipadam apabila
   pelayar ditutup, tidak ditulis ke storan kekal, dan tidak dihantar ke mana-mana pelayan.
   Cetakan/PDF yang anda jana kekal pada peranti anda.</p>
+  <p>Untuk mengesan masalah, panel juga menulis satu <strong>log langkah tanpa nama</strong> ke dalam
+  memori sesi yang sama (<code>chrome.storage.session</code>) apabila ia membaca senarai kelas anda &mdash;
+  hanya nama langkah dan kod ralat, tiada nama atau No. KP murid. Ia turut hilang apabila pelayar ditutup
+  dan tidak pernah dihantar ke mana-mana pelayan.</p>
 
   <h2>3. Data Yang Disimpan Pada Peranti Anda</h2>
   <p>Extension menyimpan perkara berikut dalam <code>chrome.storage.local</code> (pada peranti
@@ -130,8 +134,13 @@
   <ul>
     <li><strong>Status lesen:</strong> Kunci lesen (jika dimasukkan) dan satu ID peranti yang dijana
     secara rawak. Ini digunakan untuk pengesahan lesen semasa anda mengisi keputusan PBD (lihat Seksyen 4).</li>
-    <li><strong>Perpustakaan ulasan:</strong> Senarai ulasan boleh guna semula yang anda simpan
-    untuk ciri Ulasan Guru Kelas.</li>
+    <li><strong>Perpustakaan ulasan &amp; intervensi:</strong> Senarai ulasan boleh guna semula yang
+    anda simpan untuk ciri Ulasan Guru Kelas, dan ayat intervensi yang anda taip sendiri dalam panel.</li>
+    <li><strong>Tetapan panel:</strong> Kemajuan Mod Panduan (langkah 1&ndash;4, pada pemasangan pertama)
+    dan sama ada lajur Kemahiran dibuka atau ditutup.</li>
+    <li><strong>Rekod kelas yang telah diisi:</strong> Senarai <em>nombor rujukan kelas</em> (id
+    kelas&ndash;mata pelajaran dalam SPPB) yang pernah diisi melalui panel, serta &mdash; untuk pengguna
+    percuma &mdash; nama kelas percuma anda supaya panel boleh menamakannya. Tiada nama atau No. KP murid.</li>
     <li><strong>Tetapan cetakan (pilihan):</strong> Nama Guru Besar — untuk dipaparkan pada
     cetakan laporan sahaja; kekal pada peranti anda dan tidak pernah dihantar ke mana-mana pelayan.
     Imej tandatangan Guru Kelas / Guru Besar pula <strong>tidak disimpan langsung</strong>: ia wujud
@@ -154,7 +163,7 @@
     yang dihantar disimpan selama yang perlu untuk menyelesaikan isu, dan boleh dipadam atas
     permintaan. Tiada apa-apa dihantar melainkan anda memilih untuk menghantarnya.</li>
     <li><strong>Pengesahan lesen (semasa mengisi keputusan PBD):</strong> Untuk menyokong pelan Pro,
-    setiap kali anda klik "Isi &amp; Simpan" bagi keputusan PBD (Tahap Penguasaan sesuatu
+    setiap kali anda menekan "Tulis" bagi keputusan PBD (Tahap Penguasaan sesuatu
     kelas&ndash;mata pelajaran), Extension bertanya pelayan lesen kami sama ada kelas itu dibenarkan.
     Ia menghantar satu hash SHA-256 <strong>tanpa nama</strong> bagi ID pengguna SPPB anda sendiri,
     ID kelas (cmid), satu ID peranti rawak, kunci lesen jika ada, serta versi Extension. Tiada nama atau No. KP murid.
@@ -162,8 +171,8 @@
     percuma dibenarkan untuk 1 kelas&ndash;mata pelajaran; pelan Pro (tanpa had) memerlukan kunci
     lesen yang sah.</li>
     <li><strong>Semakan status lesen (baca sahaja):</strong> Apabila anda membuka panel atau bertukar
-    tab SPPB, Extension menyemak pelayan lesen kami untuk memaparkan lencana pelan anda (PERCUMA
-    atau PRO) dalam panel. Ia menghantar hash SHA-256 <strong>tanpa nama</strong> yang sama bagi ID
+    tab SPPB, Extension menyemak pelayan lesen kami untuk mengetahui pelan anda (percuma atau Pro)
+    dan memaparkannya di skrin Rumah panel. Ia menghantar hash SHA-256 <strong>tanpa nama</strong> yang sama bagi ID
     pengguna SPPB anda, penanda produk, kunci lesen jika ada, serta versi Extension &mdash; tiada nama atau No. KP
     murid. Semakan ini baca sahaja: ia tidak mendaftarkan kunci dan tidak menuntut kuota percuma.
     Hasilnya disimpan sementara (lebih kurang 10 minit) pada peranti anda supaya pertukaran tab
