@@ -202,6 +202,8 @@
     .shot-url .lock { color: var(--teal); margin-right: 6px; }
     .shot img { width: 100%; height: auto; display: block; }
     .shot video { width: 100%; height: auto; display: block; background: var(--n-100); }
+    .step-media.is-panel .shot { max-width: 400px; margin: 0 auto; }
+    .step-media.is-panel { margin-right: 0; }
     .step-media figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 10px; text-align: center; font-style: italic; }
     /* Wide-screen media bleed: on top of the 1280px content column, on viewports wider
        than the layout the framed shots (source 1200px) grow rightward into the page
@@ -543,7 +545,16 @@
             </ul>
             <p>Anda tidak perlu berada di halaman yang betul dahulu &mdash; tekan kad tugas dan panel akan membawa tab SPPB ke sana.</p>
           </div>
-          <!-- TODO v1.3 media: BARU img/16-rumah.png - tangkapan skrin "Rumah" v1.3 (tajuk "Apa yang anda mahu buat?" + kad Isi PBD kelas ini / Excel pukal / Ulasan Guru Kelas / Cetak Laporan PBD, setiap satu dengan baris status). Krop supaya kad bertanda "Akan datang" tidak masuk dalam tangkapan. Blur: nama kelas + nama sekolah/guru. Imej pegun, panel 360px lebar. -->
+          <!-- v1.3 media: tangkapan panel v1.3 daripada harness (data contoh, nama rekaan) 2026-09-01 — tangkap semula dengan SPPB sebenar pada hari rakaman Oktober. -->
+          <figure class="step-media is-panel">
+            <div class="shot" role="img" aria-label="Skrin Rumah panel PBD Helper dengan kad tugas.">
+              <div class="shot-bar" aria-hidden="true">
+                <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
+                <span class="shot-url">PBD Helper &middot; Rumah</span>
+              </div>
+              <img src="img/16-rumah.png" width="720" height="1798" loading="lazy" alt="Skrin Rumah PBD Helper: tajuk Apa yang anda mahu buat? dengan kad Isi PBD kelas ini, Excel pukal, Ulasan Guru Kelas dan Cetak Laporan PBD, setiap satu dengan baris status.">
+            </div>
+          </figure>
           <div class="step-callout">
             <div class="callout is-tip"><span class="callout-icon" aria-hidden="true">&#128161;</span>
               <strong>Kali pertama guna?</strong> Pada pemasangan pertama, panel membuka <strong>Mod Panduan</strong> &mdash; empat langkah ringkas yang bergerak sendiri sebaik tab SPPB anda sampai ke halaman yang betul. Tekan <strong>Langkau panduan</strong> bila-bila masa.
@@ -569,7 +580,16 @@
             </ul>
             <p>Tekan satu kelas: tab SPPB dibuka ke halaman kelas itu dan panel terus masuk ke skrin <strong>Isi PBD</strong>. Butang <strong>&lsaquo; Pilih kelas</strong> di atas membawa anda kembali ke senarai, dan <strong>&lsaquo; Rumah</strong> kembali ke skrin utama.</p>
           </div>
-          <!-- TODO v1.3 media: BARU img/17-pilih-kelas.png - tangkapan skrin "Pilih kelas" v1.3 (kad "Semua kelas sekaligus" di atas, kad kelas dengan status Boleh diisi / dikunci, lipatan "Sesi terdahulu"). Blur: nama kelas + nama sekolah/guru. Imej pegun, panel 360px lebar. -->
+          <!-- v1.3 media: tangkapan panel v1.3 daripada harness (data contoh, nama rekaan) 2026-09-01 — tangkap semula dengan SPPB sebenar pada hari rakaman Oktober. -->
+          <figure class="step-media is-panel">
+            <div class="shot" role="img" aria-label="Senarai kelas dalam panel PBD Helper dengan status setiap kelas.">
+              <div class="shot-bar" aria-hidden="true">
+                <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
+                <span class="shot-url">PBD Helper &middot; Pilih kelas</span>
+              </div>
+              <img src="img/17-pilih-kelas.png" width="720" height="1798" loading="lazy" alt="Skrin Pilih kelas: kad Semua kelas sekaligus di atas, kiraan 10 daripada 14 kelas, kad kelas bertanda Boleh diisi atau dikunci, lihat sahaja.">
+            </div>
+          </figure>
           <figure class="step-media">
             <div class="shot" role="img" aria-label="Halaman Senarai Pentaksiran SPPB: menu Keputusan dan Pentaksiran Bilik Darjah, dan ikon pensel untuk membuka satu kelas.">
               <div class="shot-bar" aria-hidden="true">
@@ -636,7 +656,16 @@
             </ul>
             <p>Baris ringkasan di bawah nama lajur memberitahu berapa baris masih <em>auto</em>, berapa sudah menjadi <em>tulisan / pilihan anda</em> (dilindungi), dan berapa yang masih menunggu TP.</p>
           </div>
-          <!-- TODO v1.3 media: BARU img/18-lajur-ulasan.png - tangkapan skrin lajur "Ulasan" v1.3 (tag auto vs "tulisan anda", baris ringkasan, dropdown "Ganti ulasan auto..."). Blur: nama murid + nama sekolah/guru. Imej pegun, panel 360px lebar. -->
+          <!-- v1.3 media: tangkapan panel v1.3 daripada harness (data contoh, nama rekaan) 2026-09-01 — tangkap semula dengan SPPB sebenar pada hari rakaman Oktober. -->
+          <figure class="step-media is-panel">
+            <div class="shot" role="img" aria-label="Lajur Ulasan panel PBD Helper dengan tag auto dan tulisan anda.">
+              <div class="shot-bar" aria-hidden="true">
+                <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
+                <span class="shot-url">PBD Helper &middot; Isi PBD &middot; Ulasan</span>
+              </div>
+              <img src="img/18-lajur-ulasan.png" width="720" height="1798" loading="lazy" alt="Lajur Ulasan dalam skrin Isi PBD: baris ringkasan 9 auto ikut TP, 1 tulisan anda dilindungi, dropdown Ganti ulasan auto, dan kotak ulasan murid bertanda AUTO TP4.">
+            </div>
+          </figure>
         </article>
 
         <article class="step" id="step-3-5">
@@ -657,7 +686,16 @@
             <p>Peraturannya tetap dan tidak boleh dimatikan: <strong>hanya murid yang belum ada TP tersimpan, atau yang anda ubah kali ini, akan ditulis.</strong> Jika anda memang mahu menulis semula murid yang sudah digred, tukar penapis ke <strong>Sudah</strong> dan ubah TP mereka &mdash; nama mereka akan disenaraikan di skrin semak ini.</p>
             <p>Belum puas hati? Tekan <strong>Kembali &amp; ubah</strong>.</p>
           </div>
-          <!-- TODO v1.3 media: BARU img/19-semak.png - tangkapan skrin "Semak sebelum tulis" v1.3 (kiraan "N murid akan ditulis ke SPPB sekarang", senarai "Yang akan ditulis" + "Yang tidak disentuh", butang "Tulis N murid ke SPPB"). Blur: nama murid + nama kelas/sekolah. Imej pegun, panel 360px lebar. -->
+          <!-- v1.3 media: tangkapan panel v1.3 daripada harness (data contoh, nama rekaan) 2026-09-01 — tangkap semula dengan SPPB sebenar pada hari rakaman Oktober. -->
+          <figure class="step-media is-panel">
+            <div class="shot" role="img" aria-label="Skrin Semak sebelum tulis panel PBD Helper.">
+              <div class="shot-bar" aria-hidden="true">
+                <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
+                <span class="shot-url">PBD Helper &middot; Semak sebelum tulis</span>
+              </div>
+              <img src="img/19-semak.png" width="720" height="1798" loading="lazy" alt="Skrin Semak sebelum tulis: 3 murid akan ditulis ke SPPB sekarang, senarai Yang akan ditulis (TP, Usaha, Ulasan, Kemahiran BI) dan Yang tidak disentuh, butang Tulis 3 murid ke SPPB.">
+            </div>
+          </figure>
           <div class="step-callout">
             <div class="callout"><span class="callout-icon" aria-hidden="true">&#9432;</span>
               <strong>Ulasan yang anda taip sendiri di SPPB tidak ditulis ganti melalui skrin ini.</strong> Ia disenaraikan di bawah &ldquo;Yang tidak disentuh&rdquo; supaya anda nampak sendiri, bukan sekadar percaya.
@@ -745,14 +783,14 @@
             <p>Tekan <strong>Jana fail Excel</strong>. Extension membaca senarai kelas anda (termasuk semua halaman senarai, bukan halaman pertama sahaja) dan memuat turun satu fail Excel dengan <strong>satu tab untuk setiap kelas&ndash;mata pelajaran</strong>, sudah disenaraikan dengan nama murid kelas berkenaan.</p>
             <p>Panel menyatakan kiraan sebenar &mdash; contohnya <em>&ldquo;Kali terakhir: 10 daripada 14 kelas&ndash;mata pelajaran dibaca&rdquo;</em>. Kalau ada yang tidak sempat dibaca, jana sekali lagi untuk yang selebihnya.</p>
           </div>
-          <!-- TODO v1.3 media: gantikan img/08-jana-excel.png dengan tangkapan skrin "Excel pukal" v1.3 (suis "Isi PBD | Ulasan Guru Kelas", tiga kad berangka, baris "Kali terakhir: m daripada n"). Blur: nama kelas + nama sekolah/guru. Imej pegun, panel 360px lebar. -->
-          <figure class="step-media">
+          <!-- v1.3 media: tangkapan panel v1.3 daripada harness (data contoh, nama rekaan) 2026-09-01 — tangkap semula dengan SPPB sebenar pada hari rakaman Oktober. -->
+          <figure class="step-media is-panel">
             <div class="shot" role="img" aria-label="Skrin Excel pukal PBD Helper: butang jana fail Excel dan fail yang dimuat turun dalam senarai muat turun pelayar.">
               <div class="shot-bar" aria-hidden="true">
                 <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
                 <span class="shot-url">PBD Helper &middot; Excel Pukal</span>
               </div>
-              <img src="img/08-jana-excel.png" width="1280" height="800" loading="lazy" alt="Skrin Excel pukal: butang jana fail Excel ditanda (1), fail Excel yang dimuat turun dalam senarai muat turun pelayar ditanda (2).">
+              <img src="img/08-jana-excel.png" width="720" height="1798" loading="lazy" alt="Skrin Excel pukal: butang jana fail Excel ditanda (1), fail Excel yang dimuat turun dalam senarai muat turun pelayar ditanda (2).">
             </div>
           </figure>
           <div class="step-callout">
@@ -839,14 +877,14 @@
             <p>Sebarang masalah dalam fail disenaraikan sebagai <strong>amaran</strong> &mdash; tajuk lajur yang bertukar, nama tab yang tidak dikenali, No. KP berganda, kelas yang <strong>&ldquo;dikunci, tidak boleh diisi&rdquo;</strong>. Amaran tidak pernah menggugurkan data secara senyap; ia dipaparkan supaya anda boleh baca dahulu.</p>
             <p>Jika anda masih pada pelan percuma, skrin ini juga menamakan kelas yang akan menjadi <strong>kelas percuma</strong> anda.</p>
           </div>
-          <!-- TODO v1.3 media: gantikan img/05-sahkan-gate.png dengan tangkapan skrin gate v1.3 (tajuk "Semak sebelum tulis" + "<fail>.xlsx - N tab dibaca", senarai kelas bertanda, kotak amaran, butang "Tulis N kelas"). Blur: nama kelas + nama sekolah/guru. Imej pegun, panel 360px lebar. -->
-          <figure class="step-media">
+          <!-- v1.3 media: tangkapan panel v1.3 daripada harness (data contoh, nama rekaan) 2026-09-01 — tangkap semula dengan SPPB sebenar pada hari rakaman Oktober. -->
+          <figure class="step-media is-panel">
             <div class="shot" role="img" aria-label="Skrin semak PBD Helper: senarai kelas dan bilangan murid sebelum apa-apa ditulis.">
               <div class="shot-bar" aria-hidden="true">
                 <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
                 <span class="shot-url">PBD Helper &middot; Semak sebelum tulis</span>
               </div>
-              <img src="img/05-sahkan-gate.png" width="1280" height="800" loading="lazy" alt="Skrin semak: senarai kelas dan bilangan murid yang akan diisi.">
+              <img src="img/05-sahkan-gate.png" width="720" height="1560" loading="lazy" alt="Skrin semak: senarai kelas dan bilangan murid yang akan diisi.">
             </div>
           </figure>
         </article>
@@ -991,14 +1029,14 @@
             <p>Tekan <strong>Jana cetakan kelas</strong> dan tunggu sebentar &mdash; panel menunjukkan kad kemajuan <strong>&ldquo;m daripada n murid&rdquo;</strong> dengan anggaran masa.</p>
             <p>Kelas penuh mengambil kira-kira satu hingga dua minit, bergantung pada kelajuan rangkaian sekolah. Jika ada murid yang gagal dimuat, namanya disenaraikan dan anda boleh jana semula.</p>
           </div>
-          <!-- TODO v1.3 media: gantikan img/14-laporan-jana.png dengan tangkapan skrin "Cetak Laporan PBD" v1.3 (butang "‹ Pilih kelas", butang "Jana cetakan kelas", baris "1 Jana → 2 Semak → 3 Cetak"). Blur: nama kelas + nama sekolah/guru. Imej pegun, panel 360px lebar. -->
-          <figure class="step-media">
+          <!-- v1.3 media: tangkapan panel v1.3 daripada harness (data contoh, nama rekaan) 2026-09-01 — tangkap semula dengan SPPB sebenar pada hari rakaman Oktober. -->
+          <figure class="step-media is-panel">
             <div class="shot">
               <div class="shot-bar" aria-hidden="true">
                 <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
                 <span class="shot-url"><span class="lock">&#128274;</span>moeissppb.moe.gov.my</span>
               </div>
-              <img src="img/14-laporan-jana.png" width="800" height="500" loading="lazy" alt="Panel PBD Helper pada halaman Laporan Individu dengan butang untuk menjana cetakan seluruh kelas dan panduan 3 langkah.">
+              <img src="img/14-laporan-jana.png" width="720" height="1240" loading="lazy" alt="Panel PBD Helper pada halaman Laporan Individu dengan butang untuk menjana cetakan seluruh kelas dan panduan 3 langkah.">
             </div>
           </figure>
         </article>
