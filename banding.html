@@ -24,6 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/site.css?v=20260902">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -94,32 +95,6 @@
 }
   </script>
   <style>
-    :root {
-      --teal: #0e7c66; --teal-deep: #0b5e4d; --teal-tint: #e7f1ee;
-      --paper: #fcfaf6; --ink: #222; --muted: #6a655c; --line: #ece6db;
-      --white: #ffffff;
-      --n-50: #faf8f3; --n-100: #f4f0e8; --n-200: #e6e0d4;
-      --n-300: #cfc7b8; --n-400: #a49c8c; --n-500: #837b6d;
-      --n-700: #4a453d; --n-900: #2b2822;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    *:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; border-radius: 4px; }
-    body { font-family: "Hanken Grotesk", system-ui, sans-serif; color: var(--ink); background: var(--paper); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-    img { max-width: 100%; display: block; }
-    .skip-link{position:absolute;left:-9999px;top:0;z-index:100;background:var(--white);color:var(--teal-deep);padding:10px 16px;border-bottom-right-radius:8px;font-weight:700;text-decoration:none}
-    .skip-link:focus{left:0}
-
-    nav { position: sticky; top: 0; z-index: 50; background: rgba(252,250,246,0.85); backdrop-filter: saturate(180%) blur(12px); -webkit-backdrop-filter: saturate(180%) blur(12px); border-bottom: 1px solid var(--line); }
-    .nav-inner { max-width: 1152px; margin: 0 auto; padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; }
-    @media(min-width:768px) { .nav-inner { padding: 14px 32px; } }
-    .nav-logo { display: inline-flex; align-items: center; gap: 9px; font-size: 1.2rem; font-weight: 800; color: var(--n-900); text-decoration: none; letter-spacing: -0.01em; }
-    .nav-logo img { width: 28px; height: 28px; border-radius: 7px; flex-shrink: 0; }
-    .nav-logo span { color: var(--teal); }
-    .nav-back { font-size: 0.9rem; font-weight: 600; color: var(--muted); text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; padding: 11px 4px; transition: color 0.15s; }
-    .nav-back:hover { color: var(--n-900); }
-
-    .container { max-width: 1152px; margin: 0 auto; padding: 0 16px; }
-    @media(min-width:768px) { .container { padding: 0 32px; } }
 
     .page-main { max-width: 820px; margin: 0 auto; padding: 44px 20px 64px; line-height: 1.75; }
     h1 { font-size: 1.95rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 12px; color: var(--n-900); }
@@ -179,22 +154,6 @@
 
     .note { font-size: 0.82rem; color: var(--muted); line-height: 1.65; background: var(--n-50); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin: 26px 0 8px; }
 
-    footer { padding: 52px 0 40px; border-top: 1px solid var(--line); background: var(--white); }
-    .footer-inner { display: flex; flex-direction: column; gap: 32px; }
-    @media(min-width:768px) { .footer-inner { flex-direction: row; justify-content: space-between; align-items: start; } }
-    .footer-brand { max-width: 320px; }
-    .footer-brand .logo { display: inline-flex; align-items: center; gap: 9px; font-size: 1.2rem; font-weight: 800; color: var(--n-900); margin-bottom: 10px; }
-    .footer-brand .logo img { width: 26px; height: 26px; border-radius: 7px; }
-    .footer-brand .logo span { color: var(--teal); }
-    .footer-brand p { font-size: 0.875rem; color: var(--muted); }
-    .footer-links { display: flex; gap: 48px; }
-    .footer-col h3 { font-weight: 700; color: var(--n-700); margin-bottom: 10px; font-size: 0.875rem; }
-    .footer-col a { display: block; font-size: 0.875rem; color: var(--muted); text-decoration: none; padding: 10px 0; min-height: 40px; transition: color 0.15s; }
-    .footer-col a:hover { color: var(--n-900); }
-    .footer-disclaimer { max-width: 1152px; margin: 36px auto 0; font-size: 0.78rem; color: var(--n-500); line-height: 1.6; padding-top: 24px; border-top: 1px solid var(--line); }
-    .footer-bottom { max-width: 1152px; margin: 16px auto 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: 0.85rem; color: var(--muted); }
-    .footer-bottom a { color: var(--muted); text-decoration: none; }
-    .footer-bottom a:hover { color: var(--teal); }
   </style>
 </head>
 <body>

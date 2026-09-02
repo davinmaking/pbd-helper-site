@@ -89,23 +89,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/site.css?v=20260902">
   <style>
     /* === Tokens (mirror landing page) === */
-    :root {
-      --teal: #0e7c66; --teal-deep: #0b5e4d; --teal-tint: #e7f1ee;
-      --paper: #fcfaf6; --ink: #222; --muted: #6a655c; --line: #ece6db;
-      --white: #ffffff;
-      /* Warm neutral ramp for borders/text on paper */
-      --n-50: #faf8f3; --n-100: #f4f0e8; --n-200: #e6e0d4;
-      --n-300: #cfc7b8; --n-400: #a49c8c; --n-500: #837b6d;
-      --n-700: #4a453d; --n-900: #2b2822;
-      /* Semantics */
-      --ok: #2c8849; --ok-tint: #ecf7ee; --ok-line: #b7e0c0;
-      --bad: #b94a4f; --bad-tint: #fbf2f3; --bad-line: #eec6c8;
-      --tip: #b47d17; --tip-tint: #fbf5e7; --tip-line: #ecd9a8;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    *:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; border-radius: 4px; }
     html { scroll-padding-top: 76px; }
     @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
     html, body { overscroll-behavior-y: none; }
@@ -113,9 +99,6 @@
     a { color: var(--teal); text-decoration: none; }
     a:hover { text-decoration: underline; }
     .step-body p a, .step-body li a, .footer-inner a, .hero p a, .callout a, .faq-a a { text-decoration: underline; text-underline-offset: 3px; }
-    img { max-width: 100%; height: auto; display: block; }
-    .skip-link{position:absolute;left:-9999px;top:0;z-index:100;background:var(--white);color:var(--teal-deep);padding:10px 16px;border-bottom-right-radius:8px;font-weight:700;text-decoration:none}
-    .skip-link:focus{left:0}
 
     /* === Top nav (mirror landing) === */
     nav.topnav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(252,250,246,0.85); backdrop-filter: saturate(180%) blur(12px); -webkit-backdrop-filter: saturate(180%) blur(12px); border-bottom: 1px solid var(--line); }
@@ -279,7 +262,6 @@
     /* === Footer (mirror landing) === */
     footer { padding: 52px 0 40px; border-top: 1px solid var(--line); background: var(--white); margin-top: 40px; }
     .footer-inner { max-width: 1280px; margin: 0 auto; padding: 0 16px; display: flex; flex-direction: column; gap: 32px; }
-    @media(min-width:768px) { .footer-inner { padding: 0 32px; flex-direction: row; justify-content: space-between; align-items: start; } }
     .footer-brand { max-width: 320px; }
     .footer-brand .logo { display: inline-flex; align-items: center; gap: 9px; font-size: 1.2rem; font-weight: 800; color: var(--n-900); margin-bottom: 10px; }
     .footer-brand .logo img { width: 26px; height: 26px; border-radius: 7px; }
