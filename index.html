@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/site.css?v=20260902">
+  <link rel="stylesheet" href="/site.css?v=20260902b">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -230,13 +230,13 @@
     .how-grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; margin-top: 48px; }
     @media (min-width: 900px) { .how-grid { grid-template-columns: 7fr 4fr; gap: 64px; } }
     .how-steps { position: relative; }
-    .how-steps::before { content: ""; position: absolute; left: 23px; top: 24px; bottom: 24px; width: 2px; background: #cfe3dc; }
+    .how-steps::before { content: ""; position: absolute; inset-inline-start: 23px; top: 24px; bottom: 24px; width: 2px; background: #cfe3dc; }
     .how-step { display: grid; grid-template-columns: 48px 1fr; gap: 22px; padding: 14px 0; position: relative; }
     .how-num { width: 48px; height: 48px; border-radius: 50%; background: var(--teal); color: var(--white); font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; box-shadow: 0 0 0 5px var(--white); }
     .how-step h3 { font-size: 1.12rem; font-weight: 700; margin-bottom: 6px; padding-top: 10px; color: var(--n-900); }
     .how-step p { font-size: 0.97rem; color: var(--muted); line-height: 1.65; }
     .how-shot { max-width: 360px; max-height: 720px; margin: 0 auto; overflow: hidden; -webkit-mask-image: linear-gradient(#000 82%, transparent); mask-image: linear-gradient(#000 82%, transparent); box-shadow: none; }
-    .how-link { margin-top: 28px; padding-left: 70px; }
+    .how-link { margin-top: 28px; padding-inline-start: 70px; }
     .how-link a { color: var(--teal-deep); font-weight: 600; text-decoration: none; }
     .how-link a:hover { text-decoration: underline; }
 
@@ -310,7 +310,7 @@
 
   <nav aria-label="Navigasi utama">
     <div class="nav-inner">
-      <a href="#" class="nav-logo"><img src="icon128.png" alt="" aria-hidden="true" width="28" height="28">PBD <span>Helper</span></a>
+      <a href="/" class="nav-logo"><img src="icon128.png" alt="" aria-hidden="true" width="28" height="28">PBD <span>Helper</span></a>
       <div class="nav-links">
         <a href="#ciri">Ciri-ciri</a>
         <a href="#cara">Cara guna</a>
