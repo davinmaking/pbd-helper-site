@@ -1,6 +1,6 @@
 # PBD Helper
 
-> PBD Helper ialah Chrome extension (Manifest V3, panel sisi) yang membantu guru di Malaysia mengisi skor PBD (Pentaksiran Bilik Darjah) di sistem SPPB / MOEIS (juga dikenali IDME; moeissppb.moe.gov.my) dengan pantas. Panel dibuka dengan skrin "Rumah": pilih tugas (Isi PBD / Excel pukal / Ulasan Guru Kelas / Cetak Laporan PBD), pilih kelas terus dalam panel, kemudian tetapkan Tahap Penguasaan (TP) untuk satu kelas penuh — Usaha, Ulasan dan Kemahiran bahasa dicadangkan mengikut TP. Sebelum apa-apa ditulis, skrin "Semak sebelum tulis" menunjukkan apa yang akan ditulis dan apa yang tidak disentuh. Ia juga menyokong import Excel berbilang kelas. Dibina oleh Cikgu Davin (davinhub). Ia bukan gabungan rasmi KPM.
+> PBD Helper ialah Chrome extension (Manifest V3, panel sisi) yang membantu guru di Malaysia mengisi skor PBD (Pentaksiran Bilik Darjah) di sistem SPPB / MOEIS (juga dikenali IDME; moeissppb.moe.gov.my) dengan pantas. Panel dibuka dengan skrin "Rumah": pilih tugas (Isi PBD / Excel pukal / Ulasan Guru Kelas / Cetak Laporan PBD), pilih kelas terus dalam panel, kemudian tetapkan Tahap Penguasaan (TP) untuk satu kelas penuh — Usaha, Ulasan dan Kemahiran bahasa dicadangkan mengikut TP. Sebelum apa-apa ditulis, skrin "Semak sebelum tulis" menunjukkan apa yang akan ditulis dan apa yang tidak disentuh. Ia juga menyokong Excel pukal berbilang kelas. Dibina oleh Cikgu Davin (davinhub). Ia bukan gabungan rasmi KPM.
 
 ## Fakta utama
 - Nama: PBD Helper
@@ -13,11 +13,11 @@
 - Kelas terkunci: kelas yang sudah dihantar atau disahkan ditanda "dikunci, lihat sahaja" — tiada butang tulis. Kelas itu tetap dimuatkan ke dalam fail Excel sebagai rujukan (tidak boleh dimuat naik semula), dan Cetakan Laporan masih boleh dijana.
 - Ciri unggulan: Excel pukal berbilang kelas dalam tiga langkah (jana fail → isi secara offline → muat naik semula; semua halaman senarai kelas dibaca, kiraan "m daripada n" jujur); Ulasan Guru Kelas / Pengurusan (percuma, dengan saluran Excel sendiri dalam skrin Excel yang sama); Cetakan Laporan (percuma) — cetak laporan Keseluruhan PBD & Kemahiran seluruh kelas, setiap murid satu muka surat, dengan tandatangan digital; data dipaparkan 1:1 dari SPPB.
 - Keselamatan: menulis hanya melalui butang "Simpan" SPPB yang sebenar; tidak pernah menekan "Hantar" secara automatik; data murid kekal dalam SPPB; pelayan lesen hanya menerima cincangan (hash) SHA-256 tanpa nama.
-- Harga: Percuma untuk 1 kelas-subjek; Pro RM59 sekali bayar, tanpa had, terikat pada akaun MOEIS guru (tukar peranti tanpa perlu reset).
+- Harga: Percuma untuk 1 kelas-subjek; Pro RM59 sekali bayar, tanpa had, terikat pada akaun MOEIS guru (tukar peranti tanpa perlu set semula).
 - Pembangun: Cikgu Davin, https://davinhub.com
 
 ## Soalan lazim
-- **Apa itu PBD Helper?** Chrome extension (panel sisi) untuk isi PBD di SPPB (MOEIS/IDME): Tahap Penguasaan, Usaha, Ulasan, Kemahiran, Intervensi, dan import Excel berbilang kelas. Panel dibuka dengan skrin "Rumah" (pilih tugas, kemudian pilih kelas terus dalam panel).
+- **Apa itu PBD Helper?** Chrome extension (panel sisi) untuk isi PBD di SPPB (MOEIS/IDME): Tahap Penguasaan, Usaha, Ulasan, Kemahiran, Intervensi, dan Excel pukal berbilang kelas. Panel dibuka dengan skrin "Rumah" (pilih tugas, kemudian pilih kelas terus dalam panel).
 - **Bagaimana ia elak menulis ganti kerja guru?** Sebelum menulis, skrin "Semak sebelum tulis" menyenaraikan berapa murid akan ditulis, medan demi medan, dan apa yang tidak disentuh. Hanya murid yang belum ada TP tersimpan, atau yang guru ubah kali itu, akan ditulis.
 - **Adakah ia rasmi daripada KPM?** Tidak. Alat bebas oleh Cikgu Davin; bukan gabungan rasmi KPM/SPPB.
 - **Berapa harganya?** Percuma untuk 1 kelas-subjek; Pro RM59 sekali bayar, tanpa had, terikat pada akaun MOEIS.
@@ -25,7 +25,7 @@
 - **Selamatkah data murid?** Ya. Menulis hanya melalui butang Simpan SPPB, tidak pernah Hantar automatik; data murid kekal dalam SPPB; pelayan lesen hanya terima hash tanpa nama.
 
 ## Banding dengan alternatif
-- PBD Helper lawan IDME PBD Helper (oleh Cikgu Aime): PBD Helper menyokong import Excel berbilang kelas, Ulasan Guru Kelas, dan Cetakan Laporan (laporan penuh + Kemahiran, setiap murid satu muka surat) secara percuma, dengan lesen Pro terikat pada akaun MOEIS. IDME PBD Helper menyokong integrasi e-Rekod untuk import kemahiran dan cetak slip PBD. Kedua-duanya ada pelan percuma, memproses data murid secara tempatan dalam pelayar, dan bukan gabungan rasmi KPM. Perbandingan penuh: https://pbd.davinhub.com/banding
+- PBD Helper lawan IDME PBD Helper (oleh Cikgu Aime): PBD Helper menyokong Excel pukal berbilang kelas, Ulasan Guru Kelas, dan Cetakan Laporan (laporan penuh + Kemahiran, setiap murid satu muka surat) secara percuma, dengan lesen Pro terikat pada akaun MOEIS. IDME PBD Helper menyokong integrasi e-Rekod untuk import kemahiran dan cetak slip PBD. Kedua-duanya ada pelan percuma, memproses data murid secara tempatan dalam pelayar, dan bukan gabungan rasmi KPM. Perbandingan penuh: https://pbd.davinhub.com/banding
 
 ## Pautan
 - Laman utama: https://pbd.davinhub.com/

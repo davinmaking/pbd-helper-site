@@ -6,10 +6,10 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="icon128.png">
   <title>Dasar Privasi — PBD Helper</title>
-  <meta name="description" content="Dasar privasi PBD Helper Chrome Extension. Tiada data murid dikumpul, tiada penjejak, tiada analitik. Data murid kekal dalam SPPB.">
+  <meta name="description" content="Dasar privasi PBD Helper Chrome Extension. Tiada data murid dikumpul, tiada cookies penjejak, tiada analitik pihak ketiga. Data murid kekal dalam SPPB.">
   <link rel="canonical" href="https://pbd.davinhub.com/privacy">
   <meta property="og:title" content="Dasar Privasi — PBD Helper">
-  <meta property="og:description" content="Dasar privasi PBD Helper. Tiada data murid dikumpul, tiada penjejak, tiada analitik.">
+  <meta property="og:description" content="Dasar privasi PBD Helper. Tiada data murid dikumpul, tiada cookies penjejak, tiada analitik pihak ketiga.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://pbd.davinhub.com/privacy">
   <meta property="og:locale" content="ms_MY">
@@ -19,11 +19,34 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Dasar Privasi — PBD Helper">
-  <meta name="twitter:description" content="Dasar privasi PBD Helper Chrome Extension. Tiada data murid dikumpul, tiada penjejak, tiada analitik. Data murid kekal dalam SPPB.">
+  <meta name="twitter:description" content="Dasar privasi PBD Helper Chrome Extension. Tiada data murid dikumpul, tiada cookies penjejak, tiada analitik pihak ketiga. Data murid kekal dalam SPPB.">
   <meta name="twitter:image" content="https://pbd.davinhub.com/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Laman utama", "item": "https://pbd.davinhub.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Dasar Privasi", "item": "https://pbd.davinhub.com/privacy" }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "name": "Dasar Privasi PBD Helper",
+        "url": "https://pbd.davinhub.com/privacy",
+        "inLanguage": "ms-MY",
+        "dateModified": "2026-09-02",
+        "isPartOf": { "@type": "WebSite", "name": "PBD Helper", "url": "https://pbd.davinhub.com/" },
+        "about": { "@type": "SoftwareApplication", "name": "PBD Helper", "url": "https://pbd.davinhub.com/" }
+      }
+    ]
+  }
+  </script>
   <style>
     :root {
       --teal: #0e7c66; --teal-deep: #0b5e4d; --teal-tint: #e7f1ee;
@@ -97,13 +120,13 @@
 
   <main class="page-main" id="main">
   <h1>Dasar Privasi / Privacy Policy</h1>
-  <p class="updated">Kemaskini terakhir: 1 September 2026</p>
+  <p class="updated">Kemaskini terakhir: 2 September 2026</p>
 
   <p class="lede"><strong>Ringkasnya:</strong> PBD Helper <strong>tidak mengumpul data murid</strong>. Nama,
   No. KP dan Tahap Penguasaan murid hanya dibaca dari dan ditulis semula ke SPPB
   (moeissppb.moe.gov.my), iaitu sistem yang anda sudah log masuk. Data murid tidak pernah dihantar ke
-  pelayan kami. Tiada analitik, tiada penjualan data. (Satu pengesahan lesen tanpa nama dihantar
-  semasa anda mengisi keputusan PBD; lihat Seksyen 4.)</p>
+  pelayan kami. Tiada analitik pihak ketiga, tiada penjualan data. (Satu pengesahan lesen tanpa nama dihantar
+  semasa anda mengisi keputusan PBD; lihat Seksyen 4. Pembelian lesen di laman web ini diterangkan di Seksyen 5.)</p>
 
   <h2>1. Pengenalan</h2>
   <p>PBD Helper ("Extension") ialah Chrome Extension yang membantu guru mengisi skor PBD
@@ -113,7 +136,7 @@
 
   <h2>2. Data Murid Kekal Dalam SPPB</h2>
   <p>Extension membaca senarai kelas (nama, No. KP, jantina, Tahap Penguasaan) terus dari halaman
-  SPPB yang anda buka, dan menulis skor semula ke SPPB melalui butang "Simpan" sistem itu sendiri.
+  SPPB yang anda buka, dan menulis skor semula ke SPPB melalui butang &ldquo;Simpan&rdquo; sistem itu sendiri.
   Semua data murid ini bergerak hanya antara pelayar anda dan moeissppb.moe.gov.my; ia
   <strong>tidak dihantar, disimpan, atau dikongsi</strong> ke mana-mana pelayan PBD Helper.</p>
   <p>Jika anda menggunakan ciri Excel Pukal, fail Excel diproses sepenuhnya secara tempatan dalam
@@ -160,7 +183,7 @@
   <ul>
     <li><strong>Lapor Masalah (pilihan):</strong> Apabila anda memilih untuk menghantar laporan,
     Extension menghantar nota yang anda taip, satu kontak pilihan (emel/Telegram) yang anda boleh
-    tambah supaya kami boleh balas, versi Extension, tahap pelan (free/pro), penanda produk
+    tambah supaya kami boleh balas, versi Extension, pelan (Percuma/Pro), penanda produk
     ("PBD Helper"), dan jenis pelayar (user agent). Sebarang nombor KP 12 digit dalam nota ditapis
     secara automatik, dan dialog memberi amaran supaya anda tidak menulis nama atau No. KP murid.
     Tiada rekod murid dikumpul. Laporan ini juga mencetuskan satu pemberitahuan kepada pembangun
@@ -168,7 +191,7 @@
     yang dihantar disimpan selama yang perlu untuk menyelesaikan isu, dan boleh dipadam atas
     permintaan. Tiada apa-apa dihantar melainkan anda memilih untuk menghantarnya.</li>
     <li><strong>Pengesahan lesen (semasa mengisi keputusan PBD):</strong> Untuk menyokong pelan Pro,
-    setiap kali anda menekan "Tulis" bagi keputusan PBD (Tahap Penguasaan sesuatu
+    setiap kali anda menekan &ldquo;Tulis&rdquo; bagi keputusan PBD (Tahap Penguasaan sesuatu
     kelas&ndash;mata pelajaran), Extension bertanya pelayan lesen kami sama ada kelas itu dibenarkan.
     Ia menghantar satu hash SHA-256 <strong>tanpa nama</strong> bagi ID pengguna SPPB anda sendiri,
     ID kelas (cmid), satu ID peranti rawak, kunci lesen jika ada, serta versi Extension. Tiada nama atau No. KP murid.
@@ -184,15 +207,27 @@
     tidak menghantar permintaan berulang.</li>
   </ul>
 
-  <h2>5. Data Yang TIDAK Dikumpul</h2>
+  <h2>5. Pembelian Lesen Pro (laman web)</h2>
+  <p>Pembelian dibuat di laman web <a href="/beli">pbd.davinhub.com/beli</a>, bukan di dalam Extension.
+  Semasa membeli, anda memberikan <strong>alamat emel</strong> (wajib) dan <strong>nama</strong> (pilihan).
+  Emel digunakan untuk menghantar kunci lesen dan resit, dan disimpan bersama rekod lesen anda di pelayan kami
+  supaya kunci boleh dihantar semula atau rekod dipadam atas permintaan (lihat Seksyen 9). Pembayaran diproses
+  oleh <strong>Billplz</strong> (FPX): butiran bank anda dimasukkan di halaman Billplz dan tidak pernah sampai
+  ke pelayan kami. Resit dikeluarkan oleh EDUHELPER RESOURCES.</p>
+  <p>Laman web ini (pbd.davinhub.com) menghantar satu <strong>kiraan lawatan halaman</strong> ke pelayan kami
+  untuk statistik penggunaan: laluan halaman dan halaman perujuk sahaja, tanpa cookie dan tanpa sebarang
+  pengenalan pengguna. Ia tidak dikaitkan dengan akaun SPPB atau kunci lesen anda. Extension sendiri tidak
+  mempunyai sebarang analitik.</p>
+
+  <h2>6. Data Yang TIDAK Dikumpul</h2>
   <ul>
     <li>Kami <strong>tidak</strong> mengumpul atau menyimpan data murid (nama, No. KP, Tahap
     Penguasaan, ulasan) di mana-mana pelayan.</li>
-    <li>Kami <strong>tidak</strong> menggunakan cookies penjejak atau analitik.</li>
+    <li>Kami <strong>tidak</strong> menggunakan cookies penjejak atau analitik pihak ketiga (satu-satunya kiraan ialah lawatan halaman laman web tanpa identiti, Seksyen 5).</li>
     <li>Kami <strong>tidak</strong> menjual atau memindahkan data pengguna kepada pihak ketiga.</li>
   </ul>
 
-  <h2>6. Kebenaran Extension</h2>
+  <h2>7. Kebenaran Extension</h2>
   <ul>
     <li><strong>sidePanel:</strong> Memaparkan antara muka Extension sebagai panel sisi di sebelah
     halaman SPPB. Tiada data diakses oleh kebenaran ini.</li>
@@ -209,25 +244,25 @@
     <li><strong>host (moeissppb.moe.gov.my):</strong> Untuk membaca senarai kelas anda sendiri dan
     menyimpan skor, dalam aplikasi SPPB yang anda sudah log masuk.</li>
     <li><strong>host (davinhub-api.davin-making.workers.dev):</strong> Untuk pengesahan lesen (setiap
-    kali mengisi), semakan status lesen (baca sahaja), dan ciri pilihan "Lapor Masalah" sahaja.
+    kali mengisi), semakan status lesen (baca sahaja), dan ciri pilihan &ldquo;Lapor Masalah&rdquo; sahaja.
     Lihat Seksyen 4.</li>
   </ul>
 
-  <h2>7. Keselamatan</h2>
-  <p>Semua komunikasi menggunakan HTTPS. PBD Helper hanya menulis melalui butang "Simpan" SPPB yang
-  sebenar dan tidak pernah menekan "Hantar" secara automatik, jadi kelas anda tidak akan dikunci.</p>
+  <h2>8. Keselamatan</h2>
+  <p>Semua komunikasi menggunakan HTTPS. PBD Helper hanya menulis melalui butang &ldquo;Simpan&rdquo; SPPB yang
+  sebenar dan tidak pernah menekan &ldquo;Hantar&rdquo; secara automatik, jadi kelas anda tidak akan dikunci.</p>
 
-  <h2>8. Hak Pengguna</h2>
+  <h2>9. Hak Pengguna</h2>
   <ul>
     <li>Memadam Extension akan mengosongkan semua data tempatan (status lesen) serta-merta.</li>
     <li>Anda boleh menghubungi kami untuk memadam rekod lesen anda (jika ada).</li>
   </ul>
 
-  <h2>9. Hubungi Kami</h2>
+  <h2>10. Hubungi Kami</h2>
   <p>Untuk sebarang pertanyaan mengenai dasar privasi ini:</p>
   <p><strong>Cikgu Davin</strong><br>Emel: <a href="mailto:hi@davinhub.com">hi@davinhub.com</a><br>Web: <a href="https://davinhub.com" target="_blank" rel="noopener">davinhub.com</a></p>
 
-  <h2>10. Perubahan Dasar</h2>
+  <h2>11. Perubahan Dasar</h2>
   <p>Dasar privasi ini mungkin dikemaskini dari semasa ke semasa. Perubahan akan diumumkan melalui
   kemaskini Extension dan di halaman ini.</p>
   </main>
@@ -257,7 +292,7 @@
         </div>
       </div>
       <p class="footer-disclaimer">
-        PBD Helper ialah alat bantuan pihak ketiga yang dibina secara bebas. Ia TIDAK berafiliasi, ditaja, atau disahkan oleh Kementerian Pendidikan Malaysia (KPM/MOE) atau sistem SPPB. PBD Helper hanya menulis melalui butang "Simpan" SPPB yang sebenar dan tidak pernah menekan "Hantar" secara automatik. Semua data murid kekal dalam SPPB.
+        PBD Helper ialah alat bantuan pihak ketiga yang dibina secara bebas. Ia TIDAK berafiliasi, ditaja, atau disahkan oleh Kementerian Pendidikan Malaysia (KPM/MOE) atau sistem SPPB. PBD Helper hanya menulis melalui butang &ldquo;Simpan&rdquo; SPPB yang sebenar dan tidak pernah menekan &ldquo;Hantar&rdquo; secara automatik. Semua data murid kekal dalam SPPB.
       </p>
       <div class="footer-bottom">
         <p>&copy; 2026 <a href="https://davinhub.com" target="_blank" rel="noopener" style="color:inherit">Cikgu Davin</a>. PBD Helper.</p>
