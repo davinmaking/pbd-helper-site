@@ -29,4 +29,5 @@
 - Banding pilihan (PBD Helper vs IDME PBD Helper): https://pbd.davinhub.com/banding
 - Beli Pro (RM59, sekali bayar): https://pbd.davinhub.com/beli
 - Dasar privasi: https://pbd.davinhub.com/privacy
+- Terma jualan & bayaran balik: https://pbd.davinhub.com/terma
 - Pasang di Chrome Web Store: https://chromewebstore.google.com/detail/pbd-helper/hpjmhpolokbbhnjbnkddbjnomahanpoc
