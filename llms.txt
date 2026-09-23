@@ -1,32 +1,40 @@
 # PBD Helper
 
-> PBD Helper ialah Chrome extension (Manifest V3, panel sisi) yang membantu guru di Malaysia mengisi skor PBD (Pentaksiran Bilik Darjah) di sistem SPPB / MOEIS (juga dikenali IDME; moeissppb.moe.gov.my) dengan pantas. Ia menetapkan Tahap Penguasaan (TP), Usaha, Ulasan, Kemahiran dan Intervensi untuk satu kelas penuh, serta menyokong import Excel berbilang kelas. Dibina oleh Cikgu Davin (davinhub). Ia bukan gabungan rasmi KPM.
+> PBD Helper ialah Chrome extension (Manifest V3, panel sisi) yang membantu guru di Malaysia mengisi skor PBD (Pentaksiran Bilik Darjah) di sistem SPPB / MOEIS (juga dikenali IDME; moeissppb.moe.gov.my) dengan pantas. Panel dibuka dengan skrin "Rumah": pilih tugas (Isi PBD / Excel pukal / Ulasan Guru Kelas / Cetak Laporan PBD), pilih kelas terus dalam panel, kemudian tetapkan Tahap Penguasaan (TP) untuk satu kelas penuh — Usaha, Ulasan dan Kemahiran bahasa dicadangkan mengikut TP. Sebelum apa-apa ditulis, skrin "Semak sebelum tulis" menunjukkan apa yang akan ditulis dan apa yang tidak disentuh. Ia juga menyokong Excel pukal berbilang kelas. Dibina oleh Cikgu Davin (davinhub). Ia bukan gabungan rasmi KPM.
 
 ## Fakta utama
 - Nama: PBD Helper
-- Versi semasa: 1.2.0 (tersedia di Chrome Web Store)
+- Versi semasa: 1.3.0 (tersedia di Chrome Web Store)
 - Jenis: Chrome / Chromium extension (Chrome, Edge, Brave, Opera). Ia extension komputer, bukan aplikasi telefon atau Safari.
 - Sistem disokong: SPPB / MOEIS / IDME (moeissppb.moe.gov.my)
-- Fungsi: isi PBD iaitu Tahap Penguasaan (TP1 hingga TP6), Usaha Murid, Ulasan Guru, Kemahiran bahasa (LSRW) dan Intervensi; cetak laporan PBD seluruh kelas (Cetakan Laporan).
-- Ciri unggulan: import Excel berbilang kelas (sediakan skor secara offline untuk banyak kelas, kemudian muat naik); Ulasan Guru Kelas / Pengurusan (percuma); Cetakan Laporan (percuma) — cetak laporan Keseluruhan PBD & Kemahiran seluruh kelas, setiap murid satu muka surat, dengan tandatangan digital; data dipaparkan 1:1 dari SPPB.
+- Fungsi: isi PBD iaitu Tahap Penguasaan (TP1 hingga TP6), Usaha Murid, Ulasan Guru, Kemahiran bahasa (Mendengar & Bertutur / Membaca / Menulis, atau LSRW) dan Intervensi; cetak laporan PBD seluruh kelas (Cetakan Laporan).
+- Aliran panel (v1.3): Rumah (kad tugas dengan baris status) → Pilih kelas (senarai kelas dalam panel, dikumpulkan ikut sesi, kelas terkunci ditanda) → Isi PBD ikut lajur TP · Usaha · Ulasan · Intervensi (Usaha dan Ulasan ditanda "auto" sehingga guru ubah sendiri; subjek bahasa memaparkan Kemahiran di bawah TP murid) → "Semak sebelum tulis" → "Tulis". Semasa menulis: "m daripada n murid", anggaran masa, dan butang "Berhenti selepas murid ini"; selepas siap, kad keputusan "m daripada n disahkan" dengan "Cuba lagi" untuk murid yang gagal.
+- Peraturan tulis: hanya murid yang belum ada TP tersimpan, atau yang guru ubah kali itu, akan ditulis. Ulasan yang guru taip sendiri di SPPB tidak ditulis ganti melalui skrin ini; gred Kemahiran yang sudah tersimpan dikekalkan.
+- Kelas terkunci: kelas yang sudah dihantar atau disahkan ditanda "dikunci, lihat sahaja" — tiada butang tulis. Kelas itu tetap dimuatkan ke dalam fail Excel sebagai rujukan (tidak boleh dimuat naik semula), dan Cetakan Laporan masih boleh dijana.
+- Ciri unggulan: Excel pukal berbilang kelas dalam tiga langkah (jana fail → isi secara offline → muat naik semula; semua halaman senarai kelas dibaca, kiraan "m daripada n" jujur); Ulasan Guru Kelas / Pengurusan (percuma, dengan saluran Excel sendiri dalam skrin Excel yang sama); Cetakan Laporan (percuma) — cetak laporan Keseluruhan PBD & Kemahiran seluruh kelas, setiap murid satu muka surat, dengan tandatangan digital; data dipaparkan 1:1 dari SPPB.
 - Keselamatan: menulis hanya melalui butang "Simpan" SPPB yang sebenar; tidak pernah menekan "Hantar" secara automatik; data murid kekal dalam SPPB; pelayan lesen hanya menerima cincangan (hash) SHA-256 tanpa nama.
-- Harga: Percuma untuk 1 kelas-subjek; Pro RM59 sekali bayar, tanpa had, terikat pada akaun MOEIS guru (tukar peranti tanpa perlu reset).
+- Harga: Percuma untuk 1 kelas-subjek; Pro RM59 sekali bayar, tanpa had, terikat pada akaun MOEIS guru (tukar peranti tanpa perlu set semula).
 - Pembangun: Cikgu Davin, https://davinhub.com
 
 ## Soalan lazim
-- **Apa itu PBD Helper?** Chrome extension (panel sisi) untuk isi PBD di SPPB (MOEIS/IDME): Tahap Penguasaan, Usaha, Ulasan, Kemahiran, Intervensi, dan import Excel berbilang kelas.
+- **Apa itu PBD Helper?** Chrome extension (panel sisi) untuk isi PBD di SPPB (MOEIS/IDME): Tahap Penguasaan, Usaha, Ulasan, Kemahiran, Intervensi, dan Excel pukal berbilang kelas. Panel dibuka dengan skrin "Rumah" (pilih tugas, kemudian pilih kelas terus dalam panel).
+- **Bagaimana ia elak menulis ganti kerja guru?** Sebelum menulis, skrin "Semak sebelum tulis" menyenaraikan berapa murid akan ditulis, medan demi medan, dan apa yang tidak disentuh. Hanya murid yang belum ada TP tersimpan, atau yang guru ubah kali itu, akan ditulis.
 - **Adakah ia rasmi daripada KPM?** Tidak. Alat bebas oleh Cikgu Davin; bukan gabungan rasmi KPM/SPPB.
 - **Berapa harganya?** Percuma untuk 1 kelas-subjek; Pro RM59 sekali bayar, tanpa had, terikat pada akaun MOEIS.
-- **Apa itu Cetakan Laporan?** Ciri percuma: buka halaman Laporan Individu kelas, tekan Jana Cetakan Kelas, dan cetak laporan PBD & Kemahiran seluruh kelas — setiap murid satu muka surat. Susun atur dioptimumkan untuk cetakan; data 1:1 dari SPPB, tiada yang diubah.
+- **Apa itu Cetakan Laporan?** Ciri percuma: dari Rumah pilih "Cetak Laporan PBD" dan kelas anda, tekan "Jana cetakan kelas", dan cetak laporan PBD & Kemahiran seluruh kelas — setiap murid satu muka surat. Susun atur dioptimumkan untuk cetakan; data 1:1 dari SPPB, tiada yang diubah.
 - **Selamatkah data murid?** Ya. Menulis hanya melalui butang Simpan SPPB, tidak pernah Hantar automatik; data murid kekal dalam SPPB; pelayan lesen hanya terima hash tanpa nama.
 
 ## Banding dengan alternatif
-- PBD Helper lawan IDME PBD Helper (oleh Cikgu Aime): PBD Helper menyokong import Excel berbilang kelas, Ulasan Guru Kelas, dan Cetakan Laporan (laporan penuh + Kemahiran, setiap murid satu muka surat) secara percuma, dengan lesen Pro terikat pada akaun MOEIS. IDME PBD Helper menyokong integrasi e-Rekod untuk import kemahiran dan cetak slip PBD. Kedua-duanya ada pelan percuma, memproses data murid secara tempatan dalam pelayar, dan bukan gabungan rasmi KPM. Perbandingan penuh: https://pbd.davinhub.com/banding
+- Tiga extension isi PBD tersedia di Chrome Web Store (semakan 2 September 2026): PBD Helper (Cikgu Davin), Pantas PBD Helper (Cikgu Aime; dahulu dikenali sebagai IDME PBD Helper) dan myPBD Assistant (cikgujep). Ketiga-tiganya mengisi TP, Usaha, Ulasan, Kemahiran dan Intervensi melalui panel sisi, memproses data murid dalam pelayar, dan bukan gabungan rasmi KPM.
+- PBD Helper: skrin "Semak sebelum tulis" sebelum apa-apa ditulis, baca semula setiap murid selepas simpan (tanda disahkan / perlu semak), tidak menulis ganti ulasan yang guru taip sendiri, cetakan laporan penuh seluruh kelas percuma, Ulasan Guru Kelas percuma; Excel pukal dalam Pro (RM59 sekali bayar, terikat pada akaun MOEIS). Tiada integrasi e-Rekod, tiada UASA, tiada cadangan ulasan AI.
+- Pantas PBD Helper: senarai ciri paling panjang — integrasi e-Rekod, isian UASA, cadangan ulasan AI, auto-intervensi, Excel ("Import TP dari Borang") dan Ulasan Guru Kelas dalam pelan Pro berbayar; komuniti pengguna paling besar.
+- myPBD Assistant: percuma sepenuhnya tanpa pelan Pro, termasuk Excel pukal dan Ulasan Guru Kelas.
+- Perbandingan penuh dan neutral, ditulis oleh pembangun PBD Helper: https://pbd.davinhub.com/banding
 
 ## Pautan
 - Laman utama: https://pbd.davinhub.com/
 - Panduan langkah demi langkah: https://pbd.davinhub.com/panduan
-- Banding pilihan (PBD Helper vs IDME PBD Helper): https://pbd.davinhub.com/banding
+- Banding pilihan (PBD Helper, Pantas PBD Helper, myPBD Assistant): https://pbd.davinhub.com/banding
 - Beli Pro (RM59, sekali bayar): https://pbd.davinhub.com/beli
 - Dasar privasi: https://pbd.davinhub.com/privacy
 - Terma jualan & bayaran balik: https://pbd.davinhub.com/terma

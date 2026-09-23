@@ -24,6 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/site.css?v=20260902b">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -53,56 +54,16 @@
   }
   </script>
   <style>
-    :root {
-      --teal: #0e7c66; --teal-deep: #0b5e4d; --teal-tint: #e7f1ee;
-      --paper: #fcfaf6; --ink: #222; --muted: #6a655c; --line: #ece6db;
-      --white: #ffffff;
-      --n-50: #faf8f3; --n-100: #f4f0e8; --n-200: #e6e0d4;
-      --n-300: #cfc7b8; --n-400: #a49c8c; --n-500: #837b6d;
-      --n-700: #4a453d; --n-900: #2b2822;
-      --ok: #2c8849; --ok-tint: #ecf7ee;
-      --bad: #b94a4f; --bad-tint: #fbf2f3;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    *:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; border-radius: 4px; }
-    body { font-family: "Hanken Grotesk", system-ui, sans-serif; color: var(--ink); background: var(--paper); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-    img { max-width: 100%; display: block; }
     a { color: var(--teal); }
-
-    .skip-link{position:absolute;left:-9999px;top:0;z-index:100;background:var(--white);color:var(--teal-deep);padding:10px 16px;border-bottom-right-radius:8px;font-weight:700;text-decoration:none}
-    .skip-link:focus{left:0}
-
-    /* Nav (matches index.html) */
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(252,250,246,0.85); backdrop-filter: saturate(180%) blur(12px); -webkit-backdrop-filter: saturate(180%) blur(12px); border-bottom: 1px solid var(--line); }
-    .nav-inner { max-width: 1152px; margin: 0 auto; padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; }
-    @media(min-width:768px) { .nav-inner { padding: 14px 32px; } }
-    .nav-logo { display: inline-flex; align-items: center; gap: 9px; font-size: 1.2rem; font-weight: 800; color: var(--n-900); text-decoration: none; letter-spacing: -0.01em; }
-    .nav-logo img { width: 28px; height: 28px; border-radius: 7px; flex-shrink: 0; }
-    .nav-logo span { color: var(--teal); }
-    .nav-back { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 11px 4px; font-size: 0.9rem; font-weight: 600; color: var(--muted); text-decoration: none; transition: color 0.15s; }
-    .nav-back:hover { color: var(--n-900); }
-
-    /* Container */
-    .container { max-width: 1152px; margin: 0 auto; padding: 0 16px; }
-    @media(min-width:768px) { .container { padding: 0 32px; } }
 
     /* Section header trio */
     .sh-label { font-size: 0.85rem; font-weight: 700; color: var(--teal); margin-bottom: 12px; letter-spacing: 0.02em; text-transform: uppercase; }
-    .sh-title { font-size: 1.85rem; font-weight: 800; margin-bottom: 16px; letter-spacing: -0.02em; color: var(--n-900); }
-    @media(min-width:768px) { .sh-title { font-size: 2.25rem; } }
-    .sh-sub { color: var(--muted); max-width: 560px; margin: 0 auto; font-size: 1.02rem; }
-
+    
     /* Page */
-    .page { padding: 104px 0 64px; }
-    @media(min-width:768px) { .page { padding: 120px 0 80px; } }
+    .page { padding: 48px 0 64px; }
+    @media(min-width:768px) { .page { padding: 72px 0 80px; } }
     .buy-head { text-align: center; margin-bottom: 44px; }
 
-    /* Promo strip (matches index.html) */
-    .promo-strip { max-width: 720px; margin: 0 auto 40px; padding: 16px 24px; background: var(--teal-tint); border: 1px solid #cfe3dc; color: var(--n-700); border-radius: 12px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px; font-size: 0.95rem; line-height: 1.4; text-align: center; }
-    .promo-pill { font-size: 0.68rem; font-weight: 700; padding: 4px 11px; background: var(--teal); color: var(--white); border-radius: 99px; letter-spacing: 0.06em; flex-shrink: 0; }
-    .promo-price { font-weight: 700; color: var(--n-900); }
-    .promo-price b { font-size: 1.3rem; color: var(--teal-deep); }
-    .promo-price .old { font-size: 0.95rem; text-decoration: line-through; color: var(--muted); font-weight: 500; margin-left: 6px; }
 
     /* Buy grid: benefits panel + form card */
     .buy-grid { display: grid; grid-template-columns: 1fr; gap: 24px; max-width: 900px; margin: 0 auto; align-items: start; }
@@ -127,7 +88,6 @@
     .buy-card { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 32px 28px; box-shadow: 0 24px 50px -30px rgba(11,94,77,0.28); }
     .buy-card .price-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
     .buy-card .price { font-size: 2.5rem; font-weight: 800; color: var(--teal-deep); line-height: 1; }
-    .buy-card .price-orig { font-size: 1.05rem; color: var(--n-400); text-decoration: line-through; font-weight: 500; }
     .buy-card .price-note { font-size: 0.82rem; color: var(--muted); margin-bottom: 24px; }
     .buy-card hr { border: none; border-top: 1px solid var(--line); margin-bottom: 24px; }
 
@@ -136,7 +96,7 @@
     label .opt { font-weight: 400; color: var(--muted); }
     input[type="email"], input[type="text"] {
       width: 100%; padding: 12px 14px; border: 1px solid var(--n-200); border-radius: 10px;
-      font: inherit; font-size: 0.95rem; color: var(--ink); background: var(--white);
+      font: inherit; font-size: 1rem; color: var(--ink); background: var(--white);
       outline: none; transition: border-color 0.15s, box-shadow 0.15s;
     }
     input::placeholder { color: var(--muted); }
@@ -156,38 +116,6 @@
     #err { margin-top: 12px; font-size: 0.88rem; color: var(--bad); min-height: 1.4em; }
 
     .trust { margin-top: 18px; font-size: 0.78rem; color: var(--muted); text-align: center; line-height: 1.6; }
-
-    /* Disclaimer (matches index.html) */
-    .disclaimer { max-width: 760px; margin: 32px auto 0; padding: 16px 20px; background: var(--n-50); border: 1px solid var(--line); border-radius: 12px; font-size: 0.82rem; color: var(--muted); line-height: 1.6; text-align: center; }
-    .disclaimer strong { color: var(--n-700); }
-
-    /* Footer (matches index.html) */
-    footer { padding: 52px 0 40px; border-top: 1px solid var(--line); background: var(--white); margin-top: 40px; }
-    .footer-inner { display: flex; flex-direction: column; gap: 32px; }
-    @media(min-width:768px) { .footer-inner { flex-direction: row; justify-content: space-between; align-items: start; } }
-    .footer-brand { max-width: 320px; }
-    .footer-brand .logo { display: inline-flex; align-items: center; gap: 9px; font-size: 1.2rem; font-weight: 800; color: var(--n-900); margin-bottom: 10px; }
-    .footer-brand .logo img { width: 26px; height: 26px; border-radius: 7px; }
-    .footer-brand .logo span { color: var(--teal); }
-    .footer-brand p { font-size: 0.875rem; color: var(--muted); }
-    .footer-links { display: flex; gap: 48px; }
-    .footer-col h3 { font-weight: 700; color: var(--n-700); margin-bottom: 10px; font-size: 0.875rem; }
-    .footer-col a { display: block; font-size: 0.875rem; color: var(--muted); text-decoration: none; padding: 10px 0; min-height: 40px; transition: color 0.15s; }
-    .footer-col a:hover { color: var(--n-900); }
-    .footer-disclaimer { max-width: 1152px; margin: 36px auto 0; font-size: 0.78rem; color: var(--muted); line-height: 1.6; padding-top: 24px; border-top: 1px solid var(--line); }
-    .footer-bottom { max-width: 1152px; margin: 16px auto 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: 0.85rem; color: var(--muted); }
-    .footer-bottom a { color: var(--muted); text-decoration: none; }
-    .footer-bottom a:hover { color: var(--teal); }
-
-    .promo-row { display: flex; gap: 8px; }
-    .promo-row input { flex: 1; text-transform: uppercase; }
-    .btn-promo { flex: none; padding: 0 16px; font: inherit; font-weight: 600; font-size: 0.9rem; color: #0b5e4d; background: #e7f1ee; border: 1px solid #0e7c66; border-radius: 10px; cursor: pointer; transition: background .15s; }
-    .btn-promo:hover { background: #dcebe6; }
-    .btn-promo:disabled { opacity: .55; cursor: default; }
-    .promo-msg { margin: 8px 0 0; font-size: 0.82rem; line-height: 1.4; }
-    .promo-msg:empty { margin: 0; }
-    .promo-msg.ok { color: #0b5e4d; font-weight: 600; }
-    .promo-msg.bad { color: #b94a4f; }
 
     @media (max-width: 520px) {
       .buy-card, .buy-panel { padding: 28px 22px; }
@@ -220,12 +148,6 @@
         <p class="sh-sub">Isi PBD untuk semua kelas tanpa had — bayar sekali, terikat pada akaun MOEIS anda. Bukan langganan.</p>
       </div>
 
-      <!-- Static promo strip (no JS, no countdown) -->
-      <div class="promo-strip" role="note">
-        <span class="promo-pill">HARGA</span>
-        <span class="promo-price"><b>RM59</b> <span class="old">RM79</span></span>
-        <span>Sekali bayar, tanpa had kelas-subjek</span>
-      </div>
 
       <div class="buy-grid">
         <!-- Benefits panel -->
@@ -245,7 +167,7 @@
               <svg aria-hidden="true" focusable="false"><use href="#icon-shield"/></svg>
               <div>
                 <strong>Selamat untuk kelas anda</strong>
-                <small>Hanya menulis melalui butang "Simpan" SPPB yang sebenar — tidak pernah menekan "Hantar" secara automatik. Kelas anda tidak akan dikunci; semua data murid kekal dalam SPPB.</small>
+                <small>Hanya menulis melalui butang &ldquo;Simpan&rdquo; SPPB yang sebenar — tidak pernah menekan &ldquo;Hantar&rdquo; secara automatik. Kelas anda tidak akan dikunci; semua data murid kekal dalam SPPB.</small>
               </div>
             </div>
             <div class="panel-trust-item">
@@ -262,7 +184,6 @@
         <div class="buy-card">
           <div class="price-row">
             <span class="price">RM59</span>
-            <span class="price-orig">RM79</span>
           </div>
           <p class="price-note">Sekali bayar &mdash; bukan langganan. Terikat pada akaun MOEIS anda.</p>
 
@@ -277,14 +198,6 @@
               <label for="name">Nama <span class="opt">(pilihan)</span></label>
               <input type="text" id="name" name="name" placeholder="Nama guru" autocomplete="name">
             </div>
-            <div class="field">
-              <label for="promo">Kod promosi <span class="opt">(jika ada)</span></label>
-              <div class="promo-row">
-                <input type="text" id="promo" name="promo" placeholder="Kod diskaun (jika ada)" autocomplete="off" spellcheck="false">
-                <button type="button" id="promoBtn" class="btn-promo">Guna</button>
-              </div>
-              <p id="promoMsg" class="promo-msg" role="status" aria-live="polite"></p>
-            </div>
 
             <button class="btn-pay" id="payBtn" type="submit">Bayar RM59 dengan Billplz</button>
             <p id="err" role="alert" aria-live="polite"></p>
@@ -296,7 +209,7 @@
       </div>
 
       <p class="disclaimer">
-        PBD Helper ialah alat bantuan pihak ketiga yang dibina secara bebas. Ia TIDAK berafiliasi, ditaja, atau disahkan oleh Kementerian Pendidikan Malaysia (KPM/MOE) atau sistem SPPB. Selepas bayar, anda terima kunci lesen bermula dengan <strong>PBDH-</strong> beserta emel &mdash; tampal kunci itu ke dalam panel extension dan klik "Aktifkan".
+        PBD Helper ialah alat bantuan pihak ketiga yang dibina secara bebas. Ia TIDAK berafiliasi, ditaja, atau disahkan oleh Kementerian Pendidikan Malaysia (KPM/MOE) atau sistem SPPB. Selepas bayar, anda terima kunci lesen bermula dengan <strong>PBDH-</strong> beserta emel &mdash; tampal kunci itu ke dalam panel extension dan klik &ldquo;Aktifkan&rdquo;.
       </p>
     </div>
   </main>
@@ -327,7 +240,7 @@
         </div>
       </div>
       <p class="footer-disclaimer">
-        PBD Helper ialah alat bantuan pihak ketiga yang dibina secara bebas. Ia TIDAK berafiliasi, ditaja, atau disahkan oleh Kementerian Pendidikan Malaysia (KPM/MOE) atau sistem SPPB. PBD Helper hanya menulis melalui butang "Simpan" SPPB yang sebenar dan tidak pernah menekan "Hantar" secara automatik. Semua data murid kekal dalam SPPB.
+        PBD Helper ialah alat bantuan pihak ketiga yang dibina secara bebas. Ia TIDAK berafiliasi, ditaja, atau disahkan oleh Kementerian Pendidikan Malaysia (KPM/MOE) atau sistem SPPB. PBD Helper hanya menulis melalui butang &ldquo;Simpan&rdquo; SPPB yang sebenar dan tidak pernah menekan &ldquo;Hantar&rdquo; secara automatik. Semua data murid kekal dalam SPPB.
       </p>
       <div class="footer-bottom">
         <p>&copy; 2026 <a href="https://davinhub.com" target="_blank" rel="noopener" style="color:inherit">Cikgu Davin</a>. PBD Helper.</p>
@@ -339,49 +252,10 @@
   <script>
     const API = 'https://davinhub-api.davin-making.workers.dev';
     const SLUG = 'pbd-helper';
-    const BASE_CENTS = 5900; // static RM59 (matches resources.price)
     const form = document.getElementById('buyForm');
     const btn = document.getElementById('payBtn');
     const err = document.getElementById('err');
-    const promoInput = document.getElementById('promo');
-    const promoBtn = document.getElementById('promoBtn');
-    const promoMsg = document.getElementById('promoMsg');
-    const priceEl = document.querySelector('.buy-card .price');
-    let payLabel = 'Bayar RM59 dengan Billplz';
-
-    function setPay(cents) {
-      const rm = Math.round(cents / 100);
-      payLabel = `Bayar RM${rm} dengan Billplz`;
-      btn.textContent = payLabel;
-      if (priceEl) priceEl.textContent = `RM${rm}`;
-    }
-    // Editing the code un-applies the discount until re-checked (display + charge stay honest).
-    promoInput.addEventListener('input', () => { setPay(BASE_CENTS); promoMsg.textContent = ''; promoMsg.className = 'promo-msg'; });
-
-    promoBtn.addEventListener('click', async () => {
-      const code = promoInput.value.trim().toUpperCase();
-      promoMsg.className = 'promo-msg'; promoMsg.textContent = '';
-      if (!code) { promoInput.focus(); return; }
-      promoBtn.disabled = true; promoBtn.textContent = '…';
-      try {
-        const r = await fetch(`${API}/api/license-purchase/promo?code=${encodeURIComponent(code)}&slug=${SLUG}`);
-        const j = await r.json();
-        if (j.ok && j.data) {
-          setPay(j.data.finalCents);
-          promoMsg.className = 'promo-msg ok';
-          promoMsg.textContent = `✓ ${j.data.code} digunakan — jimat RM${Math.round(j.data.discountCents / 100)}. Jumlah: RM${Math.round(j.data.finalCents / 100)}.`;
-        } else {
-          setPay(BASE_CENTS);
-          promoMsg.className = 'promo-msg bad';
-          promoMsg.textContent = (j && j.error) || 'Kod promosi tidak sah.';
-        }
-      } catch (ex) {
-        promoMsg.className = 'promo-msg bad';
-        promoMsg.textContent = 'Tidak dapat menyemak kod. Cuba lagi.';
-      } finally {
-        promoBtn.disabled = false; promoBtn.textContent = 'Guna';
-      }
-    });
+    const payLabel = 'Bayar RM59 dengan Billplz';
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -393,8 +267,6 @@
           email: document.getElementById('email').value.trim(),
           name: document.getElementById('name').value.trim(),
         };
-        const code = promoInput.value.trim().toUpperCase();
-        if (code) body.promo = code;
         const r = await fetch(API + '/api/license-purchase', {
           method: 'POST',
           headers: { 'content-type': 'application/json' },

@@ -3,3 +3,5 @@
 CLAUDE.md
 # Marketing drafts + assets — local only, not deployed
 marketing/
+# Session handoff notes — local only, must never deploy
+HANDOFF.md
