@@ -27,7 +27,7 @@
 ## Banding dengan alternatif
 - Tiga extension isi PBD tersedia di Chrome Web Store (semakan 26 September 2026): PBD Helper (Cikgu Davin), Pantas PBD Helper (Cikgu Aime; dahulu dikenali sebagai IDME PBD Helper) dan myPBD Assistant (cikgujep). Ketiga-tiganya mengisi TP, Usaha, Ulasan, Kemahiran dan Intervensi melalui panel sisi, memproses data murid dalam pelayar, dan bukan produk rasmi KPM.
 - PBD Helper: skrin "Semak sebelum tulis" sebelum apa-apa ditulis, baca semula setiap murid selepas simpan (tanda disahkan / perlu semak), tidak menulis ganti ulasan yang guru taip sendiri, cetakan laporan penuh seluruh kelas percuma, Ulasan Guru Kelas percuma; Excel pukal dalam Pro (RM59 sekali bayar, terikat pada akaun MOEIS). Tiada integrasi e-Rekod, tiada UASA, tiada cadangan ulasan AI.
-- Pantas PBD Helper: senarai ciri paling panjang — integrasi e-Rekod, isian UASA, cadangan ulasan AI, auto-intervensi, Excel ("Import TP dari Borang") dan Ulasan Guru Kelas dalam pelan Pro berbayar; komuniti pengguna paling besar. Cetakan laporan satu muka surat ialah extension berasingan oleh pembangun yang sama (PBD OnePage, percuma).
+- Pantas PBD Helper: senarai ciri paling panjang — integrasi e-Rekod, isian UASA, cadangan ulasan AI, auto-intervensi, Excel ("Import TP dari Borang") dan Ulasan Guru Kelas dalam pelan Pro berbayar; komuniti pengguna paling besar. Penyenaraian Pantas PBD Helper tidak menyebut cetakan laporan; pembangun yang sama menerbitkan extension berasingan untuk cetakan satu muka surat (PBD OnePage).
 - myPBD Assistant: percuma sepenuhnya tanpa pelan Pro, termasuk Excel pukal dan Ulasan Guru Kelas.
 - Perbandingan penuh dan neutral, ditulis oleh pembangun PBD Helper: https://pbd.davinhub.com/banding
 
