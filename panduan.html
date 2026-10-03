@@ -26,6 +26,103 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "VideoObject",
+        "@id": "https://pbd.davinhub.com/panduan#tutorial-video",
+        "name": "Panduan Penuh PBD Helper — Isi PBD di SPPB: Panel, Excel Pukal, Ulasan Guru Kelas, Cetak Laporan",
+        "description": "Panduan penuh PBD Helper langkah demi langkah: pasang, pilih kelas, isi TP/Usaha/Ulasan/Kemahiran, Semak sebelum tulis, Excel pukal, Ulasan Guru Kelas, Cetak Laporan PBD, dan keadaan seperti sesi tamat.",
+        "thumbnailUrl": "https://pbd.davinhub.com/img/tutorial-thumb.jpg",
+        "uploadDate": "2026-10-03",
+        "duration": "PT21M10S",
+        "contentUrl": "https://www.youtube.com/watch?v=gqphF55mpBc",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/gqphF55mpBc",
+        "inLanguage": "ms-MY",
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://pbd.davinhub.com/#organization",
+          "name": "PBD Helper",
+          "url": "https://pbd.davinhub.com/"
+        },
+        "hasPart": [
+          {
+            "@type": "Clip",
+            "name": "Pengenalan",
+            "startOffset": 0,
+            "endOffset": 98,
+            "url": "https://www.youtube.com/watch?v=gqphF55mpBc&t=0s"
+          },
+          {
+            "@type": "Clip",
+            "name": "Pasang PBD Helper",
+            "startOffset": 98,
+            "endOffset": 163,
+            "url": "https://www.youtube.com/watch?v=gqphF55mpBc&t=98s"
+          },
+          {
+            "@type": "Clip",
+            "name": "Rumah & pilih kelas",
+            "startOffset": 163,
+            "endOffset": 277,
+            "url": "https://www.youtube.com/watch?v=gqphF55mpBc&t=163s"
+          },
+          {
+            "@type": "Clip",
+            "name": "Isi PBD",
+            "startOffset": 277,
+            "endOffset": 421,
+            "url": "https://www.youtube.com/watch?v=gqphF55mpBc&t=277s"
+          },
+          {
+            "@type": "Clip",
+            "name": "Semak sebelum tulis",
+            "startOffset": 421,
+            "endOffset": 590,
+            "url": "https://www.youtube.com/watch?v=gqphF55mpBc&t=421s"
+          },
+          {
+            "@type": "Clip",
+            "name": "Excel pukal",
+            "startOffset": 590,
+            "endOffset": 786,
+            "url": "https://www.youtube.com/watch?v=gqphF55mpBc&t=590s"
+          },
+          {
+            "@type": "Clip",
+            "name": "Ulasan Guru Kelas",
+            "startOffset": 786,
+            "endOffset": 902,
+            "url": "https://www.youtube.com/watch?v=gqphF55mpBc&t=786s"
+          },
+          {
+            "@type": "Clip",
+            "name": "Cetak Laporan PBD",
+            "startOffset": 902,
+            "endOffset": 1017,
+            "url": "https://www.youtube.com/watch?v=gqphF55mpBc&t=902s"
+          },
+          {
+            "@type": "Clip",
+            "name": "Percuma, Pro & Lapor masalah",
+            "startOffset": 1017,
+            "endOffset": 1124,
+            "url": "https://www.youtube.com/watch?v=gqphF55mpBc&t=1017s"
+          },
+          {
+            "@type": "Clip",
+            "name": "Sesi tamat & keadaan lain",
+            "startOffset": 1124,
+            "endOffset": 1184,
+            "url": "https://www.youtube.com/watch?v=gqphF55mpBc&t=1124s"
+          },
+          {
+            "@type": "Clip",
+            "name": "Penutup & penafian",
+            "startOffset": 1184,
+            "endOffset": 1270,
+            "url": "https://www.youtube.com/watch?v=gqphF55mpBc&t=1184s"
+          }
+        ]
+      },
+      {
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Laman utama", "item": "https://pbd.davinhub.com/" },
@@ -114,6 +211,22 @@
     .hero { padding: 104px 16px 32px; text-align: center; max-width: 800px; margin: 0 auto; }
     @media(min-width:768px) { .hero { padding: 128px 32px 48px; } }
     .hero-tag { display: inline-flex; align-items: center; gap: 8px; padding: 7px 15px; background: var(--teal-tint); border: 1px solid #cfe3dc; border-radius: 99px; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase; color: var(--teal-deep); margin-bottom: 20px; }
+    /* Tutorial video facade (same pattern as index #ytDemo): YouTube loads only on click */
+    .panduan-video { margin: 28px auto 0; max-width: 760px; }
+    .yt-facade { position: relative; aspect-ratio: 16 / 9; background: var(--n-900); }
+    .yt-facade iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .yt-play { position: absolute; inset: 0; width: 100%; height: 100%; display: block; padding: 0; border: none; cursor: pointer; background: none; font-family: inherit; }
+    .yt-play img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .yt-play-badge { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 10px; padding: 14px 26px; background: rgba(11,20,17,0.82); color: #fff; border-radius: 99px; font-size: 1rem; font-weight: 700; white-space: nowrap; box-shadow: 0 12px 34px -8px rgba(0,0,0,0.5); transition: transform 0.15s ease, background 0.15s ease; }
+    .yt-play-badge svg { width: 22px; height: 22px; flex-shrink: 0; }
+    .yt-play:hover .yt-play-badge, .yt-play:focus-visible .yt-play-badge { background: var(--teal-deep); transform: translate(-50%, -50%) scale(1.05); }
+    .yt-play:focus-visible { outline: 3px solid var(--teal); outline-offset: -3px; }
+    .yt-play-dur { font-weight: 600; font-size: 0.85rem; opacity: 0.75; }
+    /* The thumbnail carries its own big title on the left: keep the badge in the bottom-right corner */
+    .panduan-video .yt-play-badge { left: auto; top: auto; right: 16px; bottom: 16px; transform: none; padding: 11px 20px; font-size: 0.95rem; }
+    .panduan-video .yt-play:hover .yt-play-badge, .panduan-video .yt-play:focus-visible .yt-play-badge { transform: scale(1.05); }
+    @media (max-width: 480px) { .panduan-video .yt-play-badge { right: 10px; bottom: 10px; padding: 8px 14px; font-size: 0.85rem; gap: 8px; } .panduan-video .yt-play-badge svg { width: 18px; height: 18px; } }
+    .panduan-video-note { margin: 12px 0 0; font-size: 0.9rem; color: var(--muted); }
     .hero h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1.12; margin: 0 0 16px; color: var(--n-900); }
     @media(min-width:768px) { .hero h1 { font-size: 3rem; } }
     .hero h1 .emph { color: var(--teal); }
@@ -302,6 +415,17 @@
     <div class="hero-tag">Panduan Pengguna</div>
     <h1>Panduan <span class="emph">PBD Helper</span></h1>
     <p>Tutorial lengkap dari pemasangan ke <strong>&ldquo;Semak sebelum tulis&rdquo;</strong> dan <strong>Excel pukal</strong>. Setiap langkah dengan tangkapan skrin dan tip, sesuai untuk guru yang baharu menggunakan extension ini.</p>
+    <div class="panduan-video">
+      <div class="shot">
+        <div class="yt-facade" id="ytTut">
+          <button type="button" class="yt-play" id="ytTutPlay" aria-label="Mainkan panduan video penuh PBD Helper (21 minit)">
+            <img src="img/tutorial-thumb.jpg" width="1280" height="720" loading="lazy" alt="Panduan video penuh PBD Helper: panel sisi di sebelah halaman SPPB.">
+            <span class="yt-play-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Tonton panduan penuh <span class="yt-play-dur">21:10</span></span>
+          </button>
+        </div>
+      </div>
+      <p class="panduan-video-note">Ada senarai bab dalam video — atau teruskan membaca di bawah.</p>
+    </div>
   </header>
 
   <!-- === Main layout === -->
@@ -1337,6 +1461,21 @@
     })();
   </script>
 
+  <script>
+    /* Tutorial video facade: swap the thumbnail for the YouTube iframe on click */
+    (() => {
+      const play = document.getElementById("ytTutPlay");
+      if (!play) return;
+      play.addEventListener("click", () => {
+        const f = document.getElementById("ytTut"), i = document.createElement("iframe");
+        i.src = "https://www.youtube-nocookie.com/embed/gqphF55mpBc?autoplay=1&rel=0";
+        i.title = "Panduan video penuh PBD Helper";
+        i.allow = "autoplay; encrypted-media; picture-in-picture";
+        i.setAttribute("allowfullscreen", "");
+        f.replaceChildren(i); i.focus();
+      });
+    })();
+  </script>
   <script>
     /* Fire-and-forget pageview beacon -> davinhub /api/stats/hit.
        "/pbd" path prefix = site discriminator (page_events has no host column).
