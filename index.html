@@ -8,19 +8,19 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="icon128.png">
   <link rel="canonical" href="https://pbd.davinhub.com/">
-  <meta property="og:title" content="PBD Helper | Isi Skor PBD di SPPB dengan Pantas">
-  <meta property="og:description" content="Isi skor PBD (Tahap Penguasaan) di SPPB / MOEIS (IDME) dengan pantas: panel sisi + Excel pukal berbilang kelas. Untuk guru Malaysia.">
+  <meta property="og:title" content="PBD Helper | Isi PBD di SPPB, setiap murid dibaca semula">
+  <meta property="og:description" content="Extension Chrome untuk guru: set TP satu kelas, semak dahulu apa yang akan ditulis, kemudian setiap murid dibaca semula dari SPPB. Tidak menekan Hantar. Percuma 1 kelas-subjek.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://pbd.davinhub.com/">
   <meta property="og:locale" content="ms_MY">
   <meta property="og:site_name" content="PBD Helper">
-  <meta property="og:image" content="https://pbd.davinhub.com/og-image.png">
+  <meta property="og:image" content="https://pbd.davinhub.com/og-image-v13.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PBD Helper | Isi Skor PBD di SPPB dengan Pantas">
-  <meta name="twitter:description" content="Isi skor PBD (Tahap Penguasaan) di SPPB / MOEIS (IDME) dengan pantas: panel sisi + Excel pukal berbilang kelas. Untuk guru Malaysia.">
-  <meta name="twitter:image" content="https://pbd.davinhub.com/og-image.png">
+  <meta name="twitter:title" content="PBD Helper | Isi PBD di SPPB, setiap murid dibaca semula">
+  <meta name="twitter:description" content="Extension Chrome untuk guru: set TP satu kelas, semak dahulu apa yang akan ditulis, kemudian setiap murid dibaca semula dari SPPB. Tidak menekan Hantar. Percuma 1 kelas-subjek.">
+  <meta name="twitter:image" content="https://pbd.davinhub.com/og-image-v13.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -46,9 +46,9 @@
       "description": "Isi skor PBD (Tahap Penguasaan) dan medan-medan wajib di sistem SPPB / MOEIS / IDME (moeissppb.moe.gov.my) dengan pantas: panel sisi + Excel pukal berbilang kelas. Untuk guru Malaysia.",
       "keywords": "PBD, isi PBD, SPPB, MOEIS, IDME, Tahap Penguasaan, TP, Ulasan Guru Kelas, Pentaksiran Bilik Darjah, extension guru Malaysia",
       "inLanguage": "ms-MY",
-      "image": "https://pbd.davinhub.com/og-image.png",
-      "screenshot": "https://pbd.davinhub.com/og-image.png",
-      "softwareVersion": "1.3.1",
+      "image": "https://pbd.davinhub.com/og-image-v13.png",
+      "screenshot": "https://pbd.davinhub.com/og-image-v13.png",
+      "softwareVersion": "1.3.2",
       "featureList": [
         "Rumah: pilih tugas, kemudian pilih kelas terus dalam panel",
         "Set Tahap Penguasaan TP1–TP6 satu kelas (Semua: 1–6)",
@@ -168,6 +168,22 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "PBD Helper tidak akan mengunci kelas anda: ia hanya menulis melalui butang “Simpan” dan tidak pernah menekan “Hantar” secara automatik, dan simpanan separa dibenarkan. Kelas yang sudah dihantar atau disahkan ditanda dikunci sejak skrin Rumah dan butang tulis dimatikan; kelas itu tetap dimuatkan ke dalam fail Excel sebagai rujukan, dan Cetakan Laporan masih boleh dijana."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Panel PBD Helper saya nampak lain. Kenapa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sejak versi 1.3, panel bermula dengan skrin Rumah: pilih tugas (Isi PBD, Excel pukal, Ulasan Guru Kelas atau Cetak Laporan PBD), kemudian pilih kelas. Pelayar anda mengemas kini extension secara automatik. Untuk menyemak versi, buka chrome://extensions (Edge: edge://extensions). Untuk mengemas kini serta-merta, hidupkan “Developer mode” (Chrome: kanan atas) dan tekan Update."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Di mana Mod Panduan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mod Panduan menunjukkan 4 langkah ringkas untuk mula mengisi PBD. Ia hanya muncul secara automatik pada kali pertama extension dipasang. Untuk membukanya semula, tekan “Mod Panduan” di bahagian bawah panel."
           }
         }
       ]
@@ -295,9 +311,23 @@
     .founder-contact a { color: var(--teal); font-weight: 600; }
 
     /* Sticky mobile CTA */
+    /* Phone visitors (short-video traffic): the extension installs on a computer only. */
+    .phone-note, .sticky-cta .sticky-share { display: none; }
+    @media (max-width: 767px) and (pointer: coarse) {
+      .phone-note { display: block; max-width: 520px; margin: 0 auto 22px; padding: 18px 18px 16px; background: var(--teal-tint); border: 1px solid var(--line); border-radius: 14px; text-align: left; }
+      .phone-note h2 { font-size: 1.05rem; font-weight: 700; color: var(--teal-deep); margin-bottom: 6px; }
+      .phone-note p { font-size: 0.95rem; color: var(--n-700); margin-bottom: 14px; }
+      .phone-note-btns { display: flex; flex-direction: column; gap: 10px; }
+      .phone-note-btns button { width: 100%; }
+      #cwsBtn { display: none; }
+      .sticky-cta .sticky-cws { display: none; }
+      .sticky-cta .sticky-share { display: block; }
+    }
     .sticky-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--paper); border-top: 1px solid var(--line); padding: 10px 16px; z-index: 40; box-shadow: 0 -8px 20px -8px rgba(0,0,0,0.08); }
     @media (max-width: 767px) { .sticky-cta.show { display: block; } body.has-sticky-cta { padding-bottom: 78px; } }
-    .sticky-cta a { display: block; width: 100%; padding: 14px; min-height: 44px; font-size: 0.9rem; font-weight: 700; border-radius: 10px; text-align: center; text-decoration: none; background: var(--teal); color: var(--white); opacity: 0.92; }
+    .sticky-cta a, .sticky-cta button { width: 100%; border: 0; font-family: inherit; cursor: pointer; }
+    .sticky-cta a { display: block; }
+    .sticky-cta a, .sticky-share { width: 100%; padding: 14px; min-height: 44px; font-size: 0.9rem; font-weight: 700; border-radius: 10px; text-align: center; text-decoration: none; background: var(--teal); color: var(--white); opacity: 0.92; }
   </style>
 </head>
 <body>
@@ -340,6 +370,14 @@
     <div class="container">
       <h1>Isi skor PBD di SPPB,<br><span class="emph">dalam minit bukan jam.</span></h1>
       <p class="hero-sub">Tetapkan TP untuk satu kelas dalam beberapa klik; Usaha, Ulasan dan Kemahiran mengikut TP. Semak dahulu apa yang akan ditulis, tulis, kemudian setiap murid dibaca semula dari SPPB.</p>
+      <div class="phone-note" id="phoneNote">
+        <h2>Anda sedang menggunakan telefon?</h2>
+        <p>PBD Helper hanya boleh dipasang pada komputer (Chrome, Edge, Brave atau Opera), bukan pada telefon. Kongsi pautan ini ke WhatsApp atau e-mel anda, kemudian buka di komputer.</p>
+        <div class="phone-note-btns">
+          <button type="button" class="btn-teal js-share-link">Kongsi pautan</button>
+          <button type="button" class="btn-light js-copy-link">Salin pautan</button>
+        </div>
+      </div>
       <div class="hero-btns">
         <a href="https://chromewebstore.google.com/detail/pbd-helper/hpjmhpolokbbhnjbnkddbjnomahanpoc" id="cwsBtn" class="btn-teal" target="_blank" rel="noopener" aria-describedby="cwsNote">Pasang percuma dari Chrome Web Store</a>
         <a href="/panduan" class="btn-light">Lihat panduan</a>
@@ -542,6 +580,8 @@
         <div class="faq-item"><button><span>Apa beza Percuma dengan Pro, dan bagaimana saya aktifkan kunci?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Percuma membolehkan anda mengisi 1 kelas-subjek dengan semua ciri: set TP, &ldquo;Semak sebelum tulis&rdquo;, Tulis dan pengesahan baca semula; Ulasan Guru Kelas dan Cetakan Laporan percuma tanpa had. Pro (RM59, sekali bayar) membuka penggunaan tanpa had kelas-subjek serta Excel pukal untuk semua kelas sekali gus. Beli di <a href="/beli">pbd.davinhub.com/beli</a> melalui Billplz (FPX); kunci lesen bermula dengan PBDH- dihantar ke emel anda. Tampal kunci itu ke dalam panel PBD Helper dan tekan &ldquo;Aktifkan&rdquo;.</p></div></div>
         <div class="faq-item"><button><span>Boleh tukar peranti? Saya ada dua akaun SPPB.</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Boleh. Lesen Pro terikat pada akaun MOEIS anda, bukan pada komputer: tukar komputer atau pelayar, aktifkan semula dengan kunci yang sama dan teruskan. Satu kunci Pro terikat pada satu akaun MOEIS; akaun kedua perlukan kunci sendiri. Selepas kedua-dua akaun mempunyai kunci, anda boleh bertukar akaun dengan bebas; Pro mengikut akaun yang sedang log masuk.</p></div></div>
         <div class="faq-item"><button><span>Adakah kelas saya akan dikunci? Kelas yang sudah dihantar boleh guna lagi?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>PBD Helper tidak akan mengunci kelas anda: ia hanya menulis melalui butang &ldquo;Simpan&rdquo; dan tidak pernah menekan &ldquo;Hantar&rdquo; secara automatik, dan simpanan separa dibenarkan. Kelas yang sudah dihantar atau disahkan ditanda dikunci sejak skrin Rumah dan butang tulis dimatikan; kelas itu tetap dimuatkan ke dalam fail Excel sebagai rujukan, dan Cetakan Laporan masih boleh dijana.</p></div></div>
+        <div class="faq-item"><button><span>Panel PBD Helper saya nampak lain. Kenapa?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Sejak versi 1.3, panel bermula dengan skrin Rumah: pilih tugas (Isi PBD, Excel pukal, Ulasan Guru Kelas atau Cetak Laporan PBD), kemudian pilih kelas. Pelayar anda mengemas kini extension secara automatik. Untuk menyemak versi, buka chrome://extensions (Edge: edge://extensions). Untuk mengemas kini serta-merta, hidupkan &ldquo;Developer mode&rdquo; (Chrome: kanan atas) dan tekan Update.</p></div></div>
+        <div class="faq-item"><button><span>Di mana Mod Panduan?</span><svg aria-hidden="true" focusable="false"><use href="#icon-chevron"/></svg></button><div class="faq-answer"><p>Mod Panduan menunjukkan 4 langkah ringkas untuk mula mengisi PBD. Ia hanya muncul secara automatik pada kali pertama extension dipasang. Untuk membukanya semula, tekan &ldquo;Mod Panduan&rdquo; di bahagian bawah panel.</p></div></div>
       </div>
     </div>
   </section>
@@ -604,7 +644,8 @@
 
   <!-- Sticky mobile CTA -->
   <div class="sticky-cta" id="stickyCta">
-    <a href="https://chromewebstore.google.com/detail/pbd-helper/hpjmhpolokbbhnjbnkddbjnomahanpoc" target="_blank" rel="noopener">Pasang dari Chrome Web Store</a>
+    <a class="sticky-cws" href="https://chromewebstore.google.com/detail/pbd-helper/hpjmhpolokbbhnjbnkddbjnomahanpoc" target="_blank" rel="noopener">Pasang dari Chrome Web Store</a>
+    <button type="button" class="sticky-share js-share-link">Kongsi pautan</button>
   </div>
   <script>
     // Sticky mobile CTA — show after hero, hide while #harga in view.
@@ -630,6 +671,29 @@
     }
     window.addEventListener("scroll", updateSticky, { passive: true });
     updateSticky();
+
+    // Phone visitors: send the link to yourself (share sheet; WhatsApp link as fallback), or copy it.
+    var SHARE_URL = "https://pbd.davinhub.com/";
+    var SHARE_TEXT = "PBD Helper: buka pautan ini di komputer untuk memasangnya.";
+    document.querySelectorAll(".js-share-link").forEach(function(b) {
+      b.addEventListener("click", function() {
+        if (navigator.share) {
+          navigator.share({ title: "PBD Helper", text: SHARE_TEXT, url: SHARE_URL }).catch(function() {});
+        } else {
+          window.location.href = "https://wa.me/?text=" + encodeURIComponent(SHARE_TEXT + " " + SHARE_URL);
+        }
+      });
+    });
+    document.querySelectorAll(".js-copy-link").forEach(function(b) {
+      var label = b.textContent;
+      b.addEventListener("click", function() {
+        if (!navigator.clipboard) return;
+        navigator.clipboard.writeText(SHARE_URL).then(function() {
+          b.textContent = "Pautan disalin";
+          setTimeout(function() { b.textContent = label; }, 2500);
+        }).catch(function() {});
+      });
+    });
 
     // Mobile menu — aria-expanded mirrors .open so AT hears the state.
     var burger = document.getElementById("navBurger");
