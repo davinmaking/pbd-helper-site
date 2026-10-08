@@ -106,14 +106,14 @@
     },
     {
       "@type": "VideoObject",
-      "@id": "https://pbd.davinhub.com/#demo-video",
-      "name": "PBD Helper — Demo penuh: isi PBD di SPPB dalam minit",
-      "description": "Demo lengkap PBD Helper: set TP satu kelas dengan beberapa klik, Usaha dan Ulasan terisi automatik, Excel pukal berbilang kelas, Ulasan Guru Kelas, dan pengesahan baca-balik daripada SPPB.",
-      "thumbnailUrl": "https://pbd.davinhub.com/img/demo-thumb.jpg",
-      "uploadDate": "2026-07-09",
-      "duration": "PT3M37S",
-      "contentUrl": "https://www.youtube.com/watch?v=7Lc_MaRu9sg",
-      "embedUrl": "https://www.youtube-nocookie.com/embed/7Lc_MaRu9sg",
+      "@id": "https://pbd.davinhub.com/panduan#tutorial-video",
+      "name": "Panduan Penuh PBD Helper — Isi PBD di SPPB: Panel, Excel Pukal, Ulasan Guru Kelas, Cetak Laporan",
+      "description": "Panduan penuh PBD Helper langkah demi langkah: pasang, pilih kelas, isi TP/Usaha/Ulasan/Kemahiran, Semak sebelum tulis, Excel pukal, Ulasan Guru Kelas, Cetak Laporan PBD, dan keadaan seperti sesi tamat.",
+      "thumbnailUrl": "https://pbd.davinhub.com/img/tutorial-thumb.jpg",
+      "uploadDate": "2026-10-03",
+      "duration": "PT21M10S",
+      "contentUrl": "https://www.youtube.com/watch?v=gqphF55mpBc",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/gqphF55mpBc",
       "inLanguage": "ms-MY",
       "publisher": {
         "@id": "https://pbd.davinhub.com/#organization"
@@ -213,6 +213,10 @@
     .yt-play img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .yt-play-badge { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 10px; padding: 14px 26px; background: rgba(11,20,17,0.82); color: #fff; border-radius: 99px; font-size: 1rem; font-weight: 700; box-shadow: 0 12px 34px -8px rgba(0,0,0,0.5); transition: transform 0.15s ease, background 0.15s ease; }
     .yt-play-badge svg { width: 22px; height: 22px; flex-shrink: 0; }
+    /* Tutorial thumbnail carries its title on the left: badge goes bottom-right (same as /panduan). */
+    #ytDemo .yt-play-badge { left: auto; top: auto; right: 16px; bottom: 16px; transform: none; padding: 11px 20px; font-size: 0.95rem; }
+    #ytDemo .yt-play:hover .yt-play-badge, #ytDemo .yt-play:focus-visible .yt-play-badge { transform: scale(1.05); }
+    @media (max-width: 480px) { #ytDemo .yt-play-badge { right: 10px; bottom: 10px; padding: 8px 14px; font-size: 0.85rem; gap: 8px; } #ytDemo .yt-play-badge svg { width: 18px; height: 18px; } }
     .yt-play:hover .yt-play-badge, .yt-play:focus-visible .yt-play-badge { background: var(--teal-deep); transform: translate(-50%, -50%) scale(1.05); }
     .yt-play:focus-visible { outline: 3px solid var(--teal); outline-offset: -3px; }
     .yt-play-dur { font-weight: 600; font-size: 0.85rem; opacity: 0.75; }
@@ -386,9 +390,9 @@
       <!-- Demo video facade: YouTube loads only on click -->
       <div class="hero-shot shot">
         <div class="yt-facade" id="ytDemo">
-          <button type="button" class="yt-play" id="ytDemoPlay" aria-label="Mainkan video demo PBD Helper (3 minit 37 saat)">
-            <img src="img/demo-thumb.jpg" width="1280" height="720" fetchpriority="high" alt="Video demo PBD Helper: panel sisi mengisi Tahap Penguasaan satu kelas di SPPB.">
-            <span class="yt-play-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Tonton demo <span class="yt-play-dur">3:37</span></span>
+          <button type="button" class="yt-play" id="ytDemoPlay" aria-label="Mainkan panduan video penuh PBD Helper (21 minit)">
+            <img src="img/tutorial-thumb.jpg" width="1280" height="720" fetchpriority="high" alt="Panduan video penuh PBD Helper: panel sisi di sebelah halaman SPPB.">
+            <span class="yt-play-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Tonton panduan penuh <span class="yt-play-dur">21:10</span></span>
           </button>
         </div>
       </div>
@@ -715,8 +719,8 @@
       ytPlay.addEventListener("click", function() {
         var facade = document.getElementById("ytDemo");
         var iframe = document.createElement("iframe");
-        iframe.src = "https://www.youtube-nocookie.com/embed/7Lc_MaRu9sg?autoplay=1&rel=0";
-        iframe.title = "Video demo PBD Helper";
+        iframe.src = "https://www.youtube-nocookie.com/embed/gqphF55mpBc?autoplay=1&rel=0";
+        iframe.title = "Panduan video penuh PBD Helper";
         iframe.allow = "autoplay; encrypted-media; picture-in-picture";
         iframe.setAttribute("allowfullscreen", "");
         facade.replaceChildren(iframe);
