@@ -469,6 +469,15 @@
             </ul>
           </li>
           <li>
+            <a href="#markah-uasa">Markah UASA (Pro)</a>
+            <ul class="toc-substeps">
+              <li><a href="#step-uasa-1">Jana fail Excel UASA</a></li>
+              <li><a href="#step-uasa-2">Taip markah 0&ndash;100</a></li>
+              <li><a href="#step-uasa-3">Muat naik &amp; semak</a></li>
+              <li><a href="#step-uasa-4">Tulis &amp; baca semula</a></li>
+            </ul>
+          </li>
+          <li>
             <a href="#ulasan-guru-kelas">Ulasan Guru Kelas</a>
             <ul class="toc-substeps">
               <li><a href="#step-5-1">Buka dari Rumah</a></li>
@@ -1029,11 +1038,100 @@
       </section>
 
       <!-- ============================================================ -->
-      <!-- SECTION 5, Ulasan Guru Kelas (Pengurusan) -->
+      <!-- SECTION 5, Markah UASA (v1.4, Pro, Excel only) -->
+      <!-- ============================================================ -->
+      <section class="section" id="markah-uasa">
+        <div class="section-head">
+          <span class="section-tag">Bahagian 5</span>
+          <h2>Markah UASA (Pro, melalui Excel)</h2>
+          <p class="section-intro">Sejak v1.4 (Oktober 2026), markah UASA diisi melalui Excel sahaja: jana fail, taip markah 0&ndash;100, muat naik, semak, tulis. Setiap murid dibaca semula selepas Simpan, sama seperti Isi PBD. Ciri ini untuk pengguna Pro; panel tidak mengisi markah murid demi murid.</p>
+        </div>
+
+        <article class="step" id="step-uasa-1">
+          <div class="step-header">
+            <span class="step-num">1</span>
+            <div>
+              <p class="step-tag">Langkah 1 &middot; Jana</p>
+              <h3 class="step-title">Tekan kad &ldquo;Markah UASA&rdquo;, kemudian &ldquo;Jana fail Excel&rdquo;</h3>
+            </div>
+          </div>
+          <div class="step-body">
+            <p>Dari skrin <strong>Rumah</strong>, tekan kad <strong>Markah UASA</strong>. Ia membuka skrin Excel pukal dengan suis <strong>Markah UASA</strong> sudah dipilih.</p>
+            <p>Tekan <strong>Jana fail Excel</strong>. Panel membaca senarai kelas anda dan memuat turun satu fail dengan <strong>satu tab bagi setiap kelas UASA</strong>, sudah disenaraikan dengan nama murid. Kelas PBD tidak dimasukkan ke dalam fail ini.</p>
+            <p>Murid yang sudah ada markah di SPPB dipaparkan dengan markah itu. Sel yang anda tidak ubah tidak akan ditulis semula.</p>
+          </div>
+          <div class="step-callout">
+            <div class="callout"><span class="callout-icon" aria-hidden="true">&#9432;</span>
+              <strong>Kelas tiada dalam senarai?</strong> SPPB hanya mewujudkan rekod kelas selepas anda menapis dan menekan <strong>Cari</strong>. Dalam SPPB, buka Keputusan Pentaksiran, pilih Sesi &rarr; Aktiviti (UASA) &rarr; Tahun &rarr; Kelas, kemudian tekan Cari sekali. Buka semula panel: kelas itu akan muncul. PBD Helper tidak menekan Cari bagi pihak anda.
+            </div>
+          </div>
+        </article>
+
+        <article class="step" id="step-uasa-2">
+          <div class="step-header">
+            <span class="step-num">2</span>
+            <div>
+              <p class="step-tag">Langkah 2 &middot; Isi di luar talian</p>
+              <h3 class="step-title">Taip markah dalam lajur Markah</h3>
+            </div>
+          </div>
+          <div class="step-body">
+            <p>Buka fail Excel. Setiap tab ada satu lajur <strong>Markah</strong>:</p>
+            <ul>
+              <li><strong>Markah</strong> &mdash; nombor bulat 0&ndash;100. Gred (A&ndash;F) dikira oleh SPPB, bukan oleh fail.</li>
+              <li><strong>Kosong</strong> &mdash; murid ini tidak disentuh. Markah yang sudah ada di SPPB dikekalkan.</li>
+              <li><strong>Murid tidak hadir</strong> &mdash; biarkan kosong, dan tandakan &ldquo;Tidak Ditaksir&rdquo; terus di SPPB. PBD Helper tidak menukar status murid.</li>
+              <li><strong>Jangan ubah</strong> lajur Bil, Nama dan No IC &mdash; ia digunakan untuk memadankan murid dengan SPPB.</li>
+            </ul>
+            <p>Nilai yang bukan nombor bulat dalam julat (contoh <code>85.5</code> atau <code>A</code>) tidak ditulis; ia disenaraikan sebagai amaran pada langkah semak supaya anda boleh betulkan.</p>
+          </div>
+        </article>
+
+        <article class="step" id="step-uasa-3">
+          <div class="step-header">
+            <span class="step-num">3</span>
+            <div>
+              <p class="step-tag">Langkah 3 &middot; Muat naik &amp; semak</p>
+              <h3 class="step-title">Seret fail kembali ke panel, semak senarai kelas</h3>
+            </div>
+          </div>
+          <div class="step-body">
+            <p>Kembali ke skrin <strong>Excel pukal</strong> dan <strong>seret</strong> fail ke zon lepas fail. Panel mengecam sendiri bahawa ini fail Markah UASA.</p>
+            <p>Skrin <strong>Semak sebelum tulis</strong> menyenaraikan setiap kelas dengan bilangan murid yang akan ditulis, murid yang tidak berubah (dilangkau), dan amaran. Kelas yang sudah dihantar atau disahkan ditanda &ldquo;dikunci, tidak boleh diisi&rdquo;. Tanda kelas yang mahu ditulis.</p>
+          </div>
+          <div class="step-callout">
+            <div class="callout"><span class="callout-icon" aria-hidden="true">&#9432;</span>
+              <strong>Status Pro disemak semasa Tulis.</strong> Jika panel berkata &ldquo;Status Pro tidak dapat disemak (rangkaian)&rdquo;, tiada apa-apa ditulis; tekan Tulis sekali lagi. Pengguna percuma melihat &ldquo;Markah UASA untuk pengguna Pro sahaja&rdquo; &mdash; fail sudah sedia, dan boleh ditulis selepas naik taraf.
+            </div>
+          </div>
+        </article>
+
+        <article class="step" id="step-uasa-4">
+          <div class="step-header">
+            <span class="step-num">4</span>
+            <div>
+              <p class="step-tag">Langkah 4 &middot; Tulis</p>
+              <h3 class="step-title">Tekan &ldquo;Tulis N kelas&rdquo;, kemudian semak kad keputusan</h3>
+            </div>
+          </div>
+          <div class="step-body">
+            <p>Panel menaip markah setiap murid ke dalam jadual SPPB kelas itu dan menekan <strong>Simpan</strong> SPPB sekali bagi setiap kelas. Selepas itu setiap murid <strong>dibaca semula</strong> dari SPPB dan ditanda &#10003; atau &#10007;, sama seperti Isi PBD.</p>
+            <p>Butang <strong>Hantar</strong> tidak disentuh. Status murid juga tidak diubah oleh PBD Helper; SPPB sendiri menandakan murid sebagai sudah ditaksir apabila markah dimasukkan.</p>
+          </div>
+          <div class="step-callout">
+            <div class="callout is-tip"><span class="callout-icon" aria-hidden="true">&#128161;</span>
+              <strong>Kelas UASA tidak lagi tersenarai sebagai kelas PBD.</strong> Jika anda membuka kelas UASA di skrin Isi PBD, panel berkata &ldquo;Kelas ini kelas UASA (markah 0&ndash;100), bukan PBD &mdash; guna Markah UASA (Excel) di Rumah&rdquo;. Itu bukan ralat; ikut sahaja pautan ke Rumah.
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- SECTION 6, Ulasan Guru Kelas (Pengurusan) -->
       <!-- ============================================================ -->
       <section class="section" id="ulasan-guru-kelas">
         <div class="section-head">
-          <span class="section-tag">Bahagian 5</span>
+          <span class="section-tag">Bahagian 6</span>
           <h2>Ulasan Guru Kelas (untuk guru kelas)</h2>
           <p class="section-intro">Anda guru kelas? Isi Ulasan Guru Kelas untuk seluruh kelas anda di halaman Pengurusan, dengan senarai ulasan biasa yang boleh diguna semula. Ciri ini percuma untuk semua pengguna.</p>
         </div>
@@ -1117,7 +1215,7 @@
       <!-- ============================================================ -->
       <section class="section" id="cetakan-laporan">
         <div class="section-head">
-          <span class="section-tag">Bahagian 6</span>
+          <span class="section-tag">Bahagian 7</span>
           <h2>Cetakan Laporan (percuma)</h2>
           <p class="section-intro">Cetak laporan Keseluruhan PBD dan Kemahiran untuk seluruh kelas dengan satu klik: setiap murid satu muka surat, susun atur konsisten, siap tandatangan digital. Semua data dipaparkan 1:1 daripada laporan SPPB anda, tiada yang diubah.</p>
         </div>
@@ -1193,7 +1291,7 @@
       <!-- ============================================================ -->
       <section class="section" id="faq">
         <div class="section-head">
-          <span class="section-tag">Bahagian 7</span>
+          <span class="section-tag">Bahagian 8</span>
           <h2>Soalan Lazim &amp; Sokongan</h2>
           <p class="section-intro">Soalan yang paling kerap ditanya sebelum bermula, dan cara hubungi kami jika perlukan bantuan.</p>
         </div>
@@ -1202,7 +1300,7 @@
           <div class="faq-list">
             <div class="faq-q">
               <h3>Apa beza percuma dengan Pro?</h3>
-              <p class="faq-a">Percuma membolehkan anda mengisi <strong>1 kelas-subjek</strong> dengan semua ciri (set TP, &ldquo;Semak sebelum tulis&rdquo;, &ldquo;Tulis&rdquo;, dan pengesahan baca-balik). Pro (<strong>RM59</strong>, <strong>sekali bayar</strong> — bukan langganan) membuka penggunaan <strong>tanpa had kelas-subjek</strong> serta Excel pukal untuk semua kelas sekali gus. Lesen Pro <strong>terikat pada akaun MOEIS anda</strong>, jadi anda boleh menukar komputer atau pelayar tanpa perlu set semula.</p>
+              <p class="faq-a">Percuma membolehkan anda mengisi <strong>1 kelas-subjek</strong> dengan semua ciri (set TP, &ldquo;Semak sebelum tulis&rdquo;, &ldquo;Tulis&rdquo;, dan pengesahan baca-balik). Pro (<strong>RM59</strong>, <strong>sekali bayar</strong> — bukan langganan) membuka penggunaan <strong>tanpa had kelas-subjek</strong>, Excel pukal untuk semua kelas sekali gus, serta Markah UASA melalui Excel. Lesen Pro <strong>terikat pada akaun MOEIS anda</strong>, jadi anda boleh menukar komputer atau pelayar tanpa perlu set semula.</p>
             </div>
             <div class="faq-q">
               <h3>Bagaimana saya beli dan aktifkan Pro?</h3>
@@ -1223,6 +1321,14 @@
             <div class="faq-q">
               <h3>Adakah kelas saya akan dikunci?</h3>
               <p class="faq-a">Tidak. PBD Helper hanya menulis melalui butang &ldquo;Simpan&rdquo; SPPB dan tidak pernah menekan &ldquo;Hantar&rdquo; secara automatik. Kelas anda tidak akan dikunci, dan simpanan separa dibenarkan.</p>
+            </div>
+            <div class="faq-q">
+              <h3>Kelas saya tiada dalam senarai panel, atau Jana Excel kurang satu kelas.</h3>
+              <p class="faq-a">SPPB hanya mewujudkan rekod kelas selepas anda menapis dan menekan <strong>Cari</strong>; sebelum itu kelas belum wujud, jadi PBD Helper pun tidak nampak. Dalam SPPB, buka Keputusan Pentaksiran, pilih Sesi &rarr; Aktiviti &rarr; Tahun &rarr; Kelas mengikut urutan itu, kemudian tekan Cari. Buat sekali bagi setiap kelas, kemudian buka semula panel. PBD Helper tidak menekan Cari bagi pihak anda.</p>
+            </div>
+            <div class="faq-q">
+              <h3>Saya guru kelas. Kenapa kelas saya ada dua kali dalam Ulasan Guru Kelas?</h3>
+              <p class="faq-a">Selepas UASA dibuka, SPPB mempunyai dua rekod Pengurusan bagi setiap kelas: PBD akhir sesi dan UASA. Pemilih kelas memaparkan aktiviti SPPB di bawah nama kelas, dan rekod UASA ditanda <strong>&ldquo;&middot; UASA&rdquo;</strong> di tempat lain. Ulasan Guru Kelas <strong>dikongsi</strong> antara kedua-dua rekod: isi sekali sahaja, kedua-duanya berubah. Jika kad keputusan berkata &ldquo;disimpan &mdash; SPPB paparkannya selepas pentaksiran selesai&rdquo;, ulasan itu sudah tersimpan; SPPB memaparkannya selepas pentaksiran kelas selesai.</p>
             </div>
             <div class="faq-q">
               <h3>Pelayar apa yang disokong?</h3>
