@@ -265,6 +265,9 @@
     const UH = (new URLSearchParams(location.search).get('uh') || '').toLowerCase();
     const uhOk = /^[0-9a-f]{64}$/.test(UH);
     if (uhOk) document.getElementById('uhNote').hidden = false;
+    // Keep the hash in memory only: a copied/shared address bar must not carry it to a
+    // colleague, whose payment would then bind the licence to the sharer's account.
+    if (location.search) { try { history.replaceState(null, '', location.pathname); } catch (_) {} }
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
