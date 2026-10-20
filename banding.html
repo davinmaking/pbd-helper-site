@@ -54,7 +54,7 @@
           "name": "Apa beza PBD Helper dengan Pantas PBD Helper (dahulu IDME PBD Helper)?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Kedua-duanya ialah extension Chrome yang mengisi PBD (Tahap Penguasaan, Usaha, Ulasan, Kemahiran, Intervensi) di SPPB melalui panel sisi, dan kedua-duanya ada Excel pukal serta Ulasan Guru Kelas. Kedua-duanya juga mengisi UASA (PBD Helper: Pro, melalui Excel, sejak v1.4). Pantas PBD Helper menawarkan lebih banyak ciri: integrasi e-Rekod, cadangan ulasan AI, dan komuniti pengguna yang jauh lebih besar. PBD Helper memberi tumpuan kepada satu perkara: skrin Semak sebelum tulis, baca semula setiap murid selepas simpan, dan tidak menulis ganti ulasan yang guru taip sendiri. Cetakan laporan penuh seluruh kelas percuma."
+            "text": "Kedua-duanya ialah extension Chrome yang mengisi PBD (Tahap Penguasaan, Usaha, Ulasan, Kemahiran, Intervensi) di SPPB melalui panel sisi, dan kedua-duanya ada Excel pukal serta Ulasan Guru Kelas. Kedua-duanya juga mengisi UASA (PBD Helper: Pro, melalui Excel, sejak v1.4). Pantas PBD Helper menawarkan lebih banyak ciri: integrasi e-Rekod, cadangan ulasan AI, dan komuniti pengguna yang jauh lebih besar. Kedua-duanya juga membaca semula murid selepas simpan (Pantas PBD Helper sejak v5.0). PBD Helper memberi tumpuan kepada apa yang berlaku sebelum tulis: skrin Semak sebelum tulis yang menunjukkan berapa murid dan medan apa yang akan disentuh, dan tidak menulis ganti ulasan yang guru taip sendiri. Cetakan laporan penuh seluruh kelas percuma."
           }
         },
         {
@@ -167,7 +167,7 @@
 
   <main class="page-main" id="main">
     <h1>Tiga extension untuk isi PBD di <span>SPPB (IDME)</span>: mana satu untuk anda?</h1>
-    <p class="updated">Kemaskini: 26 September 2026 &middot; berdasarkan penyenaraian Chrome Web Store pada tarikh itu. Lajur PBD Helper dikemas kini 13 Oktober 2026 (v1.4.1, Markah UASA); dua penyenaraian lain belum disemak semula.</p>
+    <p class="updated">Kemaskini: 20 Oktober 2026 &middot; berdasarkan penyenaraian Chrome Web Store ketiga-tiga extension pada tarikh itu (PBD Helper v1.4.2, Pantas PBD Helper v5.1.1, myPBD Assistant v1.2.4).</p>
 
     <p class="disclose">Halaman ini ditulis oleh pembangun PBD Helper. Kami cuba berlaku seadil mungkin: setiap
     extension di bawah ada sebab yang munasabah untuk dipilih, termasuk perkara yang dilakukan lebih baik oleh dua extension yang lain. Sila semak penyenaraian masing-masing sebelum membuat keputusan.</p>
@@ -198,7 +198,7 @@
           <tr><th scope="row">TP, Usaha, Ulasan, Kemahiran, Intervensi</th><td><span class="yes">Ya</span></td><td><span class="yes">Ya</span></td><td><span class="yes">Ya</span></td></tr>
           <tr><th scope="row">Excel pukal (jana fail, isi di luar talian, muat naik semula)</th>
             <td><span class="yes">Ya</span><small>Pro; satu fail untuk semua kelas-subjek. Excel untuk Ulasan Guru Kelas percuma</small></td>
-            <td><span class="yes">Ya</span><small>Pro (&ldquo;Import TP dari Borang&rdquo;)</small></td>
+            <td><span class="yes">Ya</span><small>Pro; import Templat Pelaporan PBD dan Borang TP (Excel), padan ikut IC dengan pratonton</small></td>
             <td><span class="yes">Ya</span><small>Percuma</small></td></tr>
           <tr><th scope="row">Ulasan Guru Kelas</th>
             <td><span class="yes">Ya</span><small>Percuma</small></td>
@@ -206,11 +206,11 @@
             <td><span class="yes">Ya</span><small>Percuma</small></td></tr>
           <tr><th scope="row">Skrin semak sebelum apa-apa ditulis</th>
             <td><span class="yes">Ya</span><small>&ldquo;Semak sebelum tulis&rdquo;: berapa murid, medan apa, apa yang tidak disentuh</small></td>
-            <td><span class="na">Tidak dinyatakan</span></td>
+            <td><span class="na">Tidak dinyatakan</span><small>Pratonton disebut untuk import Excel sahaja</small></td>
             <td><span class="na">Tidak dinyatakan</span></td></tr>
           <tr><th scope="row">Baca semula setiap murid selepas simpan</th>
             <td><span class="yes">Ya</span><small>Tanda &#10003; disahkan atau &#10007; perlu semak, serta butang &ldquo;Cuba lagi&rdquo;</small></td>
-            <td><span class="na">Tidak dinyatakan</span></td>
+            <td><span class="yes">Ya</span><small>&ldquo;Semakan selepas simpan&rdquo; (sejak v5.0): baca semula MOEIS, tanda &#10003; tersimpan / &#10007; belum</small></td>
             <td><span class="na">Tidak dinyatakan</span></td></tr>
           <tr><th scope="row">Tidak menulis ganti kerja sedia ada</th>
             <td><span class="yes">Ya</span><small>Hanya murid yang belum ada TP atau yang anda ubah; ulasan tulisan sendiri dikekalkan</small></td>
@@ -223,7 +223,7 @@
           <tr><th scope="row">Integrasi e-Rekod</th><td><span class="no">Tidak</span></td><td><span class="yes">Ya</span></td><td><span class="no">Tidak</span></td></tr>
           <tr><th scope="row">Pengisian UASA</th><td><span class="yes">Ya</span><small>Pro; markah melalui Excel sahaja (sejak v1.4, 13 Okt 2026)</small></td><td><span class="yes">Ya</span></td><td><span class="na">Tidak dinyatakan</span></td></tr>
           <tr><th scope="row">Cadangan ulasan AI</th><td><span class="no">Tidak</span></td><td><span class="yes">Ya</span><small>Pro</small></td><td><span class="no">Tidak</span></td></tr>
-          <tr><th scope="row">Lesen Pro terikat pada</th><td>Akaun MOEIS<small>Tukar peranti tanpa set semula</small></td><td>Rujuk penyenaraian</td><td>Tiada Pro</td></tr>
+          <tr><th scope="row">Lesen Pro terikat pada</th><td>Akaun MOEIS<small>Tukar peranti tanpa set semula</small></td><td>Akaun MOEIS<small>Sehingga 5 peranti; aktif satu klik di halaman pembayaran</small></td><td>Tiada Pro</td></tr>
           <tr><th scope="row">Data murid</th>
             <td>Kekal dalam pelayar / SPPB<small>Pelayan lesen hanya terima cincangan (hash) tanpa nama</small></td>
             <td>Diproses dalam pelayar<small>Rujuk dasar privasi pembangun</small></td>
@@ -256,9 +256,9 @@
         <h3>Jika anda guna e-Rekod atau mahu ciri yang paling banyak</h3>
         <p>Oleh Cikgu Aime. Senarai ciri paling panjang dan komuniti pengguna paling besar.</p>
         <ul>
-          <li>Import kemahiran terus dari e-Rekod.</li>
-          <li>Pengisian UASA dan cadangan ulasan AI (Pro).</li>
-          <li>Auto-intervensi untuk murid TP rendah (Pro).</li>
+          <li>Import TP, Ulasan dan Kemahiran terus dari e-Rekod, percuma.</li>
+          <li>Semakan &#10003;/&#10007; selepas simpan; Pro aktif satu klik di halaman pembayaran.</li>
+          <li>Pengisian UASA, cadangan ulasan AI dan auto-intervensi (Pro).</li>
         </ul>
         <a class="card-link" href="https://chromewebstore.google.com/detail/pantas-pbd-helper/ljbhcdaienegobdeoamibnnfihlnipkc" target="_blank" rel="noopener">Penyenaraian Pantas PBD Helper di Chrome Web Store &rarr;</a>
       </div>
@@ -278,11 +278,11 @@
     <h2>Mana satu untuk anda?</h2>
     <div class="pick">
       <p><strong>Pilih Pantas PBD Helper</strong> jika aliran kerja anda berpusat pada e-Rekod, atau anda mahu
-      ciri seperti cadangan ulasan AI dan auto-intervensi.</p>
+      ciri seperti cadangan ulasan AI dan auto-intervensi. Ia juga membaca semula murid selepas simpan.</p>
       <p><strong>Pilih myPBD Assistant</strong> jika anda mahu Excel pukal dan Ulasan Guru Kelas tanpa membayar
       apa-apa, dan anda selesa menyemak sendiri hasilnya di SPPB selepas mengisi (ciri semakan tidak dinyatakan pada penyenaraiannya).</p>
-      <p><strong>Pilih PBD Helper</strong> jika anda mahu melihat dahulu apa yang akan ditulis, mahu setiap
-      murid dibaca semula dan ditanda selepas simpan, atau anda sudah ada ulasan tulisan sendiri di SPPB yang anda tidak mahu ditulis ganti. Cetakan laporan penuh seluruh kelas percuma untuk semua pengguna PBD Helper; Markah UASA (Pro) diisi melalui Excel dengan bacaan semula yang sama.</p>
+      <p><strong>Pilih PBD Helper</strong> jika anda mahu melihat dahulu apa yang akan ditulis sebelum apa-apa
+      disentuh, atau anda sudah ada ulasan tulisan sendiri di SPPB yang anda tidak mahu ditulis ganti. Setiap murid dibaca semula dan ditanda selepas simpan. Cetakan laporan penuh seluruh kelas percuma untuk semua pengguna PBD Helper; Markah UASA (Pro) diisi melalui Excel dengan bacaan semula yang sama.</p>
       <p style="margin-bottom:0;font-size:0.9rem;color:var(--muted)">Apa pun pilihan anda: cuba pada satu
       kelas dahulu, buka semula kelas itu di SPPB dan semak sendiri apa yang tercatat.</p>
     </div>
@@ -301,7 +301,7 @@
     <div class="faq">
       <details>
         <summary>Apa beza PBD Helper dengan Pantas PBD Helper (dahulu IDME PBD Helper)?</summary>
-        <p>Kedua-duanya ialah extension Chrome yang mengisi PBD (Tahap Penguasaan, Usaha, Ulasan, Kemahiran, Intervensi) di SPPB melalui panel sisi, dan kedua-duanya ada Excel pukal serta Ulasan Guru Kelas. Kedua-duanya juga mengisi UASA (PBD Helper: Pro, melalui Excel, sejak v1.4). Pantas PBD Helper menawarkan lebih banyak ciri: integrasi e-Rekod, cadangan ulasan AI, dan komuniti pengguna yang jauh lebih besar. PBD Helper memberi tumpuan kepada satu perkara: skrin Semak sebelum tulis, baca semula setiap murid selepas simpan, dan tidak menulis ganti ulasan yang guru taip sendiri. Cetakan laporan penuh seluruh kelas percuma.</p>
+        <p>Kedua-duanya ialah extension Chrome yang mengisi PBD (Tahap Penguasaan, Usaha, Ulasan, Kemahiran, Intervensi) di SPPB melalui panel sisi, dan kedua-duanya ada Excel pukal serta Ulasan Guru Kelas. Kedua-duanya juga mengisi UASA (PBD Helper: Pro, melalui Excel, sejak v1.4). Pantas PBD Helper menawarkan lebih banyak ciri: integrasi e-Rekod, cadangan ulasan AI, dan komuniti pengguna yang jauh lebih besar. Kedua-duanya juga membaca semula murid selepas simpan (Pantas PBD Helper sejak v5.0). PBD Helper memberi tumpuan kepada apa yang berlaku sebelum tulis: skrin Semak sebelum tulis yang menunjukkan berapa murid dan medan apa yang akan disentuh, dan tidak menulis ganti ulasan yang guru taip sendiri. Cetakan laporan penuh seluruh kelas percuma.</p>
       </details>
       <details>
         <summary>Ada extension isi PBD yang percuma sepenuhnya?</summary>
@@ -321,7 +321,7 @@
       </details>
     </div>
 
-    <p class="note">Maklumat perbandingan ini tepat setakat 26 September 2026 berdasarkan penyenaraian rasmi Chrome
+    <p class="note">Maklumat perbandingan ini tepat setakat 20 Oktober 2026 berdasarkan penyenaraian rasmi Chrome
     Web Store bagi setiap extension. Ciri, harga dan syarat lesen boleh berubah, jadi sila semak penyenaraian
     terkini sebelum membuat keputusan. PBD Helper ialah produk bebas dan <strong>tidak berafiliasi</strong>
     dengan Pantas PBD Helper, IDME PBD Helper, PBD OnePage, Cikgu Aime, myPBD Assistant, cikgujep, atau mana-mana pihak
