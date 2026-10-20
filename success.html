@@ -48,6 +48,7 @@
     .tg-group strong { display: block; color: #0b5e4d; font-size: 0.95rem; margin-bottom: 3px; }
     .tg-group span { display: block; color: var(--n-700); font-size: 0.82rem; line-height: 1.45; }
 
+    .email-note[hidden], .steps[hidden] { display: none; }
     .email-note { margin-top: 18px; font-size: 0.82rem; color: var(--n-700); background: var(--n-50); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; line-height: 1.55; text-align: left; }
 
     /* Footer (matches index.html) */
@@ -92,7 +93,8 @@
         <div id="key">—</div>
         <button class="copy-btn" id="copyBtn" onclick="copyKey()">Salin Kunci</button>
       </div>
-      <ol class="steps">
+      <div class="email-note" id="boundNote" hidden><strong>Pro sudah aktif pada akaun anda.</strong> Buka semula panel PBD Helper (tekan ikon muat semula di atas panel) &mdash; lencana bertukar PRO. Kunci di atas untuk simpanan: guna hanya jika anda tukar akaun atau panel masih tertulis PERCUMA.</div>
+      <ol class="steps" id="activateSteps">
         <li data-n="1">Pasang <strong>PBD Helper</strong> dari <a href="https://chromewebstore.google.com/detail/pbd-helper/hpjmhpolokbbhnjbnkddbjnomahanpoc" target="_blank" rel="noopener">Chrome Web Store</a> (jika belum) — Chrome, Edge, Brave atau Opera</li>
         <li data-n="2">Log masuk SPPB dan klik ikon PBD Helper pada toolbar untuk buka <strong>panel</strong></li>
         <li data-n="3">Di skrin <strong>Rumah</strong> panel, tekan <strong>&ldquo;Sudah beli? Aktifkan kunci&rdquo;</strong> di bahagian bawah, tampal kunci, klik <strong>Aktifkan</strong></li>
@@ -147,6 +149,11 @@
         const j = await r.json();
         if (j.ok && j.data && j.data.status === 'fulfilled' && j.data.key) {
           elKey.textContent = j.data.key;
+          // bound = the ORDER carried the panel's account hash (buy-unlock): no key paste needed
+          if (j.data.bound === true) {
+            document.getElementById('boundNote').hidden = false;
+            document.getElementById('activateSteps').hidden = true;
+          }
           elMsg.hidden = true;
           document.getElementById('done').hidden = false;
           document.getElementById('waiting').hidden = true;

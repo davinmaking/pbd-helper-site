@@ -121,6 +121,8 @@
       .buy-card, .buy-panel { padding: 28px 22px; }
       .buy-card .price { font-size: 2.1rem; }
     }
+    .uh-note { margin: 0 0 14px; padding: 10px 12px; font-size: 0.85rem; line-height: 1.5; color: var(--n-700); background: var(--n-50); border: 1px solid var(--line); border-radius: 10px; }
+    .uh-note[hidden] { display: none; }
   </style>
 </head>
 <body>
@@ -189,6 +191,7 @@
 
           <hr>
 
+          <p class="uh-note" id="uhNote" hidden>Pro akan diaktifkan terus pada akaun MOEIS yang sedang log masuk dalam panel anda selepas bayar. Bukan akaun anda sendiri (PC kongsi)? Buka pbd.davinhub.com/beli tanpa pautan ini.</p>
           <form id="buyForm">
             <div class="field">
               <label for="email">Emel <span aria-hidden="true">*</span></label>
@@ -256,6 +259,12 @@
     const btn = document.getElementById('payBtn');
     const err = document.getElementById('err');
     const payLabel = 'Bayar RM59 dengan Billplz';
+    // Buy-unlock: the panel's buy link carries the teacher's pseudonymous MOEIS hash
+    // (?uh=). Forwarded only when it is exactly a sha256 hex; the key is then issued
+    // already bound to that account (no key paste). Never echoed into the page.
+    const UH = (new URLSearchParams(location.search).get('uh') || '').toLowerCase();
+    const uhOk = /^[0-9a-f]{64}$/.test(UH);
+    if (uhOk) document.getElementById('uhNote').hidden = false;
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -266,6 +275,7 @@
           slug: SLUG,
           email: document.getElementById('email').value.trim(),
           name: document.getElementById('name').value.trim(),
+          ...(uhOk ? { user_hash: UH } : {}),
         };
         const r = await fetch(API + '/api/license-purchase', {
           method: 'POST',
