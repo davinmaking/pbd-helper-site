@@ -1,6 +1,6 @@
 # PBD Helper
 
-> PBD Helper ialah Chrome extension (Manifest V3, panel sisi) yang membantu guru di Malaysia mengisi skor PBD (Pentaksiran Bilik Darjah) di sistem SPPB / MOEIS (juga dikenali IDME; moeissppb.moe.gov.my) dengan pantas. Panel dibuka dengan skrin "Rumah": pilih tugas (Isi PBD / Excel pukal / Ulasan Guru Kelas / Cetak Laporan PBD), pilih kelas terus dalam panel, kemudian tetapkan Tahap Penguasaan (TP) untuk satu kelas penuh — Usaha, Ulasan dan Kemahiran bahasa dicadangkan mengikut TP. Sebelum apa-apa ditulis, skrin "Semak sebelum tulis" menunjukkan apa yang akan ditulis dan apa yang tidak disentuh. Ia juga menyokong Excel pukal berbilang kelas. Dibina oleh Cikgu Davin (davinhub). Ia bukan produk rasmi KPM.
+> PBD Helper ialah Chrome extension (Manifest V3, panel sisi) yang membantu guru di Malaysia mengisi skor PBD (Pentaksiran Bilik Darjah) di sistem SPPB / MOEIS (juga dikenali IDME; moeissppb.moe.gov.my) dengan pantas. Panel dibuka dengan skrin "Rumah": pilih tugas (Isi PBD / Excel pukal / Ulasan Guru Kelas / Cetak Laporan PBD), pilih kelas terus dalam panel, kemudian tetapkan Tahap Penguasaan (TP) untuk satu kelas penuh — Usaha, Ulasan dan Kemahiran bahasa dicadangkan mengikut TP. Sebelum apa-apa ditulis, skrin "Semak sebelum tulis" menunjukkan apa yang akan ditulis dan apa yang tidak disentuh. Ia juga menyokong Excel pukal berbilang kelas. Ia bukan produk rasmi KPM.
 
 ## Fakta utama
 - Nama: PBD Helper
